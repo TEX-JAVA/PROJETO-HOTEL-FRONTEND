@@ -1,7 +1,9 @@
 #text-header {
-    text-align: end;
-    padding: 10px;
-    margin-bottom: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
 }
 
 header img {
