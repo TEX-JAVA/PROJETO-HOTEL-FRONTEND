@@ -17,7 +17,7 @@ p {
 }
 
 body {
-    max-width: 1250px;
+    max-width: 1300px;
     padding: 0 10px;
     margin: 0 auto;
     background-color: #fff;
@@ -28,7 +28,7 @@ img{
 a,
 li,
 button,
-select {
+select{
     text-decoration: none;
     font-style: none;
     list-style: none;

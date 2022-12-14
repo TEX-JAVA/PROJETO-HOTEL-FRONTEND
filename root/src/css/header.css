@@ -1,51 +1,53 @@
-#text-header{
+#text-header {
     text-align: end;
     padding: 10px;
     margin-bottom: 5px;
 }
 
-header img{
-    width: 150px;
+header img {
+    width: 200px;
 }
 
-#info-princip{
+#info-princip {
     display: flex;
     align-items: center;
 }
 
-header a{
+header a {
     text-align: end;
 }
-#info-princip h1{
+
+#info-princip h1 {
     font-size: 2em;
-    padding-left: 40px ;
+    padding-left: 40px;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius: 10px;
-    margin: 20px 0;
+    margin: 30px 0;
     background-color: rgb(0, 0, 0);
 }
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: space-between;
 }
 
-nav ul li, nav p {
-    padding: 15px;
+nav ul li,
+nav p {
+    padding: 20px;
     transition: 0.3s;
 }
 
-nav ul li a, nav p a{
+nav ul li a,
+nav p a {
     color: #fff
 }
 
 
-nav ul li:hover, nav p:hover{
-    border-radius: 10px;
-    background-color: rgba(136, 134, 134, 0.879); ;
+nav ul li:hover,
+nav p:hover {
+    background-color: rgba(136, 134, 134, 0.879);
 }
