@@ -1,4 +1,4 @@
-/* Article Hotel */
+
 section article #hotel {
     display: flex;
     align-items: center;
@@ -46,13 +46,17 @@ button:hover {
     background-color: rgba(136, 134, 134, 0.879);
 }
 
-section article#gastronomia #gastronomia-hotel {
-    display: flex;
+#grid{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: center;
-    justify-content: space-around;
+    gap: 30px;
 }
 
-section article#gastronomia #gastronomia-hotel img {
+#grid img{
     width: 600px;
-    margin-left: 40px;
+    height: 400px;
+    object-fit: cover;
 }
