@@ -26,12 +26,6 @@ section article #hotel img {
     object-fit: cover;
 }
 
-#flexbox img:hover {
-    -webkit-transform: scale(0.3);
-    -ms-transform: scale(0.3);
-    transform: scale(1.1);
-}
-
 #img-princ {
     width: 100% !important;
     height: 260px;

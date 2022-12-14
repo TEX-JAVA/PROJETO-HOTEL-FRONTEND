@@ -22,13 +22,15 @@ body {
     margin: 0 auto;
     background-color: #fff;
 }
-img{
+
+img {
     border-radius: 10px;
 }
+
 a,
 li,
 button,
-select{
+select {
     text-decoration: none;
     font-style: none;
     list-style: none;
