@@ -22,7 +22,9 @@ body {
     margin: 0 auto;
     background-color: #fff;
 }
-
+img{
+    border-radius: 10px;
+}
 a,
 li,
 button,
