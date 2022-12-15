@@ -1,0 +1,62 @@
+
+section article #hotel {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-center {
+    text-align: center;
+}
+
+section article #hotel img {
+    width: 600px;
+    margin-right: 40px;
+}
+
+#flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+#flexbox img {
+    width: 32%;
+    object-fit: cover;
+}
+
+#img-princ {
+    width: 100% !important;
+    height: 260px;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: rgb(0, 0, 0);
+    color: white !important;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: rgba(136, 134, 134, 0.879);
+}
+
+#grid{
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+#grid img{
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}

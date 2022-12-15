@@ -1,0 +1,67 @@
+#footerflex {
+    display: flex;
+    gap: 10px;
+}
+
+#contato,
+iframe {
+    flex: 1;
+}
+
+#contato {
+    position: relative;
+
+}
+
+#contato nav {
+    margin: 0 !important;
+    position: absolute;
+    bottom: 0;
+}
+
+#button-contato {
+    width: 100%;
+    margin: 10px 0 !important;
+
+}
+
+input,
+textarea {
+    padding: 20px;
+    border-radius: 6px;
+    font-size: .8em;
+}
+
+
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+
+#h2-contato {
+    font-size: 1.3em;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+#redes-sociais {
+    margin: 20px 0;
+    height: 200px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 40px;
+    transition: 0.3s;
+}
+
+
+#redes-sociais a:hover {
+    padding-bottom: 10px;
+}
