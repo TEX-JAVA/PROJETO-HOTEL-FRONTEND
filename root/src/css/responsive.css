@@ -1,4 +1,4 @@
-@media screen and (max-width: 425px) {
+/* @media screen and (max-width: 425px) {
     * {
         padding: 0;
         margin: 0;
@@ -124,5 +124,151 @@
         background-color: #23d2db;
         color: white !important;
         transition: 0.4s;
+    }
+}
+ */
+
+/* Responsive Header */
+
+@media (max-width: 1550px) {
+    header {
+        max-width: 100%;
+        background-color: #023535;
+        z-index: 10;
+        padding: 10px 20px;
+    }
+
+    nav {
+        display: none;
+        padding: 0px;
+        flex-wrap: nowrap;
+    }
+
+    .login ul select {
+        display: none;
+    }
+
+    .login ul li+li {
+        display: none
+    }
+}
+
+/* Responsive Main */
+
+@media (max-width: 1250px) {
+
+    .container {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    section article #hotel {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
+    section article #hotel img {
+        width: 100%;
+        height: 30vh;
+        margin: 0;
+    }
+
+    #sobre h2 {
+        padding: 0 !important;
+        position: relative;
+        left: 20px;
+    }
+
+    #sobre {
+        padding: 10px 0;
+    }
+
+    #sobre img {
+        padding: 0;
+    }
+
+    #hotel {
+        display: flexbox;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #hotel img {
+        display: flex;
+        justify-content: center;
+        max-height: 50vh;
+        width: 100%;
+        padding-bottom: 15px;
+        align-self: center;
+        border-radius: 1em !important;
+    }
+
+    #hotel p {
+        padding: 30px 10px;
+        background-color: #8cdbd8;
+        border-radius: 1em;
+    }
+
+    #acomodacoes h2 {
+        padding: 0;
+        padding-bottom: 10px;
+    }
+
+    #flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+    }
+
+    #flexbox img {
+        width: 47% !important;
+        height: 30vh;
+    }
+
+    #flexbox img:nth-child(2),
+    #flexbox img:nth-child(4) {
+        padding-left: 2vw;
+    }
+
+    #flexbox img:nth-child(3),
+    #flexbox img:nth-child(4) {
+        padding-top: 1vh;
+    }
+
+    #gastronomia {
+        display: flexbox;
+        padding: 0;
+        gap: 0;
+    }
+
+    #gastronomia #grid {
+        display: flex-box;
+        flex-wrap: wrap;
+
+    }
+    
+    #gastronomia #grid img{
+        width: 100%;
+        object-fit: contain;
+    }
+
+    #gastronomia h2 {
+        padding: 0;
+    }
+
+    #gastronomia img {
+        max-width: 47%;
+    }
+
+    #footerflex {
+        max-width: 95vw;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        align-items: center;
     }
 }
