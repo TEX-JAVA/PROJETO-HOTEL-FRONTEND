@@ -1,121 +1,216 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Viver</title>
+    <title>HOTEL H</title>
+    <link rel="shortcut icon" href="/PROJETO-HOTEL/root/images/hackerrank.svg">
     <link rel="stylesheet" href="../root/src/css/global.css">
-    <link rel="shortcut icon" href="../root/images/logo.jpg" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../root/images/LOGO H branco.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div id="text-header">
-            <p>Olá, Visitante !</p>
-            <p>|</p>
-            <p><a href="#">Sair</a></p>
-        </div>
-        <div id="info-princip">
-            <img src="../root/images/logo.jpg" alt="logo tipo">
-            <h1>Nada melhor do que um bom lugar para passar suas férias.</h1>
+        <div class="logo">
+            <a href="#banner">
+                <img src="../root/images/LOGO H branco.png" alt="logo">
+                <span>Hotel H</span>
+            </a>
         </div>
         <nav>
             <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#acomodacoes">Acomodações</a></li>
-                <li><a href="#gastronomia">Gastronomia</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li>
+                    <a class="grid-icons" href="#sobre">
+                        <img src="../root/images/icons/bed-solid.svg" alt="">
+                        <p>Sobre</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="grid-icons" href="#acomodacoes">
+                        <img src="../root/images/icons/bed-solid.svg" alt="">
+                        <p>Acomodacões</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="grid-icons" href="#gastronomia">
+                        <img src="../root/images/icons/utensils-solid.svg" alt="">
+                        <p>Gastronomia</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="grid-icons" href="#ofertas">
+                        <img src="../root/images/icons/star-solid.svg" alt="">
+                        <p>Top Ofertas</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="grid-icons" href="#contato">
+                        <img src="../root/images/icons/envelope-solid.svg" alt="">
+                        <p>Contato</p>
+                    </a>
+                </li>
             </ul>
-            <p><a href="#">Cadastre-se</a></p>
         </nav>
+        <div class="login">
+            <ul>
+                <select>
+                    <option>
+                        🇧🇷
+                    </option>
+                    <option>
+                        🇩🇪
+                    </option>
+                    <option>
+                        🇬🇧
+                    </option>
+                </select>
+                <li>
+                    <a class="grid-icons" href="#sobre">
+                        <img src="../root/images/icons/bars-solid.svg" alt="">
+                        <p>Olá, Visitante!</p>
+                    </a>
+                </li>
+                <li>
+                    <a id="logout" href="#sobre">
+                        <p>Sair</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </header>
+
     <main>
-        <section>
-            <article id="sobre">
-                <h2>Sobre nosso Hotel</h2>
-                <div id="hotel">
-                    <img src="../root/images/hotel.jpg" alt="imagem sobre o hotel">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                        debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta nam
-                        deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe iste
-                        mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae vitae
-                        itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit atque
-                        suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti errora
-                    </p>
-                </div>
-            </article>
-            <article id="acomodacoes">
-                <h2 class="text-center">Nossas Acomodações</h2>
-                <div id="flexbox">
-                    <img src="../root/images/acomodacoes1.jpg" alt="imagem do hotel">
-                    <img src="../root/images/acomodacoes2.jpg" alt="imagem da cama">
-                    <img src="../root/images/acomodacoes3.jpg" alt="imagem do mar">
-                    <img id="img-princ" src="../root/images/acomodacoes4.jpg" alt="imagem dos quartos">
-                </div>
-                <button>Conheça mais sobre nossos serviços</button>
-            </article>
-            <article id="gastronomia">
-                <h2>Gastronomia</h2>
-                <div id="grid">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                        debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta nam
-                        deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe iste
-                        mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae vitae
-                        itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit atque
-                        suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti errora
-                    </p>
-                    <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
-                    <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                        debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta nam
-                        deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe iste
-                        mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae vitae
-                        itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit atque
-                        suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti errora
-                    </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                        debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta nam
-                        deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe iste
-                        mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae vitae
-                        itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit atque
-                        suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti errora
-                    </p>
-                    <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
+        <section id="banner">
+            <video autoplay muted loop>
+                <source src="../root/video/Hotel H.mp4" type="video/mp4">
+            </video>
+        </section>
+        <div class="container">
+            <section>
+                <article id="sobre">
+                    <h2>SOBRE</h2>
+                    <div id="hotel">
+                        <img src="../root/images/kelsey-curtis--27u_GzlAFw-unsplash.jpg" alt="imagem sobre o hotel">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
+                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
+                            nam
+                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
+                            iste
+                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
+                            vitae
+                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
+                            atque
+                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
+                            errora
+                        </p>
+                    </div>
+                </article>
+                <article id="acomodacoes">
+                    <h2 class="text-center">ACOMODAÇÕES</h2>
+                    <div id="flexbox">
+                        <img src="../root/images/acomodacoes1.jpg" alt="imagem do hotel">
+                        <img src="../root/images/acomodacoes2.jpg" alt="imagem da cama">
+                        <img src="../root/images/acomodacoes3.jpg" alt="imagem do mar">
+                        <img id="img-princ" src="../root/images/acomodacoes4.jpg" alt="imagem dos quartos">
+                    </div>
+                    <button>Conheça mais sobre nossos serviços</button>
+                </article>
+                <article id="gastronomia">
+                    <h2>GASTRONOMIA</h2>
+                    <div id="grid">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
+                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
+                            nam
+                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
+                            iste
+                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
+                            vitae
+                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
+                            atque
+                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
+                            errora
+                        </p>
+                        <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
+                        <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
+                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
+                            nam
+                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
+                            iste
+                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
+                            vitae
+                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
+                            atque
+                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
+                            errora
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
+                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
+                            nam
+                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
+                            iste
+                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
+                            vitae
+                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
+                            atque
+                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
+                            errora
+                        </p>
+                        <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
+                    </div>
+                </article>
+            </section>
+        </div>
+        <section class="bg-top-oferta">
+            <article id="ofertas">
+                <h2 class="text-center">TOP OFERTAS</h2>
+                <div class="container top-oferta">
+                    <div class="card">
+
+                    </div>
+                    <div class="card">
+
+                    </div>
+                    <div class="card">
+
+                    </div>
+
                 </div>
             </article>
         </section>
     </main>
+
     <footer>
-        <h2 class="text-center">Contato</h2>
-        <div id="footerflex">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.13980470152!2d-3.819619021392384!3d40.437869761491164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Madri%2C%20Espanha!5e0!3m2!1spt-BR!2sbr!4v1670967455169!5m2!1spt-BR!2sbr"
-                width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <div id="contato">
-                <h2 id="h2-contato">Envie nos uma mensagem...</h2>
-                <form action="" method="get">
-                    <div id="form-contato">
-                        <input type="text" id="name" name="name" placeholder="Digite seu nome...">
-                        <input type="email" id="email" name="email" placeholder="Digite seu email...">
-                        <input type="tel" id="tel" name="tel" placeholder="Digite seu número...">
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <button id="button-contato">Enviar</button>
-                    </div>
-                </form>
+        <div class="container">
+            <h2 class="text-center">CONTATO</h2>
+            <div id="footerflex">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.13980470152!2d-3.819619021392384!3d40.437869761491164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Madri%2C%20Espanha!5e0!3m2!1spt-BR!2sbr!4v1670967455169!5m2!1spt-BR!2sbr"
+                    width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div id="contato">
+                    <h2 id="h2-contato">Entre em contato</h2>
+                    <form action="" method="get">
+                        <div id="form-contato">
+                            <input type="text" id="name" name="name" placeholder="Digite seu nome...">
+                            <input type="email" id="email" name="email" placeholder="Digite seu email...">
+                            <input type="tel" id="tel" name="tel" placeholder="Digite seu número...">
+                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <button id="button-contato">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </div>
-        <div id="redes-sociais">
-            <a href="#"><img src="../root/images/icons8-facebook-novo.svg" alt="icone facebook"></a>
-            <a href="#"><img src="../root/images/icons8-instagram.svg" alt="icone do instagram"></a>
-            <a href="#"><img src="../root/images/icons8-whatsapp.svg" alt="icone do whatsapp"></a>
-        </div>
+            <div id="redes-sociais">
+                <a href="#"><img src="../root/images/icons/icons8-facebook-novo.svg" alt="icone facebook"></a>
+                <a href="#"><img src="../root/images/icons/icons8-instagram.svg" alt="icone do instagram"></a>
+                <a href="#"><img src="../root/images/icons/icons8-whatsapp.svg" alt="icone do whatsapp"></a>
+            </div>
     </footer>
+    </div>
 </body>
 
 </html>
