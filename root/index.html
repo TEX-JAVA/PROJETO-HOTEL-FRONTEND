@@ -23,6 +23,12 @@
         <nav>
             <ul>
                 <li>
+                    <a class="grid-icons" href="#sobre">
+                        <img src="../root/images/icons/bed-solid.svg" alt="">
+                        <p>Sobre</p>
+                    </a>
+                </li>
+                <li>
                     <a class="grid-icons" href="#acomodacoes">
                         <img src="../root/images/icons/bed-solid.svg" alt="">
                         <p>Acomodacões</p>
@@ -35,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#">
+                    <a class="grid-icons" href="#ofertas">
                         <img src="../root/images/icons/star-solid.svg" alt="">
                         <p>Top Ofertas</p>
                     </a>
@@ -48,8 +54,19 @@
                 </li>
             </ul>
         </nav>
-        <div>
+        <div class="login">
             <ul>
+                <select>
+                    <option>
+                        🇧🇷
+                    </option>
+                    <option>
+                        🇩🇪
+                    </option>
+                    <option>
+                        🇬🇧
+                    </option>
+                </select>
                 <li>
                     <a class="grid-icons" href="#sobre">
                         <img src="../root/images/icons/bars-solid.svg" alt="">
@@ -57,19 +74,17 @@
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#sobre">
+                    <a id="logout" href="#sobre">
                         <p>Sair</p>
                     </a>
                 </li>
             </ul>
         </div>
     </header>
+
     <main>
-        <section class="reserva">
-            <button class="button-reserve">Reserve!</button>
-        </section>
         <section id="banner">
-            <video autoplay muted>
+            <video autoplay muted loop>
                 <source src="../root/video/Hotel H.mp4" type="video/mp4">
             </video>
         </section>
@@ -149,7 +164,25 @@
                 </article>
             </section>
         </div>
+        <section class="bg-top-oferta">
+            <article id="ofertas">
+                <h2 class="text-center">TOP OFERTAS</h2>
+                <div class="container top-oferta">
+                    <div class="card">
+
+                    </div>
+                    <div class="card">
+
+                    </div>
+                    <div class="card">
+
+                    </div>
+
+                </div>
+            </article>
+        </section>
     </main>
+
     <footer>
         <div class="container">
             <h2 class="text-center">CONTATO</h2>
