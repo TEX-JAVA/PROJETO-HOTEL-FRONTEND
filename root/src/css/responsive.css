@@ -1,0 +1,128 @@
+@media screen and (max-width: 425px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+        font-size: 0.8rem;
+    }
+
+    #sobre h2 {
+        padding: 0 !important;
+        position: relative;
+        left: 20px;
+    }
+
+    #sobre {
+        padding: 10px 0;
+    }
+
+    #sobre img {
+        padding: 0;
+    }
+
+    #hotel {
+        display: flexbox;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    #hotel img {
+        display: flex;
+        justify-content: center;
+        max-height: 50vh;
+        width: 100%;
+        padding-bottom: 15px;
+        align-self: center;
+        border-radius: 1em !important;
+    }
+
+    #hotel p {
+        padding: 30px 10px;
+        background-color: #8cdbd8;
+        border-radius: 1em;
+    }
+
+    #acomodacoes h2 {
+        padding: 0;
+        padding-bottom: 10px;
+    }
+
+    #flexbox {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        justify-content: center;
+    }
+
+    #flexbox img {
+        width: 47% !important;
+        height: 30vh;
+    }
+
+    #flexbox img:nth-child(2),
+    #flexbox img:nth-child(4) {
+        padding-left: 2vw;
+    }
+
+    #flexbox img:nth-child(3),
+    #flexbox img:nth-child(4) {
+        padding-top: 1vh;
+    }
+
+    #gastronomia {
+        display: flexbox;
+        padding: 0;
+        gap: 0;
+    }
+
+    #gastronomia #grid {
+        display: flex-box;
+        flex-wrap: wrap;
+        gap: 2vw;
+        padding: 2vh 2vw;
+    }
+
+    #gastronomia h2 {
+        padding: 0;
+    }
+
+    #gastronomia img {
+        max-width: 47%;
+    }
+
+    #footerflex {
+        max-width: 95vw;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        align-items: center;
+    }
+
+    #form-contato {
+        font-size: 2.2em;
+        padding-top: 10px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    #form-contato input {
+        width: 100%;
+    }
+
+    #form-contato textarea {
+        width: 100%;
+        padding: 5px;
+    }
+
+    #button-contato {
+        width: 90%;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 0;
+        background-color: #23d2db;
+        color: white !important;
+        transition: 0.4s;
+    }
+}
