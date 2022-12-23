@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOTEL H</title>
+
     <link rel="shortcut icon" href="/PROJETO-HOTEL/root/images/hackerrank.svg">
-    <link rel="stylesheet" href="../root/src/css/global.css">
+    <link rel="stylesheet" href="../root/src/css/global/global.css">
     <link rel="shortcut icon" href="../root/images/LOGO H branco.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1770fde015.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -67,11 +69,27 @@
                         🇬🇧
                     </option>
                 </select>
-                <li>
-                    <a class="grid-icons" href="#sobre">
-                        <img src="../root/images/icons/bars-solid.svg" alt="">
-                        <p>Olá, Visitante!</p>
-                    </a>
+                <li class="login_li">
+                    <div id="login_check">
+                        <input type="checkbox" id="check" />
+                        <label for="check">
+                            <i class="fa-solid fa-bars" id="btn"></i>
+                            <i class="fa-solid fa-xmark" id="cancel"></i>
+                        </label>
+                    </div>
+                    <p>Olá! Visitante</p>
+                    <form action="" id="loginf">
+                        <div id="login_form">
+                            <ul id="login_list">
+                                <li><input type="text" class="txt" placeholder="Nome de Usuário" /></li>
+                                <li><input type="password" class="txt" placeholder="Senha" /></li>
+                                <p><input type="checkbox" />Salvar Senha</p>
+                                <li><input type="button" class="login_button" value="Login" /></li>
+                            </ul>
+                            <a href="#">Esqueci minha senha</a><br>
+                            <a href="#">Não tenho uma conta</a>
+                        </div>
+                    </form>
                 </li>
                 <li>
                     <a id="logout" href="#sobre">
@@ -80,6 +98,10 @@
                 </li>
             </ul>
         </div>
+
+
+
+
     </header>
 
     <main>

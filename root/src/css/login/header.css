@@ -1,0 +1,127 @@
+#login_main {
+	padding: 100px;
+	border: 3px solid black;
+	display: flex;
+	justify-content: space-around;
+	width: auto;
+	height: auto;
+}
+
+#boxers {
+	width: auto;
+	height: auto;
+	border: 3px solid red;
+	position: relative;
+}
+
+.login_li {
+	display: flex;
+	align-items: center;
+	color: white;
+	margin: 0;
+	padding: 0;
+}
+
+#login_form {
+	top: 80px;
+	right: 100px;
+	position: absolute;
+	padding: 30px;
+	width: 350px;
+	background: rgba(1, 89, 87, 0.5);
+	border-radius: 30px;
+	margin-left: auto;
+	text-align: center;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#login_form a {
+	font-size: 1.4rem;
+}
+
+#login_list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+
+#login_list .txt {
+	height: 25px;
+	width: 250px;
+	margin-bottom: 20px;
+	font-size: 1.4rem;
+	border-radius: 5px;
+	padding-left: 10px;
+}
+
+#login_list p {
+	font-size: 1.4rem;
+	text-align: center;
+}
+
+#login_list .login_button {
+	width: 200px;
+	background-color: #015958;
+	border-radius: 30px;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.4rem;
+	margin: 10px 2px 20px 2px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#login_list .login_button:hover {
+	background-color: #5dc4c8;
+	transition: 0.3s;
+}
+
+#check {
+	display: none;
+}
+
+label #btn,
+label #cancel {
+	color: white;
+	position: absolute;
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+label #btn {
+	right: 233px;
+	top: 18px;
+	font-size: 1.4rem;
+	padding: 6px 10px;
+	transition: all 0.2s ease;
+}
+
+label #cancel {
+	top: -200px;
+	right: 110px;
+	font-size: 1.4rem;
+	padding: 3px 9px;
+	z-index: 2;
+	transition: all 0.2s ease;
+}
+
+#check:checked ~ form #login_form {
+	top: 80px;
+}
+
+#check:checked ~ label #btn {
+	top: 0px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+#check:checked ~ label #cancel {
+	top: 90px;
+}
