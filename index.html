@@ -6,214 +6,232 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HOTEL H</title>
-    <link rel="shortcut icon" href="/PROJETO-HOTEL/root/images/hackerrank.svg">
-    <link rel="stylesheet" href="../root/src/css/global.css">
-    <link rel="shortcut icon" href="../root/images/LOGO H branco.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/global/icons/hackerrank.svg">
+    <link rel="stylesheet" href="./src/css/global/global.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <div class="logo">
-            <a href="#banner">
-                <img src="../root/images/LOGO H branco.png" alt="logo">
-                <span>Hotel H</span>
-            </a>
-        </div>
+        <a href="#">
+            <img src="./images/global/logo.png" alt="imagem de logo">
+            <p>Hotel H</p>
+        </a>
         <nav>
-            <ul>
+            <ul class="flex">
                 <li>
-                    <a class="grid-icons" href="#sobre">
-                        <img src="../root/images/icons/bed-solid.svg" alt="">
+                    <a href="#sobre">
+                        <img src="./images/global/icons/house-solid.svg" alt="icone de sobre">
                         <p>Sobre</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#acomodacoes">
-                        <img src="../root/images/icons/bed-solid.svg" alt="">
+                    <a href="#acomodacoes">
+                        <img src="./images/global/icons/bed-solid.svg" alt="icone de acomodações">
                         <p>Acomodacões</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#gastronomia">
-                        <img src="../root/images/icons/utensils-solid.svg" alt="">
+                    <a href="#gastronomia">
+                        <img src="./images/global/icons/utensils-solid.svg" alt="icone de gastronomia">
                         <p>Gastronomia</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#ofertas">
-                        <img src="../root/images/icons/star-solid.svg" alt="">
+                    <a href="#topOfertas">
+                        <img src="./images/global/icons/star-solid.svg" alt="icone de top ofertas">
                         <p>Top Ofertas</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#contato">
-                        <img src="../root/images/icons/envelope-solid.svg" alt="">
+                    <a href="#contato">
+                        <img src="./images/global/icons/envelope-solid.svg" alt="icone de contato">
                         <p>Contato</p>
                     </a>
                 </li>
             </ul>
         </nav>
-        <div class="login">
-            <ul>
-                <select>
-                    <option>
-                        🇧🇷
-                    </option>
-                    <option>
-                        🇩🇪
-                    </option>
-                    <option>
-                        🇬🇧
-                    </option>
-                </select>
-                <li>
-                    <a class="grid-icons" href="#sobre">
-                        <img src="../root/images/icons/bars-solid.svg" alt="">
-                        <p>Olá, Visitante!</p>
-                    </a>
-                </li>
-                <li>
-                    <a id="logout" href="#sobre">
-                        <p>Sair</p>
-                    </a>
-                </li>
-            </ul>
+        <div class="flex gap-div">
+            <select>
+                <option style="width: 40px;">🇧🇷</option>
+                <option>🇱🇷</option>
+                <option>🇪🇸</option>
+            </select>
+            <a href="" class="flex gap-login">
+                <img src="./images/global/icons/bars-solid.svg" alt="">
+                <p>Olá, Visitante!</p>
+            </a>
+            <a href="" class="flex">
+                <p>Sair</p>
+            </a>
         </div>
     </header>
 
     <main>
-        <button class="button-reserve">
-            Reserve
-        </button>
-        <section id="banner">
-            <video autoplay muted loop>
-                <source src="../root/video/Hotel H.mp4" type="video/mp4">
+        <section class="banner">
+            <video autoplay loop muted>
+                <source src="./video/hotel.mp4">
             </video>
         </section>
-        <div class="container">
-            <section>
-                <article id="sobre">
-                    <h2>SOBRE</h2>
-                    <div id="hotel">
-                        <img src="../root/images/kelsey-curtis--27u_GzlAFw-unsplash.jpg" alt="imagem sobre o hotel">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
-                            nam
-                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
-                            iste
-                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
-                            vitae
-                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
-                            atque
-                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
-                            errora
+        <section id="sobre">
+            <article class="container padding flexbox">
+                <img src="./images/global/hotelPraia.avif" alt="">
+                <div class="card">
+                    <p class="line">
+                        Elevando o conforto ao mais alto nível
+                    </p>
+                    <h2>Bem-Vindo ao Hotel H</h2>
+                    <div class="margin">
+                        <p>O hotel hotel h é a escolha certa para os visitantes que procuram uma combinação de charme,
+                            paz,
+                            tranquilidade e uma
+                            localização conveniente para explorar os arredores.
                         </p>
+                        <button>Saiba mais</button>
                     </div>
-                </article>
-                <article id="acomodacoes">
-                    <h2 class="text-center">ACOMODAÇÕES</h2>
-                    <div id="flexbox">
-                        <img src="../root/images/acomodacoes1.jpg" alt="imagem do hotel">
-                        <img src="../root/images/acomodacoes2.jpg" alt="imagem da cama">
-                        <img src="../root/images/acomodacoes3.jpg" alt="imagem do mar">
-                        <img id="img-princ" src="../root/images/acomodacoes4.jpg" alt="imagem dos quartos">
-                    </div>
-                    <button>Conheça mais sobre nossos serviços</button>
-                </article>
-                <article id="gastronomia">
-                    <h2>GASTRONOMIA</h2>
-                    <div id="grid">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
-                            nam
-                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
-                            iste
-                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
-                            vitae
-                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
-                            atque
-                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
-                            errora
-                        </p>
-                        <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
-                        <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
-                            nam
-                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
-                            iste
-                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
-                            vitae
-                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
-                            atque
-                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
-                            errora
-                        </p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti non commodi vel aut eos
-                            debitis quae, pariatur excepturi ipsum tempore ad accusamus totam earum quasi dolorem dicta
-                            nam
-                            deleniti consequatur? Esse sequi officiis reprehenderit fugiat illo, qui velit sit saepe
-                            iste
-                            mollitia illum earum voluptas officia quos ullam. Quis eius dolorem voluptatem sint quae
-                            vitae
-                            itaque aliquid, in voluptatum ducimus sit, odit ipsum magni facere voluptate ex impedit
-                            atque
-                            suscipit iusto ea a vel? Ratione, possimus? Ratione nemo est autem, libero totam deleniti
-                            errora
-                        </p>
-                        <img src="../root/images/gastronomia.jpg" alt="imagem da gastronomia do hotel">
-                    </div>
-                </article>
-            </section>
-        </div>
-        <section class="bg-top-oferta">
-            <article id="ofertas">
-                <h2 class="text-center">TOP OFERTAS</h2>
-                <div class="container top-oferta">
-                    <div class="card">
-
-                    </div>
-                    <div class="card">
-
-                    </div>
-                    <div class="card">
-
-                    </div>
-
                 </div>
+            </article>
+        </section>
+        <section id="acomodacoes">
+            <div class="bg-acomodacoes">
+                <article class="container relative">
+                    <div class="card-acomodacoes">
+                        <h2>Nossas Acomodações</h2>
+                        <p>O Hotel H é lider em conforto e na qualidade de hospedagem. contomas com excelentes espaços
+                            para sua diversão e entretenimento.</p>
+                        <div class="container-acomodacoes">
+                            <div class="box-acomodacoes">
+                                <img src="./images/global/icons/icons8-massagem-com-óleo-30.svg" alt="svg de massagem">
+                                <p>Spa e Massagem</p>
+                                <img src="./images/global/icons/icons8-haltere-30.svg" alt="svg de academia">
+                                <p>Academia</p>
+                                <img src="./images/global/icons/icons8-danca-de-salao-30.svg"
+                                    alt="svg de salão de festa">
+                                <p>Salão de Festas</p>
+
+                            </div>
+                            <div class="box-acomodacoes">
+                                <img src="./images/global/icons/icons8-cozinha-50 .svg" alt="svg de refeitorio">
+                                <p>Refeitório</p>
+                                <img src="./images/global/icons/icons8-piscina-50 .svg" alt="svg de piscinas">
+                                <p>Piscinas</p>
+                                <img src="./images/global/icons/icons8-parque-tematico-50.svg"
+                                    alt="svg de parque de diversão">
+                                <p>Parque de Diversão</p>
+                            </div>
+                        </div>
+                </article>
+            </div>
+            <article class="container">
+                <p class="line">
+                    Elevando o conforto ao mais alto nível
+                </p>
+                <h2>Quartos e Suites</h2>
+                <div class="container-quartos">
+                    <div class="box">
+                        <img src="./images/global/quarto1.jpg" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./images/global/quarto3.jpg" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="./images/global/quarto2.jpg" alt="">
+                    </div>
+                    <button class="absolute">Saiba mais</button>
+                </div>
+            </article>
+        </section>
+        <section id="gastronomia">
+            <div class="opaco"></div>
+            <article class="container center">
+                <div class="gastronomia-text">
+                    <h2>Gastronomia</h2>
+                    <p>Pratos preparados com Carinho pelo Chef Roque, com ingredientes Frescos e temperos de Londres.</p>
+                </div>
+            </article>
+            <article class="container">
+                <p class="line">
+
+                </p>
+            </article>
+        </section>
+        <section id="topOfertas">
+            <article class="container padding">
+            </article>
+        </section>
+        <section id="contato">
+            <article class="container padding">
+
             </article>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <h2 class="text-center">CONTATO</h2>
-            <div id="footerflex">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194348.13980470152!2d-3.819619021392384!3d40.437869761491164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422997800a3c81%3A0xc436dec1618c2269!2sMadrid%2C%20Madri%2C%20Espanha!5e0!3m2!1spt-BR!2sbr!4v1670967455169!5m2!1spt-BR!2sbr"
-                    width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                <div id="contato">
-                    <h2 id="h2-contato">Entre em contato</h2>
-                    <form action="" method="get">
-                        <div id="form-contato">
-                            <input type="text" id="name" name="name" placeholder="Digite seu nome...">
-                            <input type="email" id="email" name="email" placeholder="Digite seu email...">
-                            <input type="tel" id="tel" name="tel" placeholder="Digite seu número...">
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                            <button id="button-contato">Enviar</button>
-                        </div>
-                    </form>
+        <div class="container-footer">
+            <div class="card-footer">
+                <h3>Contato</h3>
+                <div class="column">
+                    <a href="tel:+55999129999">
+                        <img src="./images/global/icons/icons8-telefone-48.svg" alt="">
+                        <p>+5584999129999</p>
+                    </a>
+                    <a href="mailto:hotelh@suporte.com.br">
+                        <img src="./images/global/icons/envelope-solid.svg" alt="">
+                        <p>hotelh@suporte.com.br</p>
+                    </a>
+                    <a href="#">
+                        <img src="./images/global/icons/icons8-maps-64.svg" alt="">
+                        <p>321, Rua das Maravilhas, <br> Brazil</p>
+                    </a>
+                </div>
+                <div class="icons">
+                    <a href="#">
+                        <img src="./images/global/icons/icons8-instagram.svg" alt="">
+                    </a><a href="">
+                        <img src="./images/global/icons/icons8-twitter.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./images/global/icons/icons8-facebook-novo.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./images/global/icons/icons8-whatsapp.svg" alt="">
+                    </a>
                 </div>
             </div>
-            <div id="redes-sociais">
-                <a href="#"><img src="../root/images/icons/icons8-facebook-novo.svg" alt="icone facebook"></a>
-                <a href="#"><img src="../root/images/icons/icons8-instagram.svg" alt="icone do instagram"></a>
-                <a href="#"><img src="../root/images/icons/icons8-whatsapp.svg" alt="icone do whatsapp"></a>
+            <div class="card-footer">
+                <h3>Serviços</h3>
+                <div class="column">
+                    <a href="#">Home</a>
+                    <a href="#">Sobre</a>
+                    <a href="#">Acomodações</a>
+                    <a href="#">Reserva</a>
+                </div>
             </div>
+            <div class="card-footer">
+                <h3>Carreira</h3>
+                <div class="column">
+                    <a href="#">Trabalhe Conosco</a>
+                    <a href="#">Desenvolvedor</a>
+                    <a href="#">Trainner</a>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h3>Links Rápidos</h3>
+                <div class="column">
+                    <a href="#">Admin</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="directs">
+            <p>&copy;2023 - Grupo 5 TEX</p>
+        </div>
     </footer>
-    </div>
+
 </body>
 
 </html>
