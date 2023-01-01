@@ -8,7 +8,7 @@
     <title>ACOMODACOES HOTEL H</title>
     <link rel="shortcut icon" href="../images/hackerrank.svg">
     <link rel="stylesheet" href="../src/css/acomodacoes/acomodacoes.css">
-    <link rel="stylesheet" href="../src/css/global.css">
+    <link rel="stylesheet" href="../src/css/global/global.css">
     <link rel="shortcut icon" href="../images/LOGO H branco.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/e0fe12c7d3.js" crossorigin="anonymous"></script>
@@ -17,71 +17,57 @@
 
 <body style="overflow: auto">
     <header>
-        <div class="logo">
-            <a href="#banner">
-                <img src="../images/LOGO H branco.png" alt="logo">
-                <span>Hotel H</span>
-            </a>
-        </div>
+        <a href="#">
+            <img src="./../images/global/logo.png" alt="imagem de logo">
+            <p>Hotel H</p>
+        </a>
         <nav>
-            <ul>
+            <ul class="flex">
                 <li>
-                    <a class="grid-icons" href="#sobre">
-                        <img src="../images/icons/bed-solid.svg" alt="">
+                    <a href="#sobre">
+                        <img src="./../images/global/icons/house-solid.svg" alt="icone de sobre">
                         <p>Sobre</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#acomodacoes">
-                        <img src="../images/icons/bed-solid.svg" alt="">
+                    <a href="#acomodacoes">
+                        <img src="./../images/global/icons/bed-solid.svg" alt="icone de acomodações">
                         <p>Acomodacões</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#gastronomia">
-                        <img src="../images/icons/utensils-solid.svg" alt="">
+                    <a href="#gastronomia">
+                        <img src="./../images/global/icons/utensils-solid.svg" alt="icone de gastronomia">
                         <p>Gastronomia</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#ofertas">
-                        <img src="../images/icons/star-solid.svg" alt="">
+                    <a href="#topOfertas">
+                        <img src="./../images/global/icons/star-solid.svg" alt="icone de top ofertas">
                         <p>Top Ofertas</p>
                     </a>
                 </li>
                 <li>
-                    <a class="grid-icons" href="#contato">
-                        <img src="../images/icons/envelope-solid.svg" alt="">
+                    <a href="#contato">
+                        <img src="./../images/global/icons/envelope-solid.svg" alt="icone de contato">
                         <p>Contato</p>
                     </a>
                 </li>
             </ul>
         </nav>
-        <div class="login">
-            <ul>
-                <select>
-                    <option>
-                        🇧🇷
-                    </option>
-                    <option>
-                        🇩🇪
-                    </option>
-                    <option>
-                        🇬🇧
-                    </option>
-                </select>
-                <li>
-                    <a class="grid-icons" href="#sobre">
-                        <img src="../images/icons/bars-solid.svg" alt="">
-                        <p>Olá, Visitante!</p>
-                    </a>
-                </li>
-                <li>
-                    <a id="logout" href="#sobre">
-                        <p>Sair</p>
-                    </a>
-                </li>
-            </ul>
+        <div class="flex gap-div">
+            <select>
+                <option style="width: 40px;">🇧🇷</option>
+                <option>🇱🇷</option>
+                <option>🇪🇸</option>
+            </select>
+            <a href="" class="flex gap-login">
+                <img src="./../images/global/icons/bars-solid.svg" alt="">
+                <p>Olá, Visitante!</p>
+            </a>
+            <a href="" class="flex">
+                <p>Sair</p>
+            </a>
         </div>
     </header>
     
@@ -94,9 +80,6 @@
 </slogan>
     
     <main>       
-        <button class="button-reserve">
-            Reserve
-        </button>
         <div class="container">
             <section id="page-section">
                 
@@ -122,7 +105,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao02.jpg">
@@ -142,7 +125,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao03.jpg">
@@ -162,7 +145,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao04.jpg">
@@ -182,7 +165,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao05.jpg">
@@ -202,7 +185,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao06.jpg">
@@ -222,7 +205,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao07.jpg">
@@ -242,7 +225,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao08.jpg">
@@ -262,7 +245,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao09.jpg">
@@ -282,7 +265,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div id="flex-div">
                             <img src="../images/acomodacoes/acomodacao01.jpg">
@@ -302,7 +285,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                             </a>
                         </div>
                         <div>
@@ -323,7 +306,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao03.jpg">
@@ -343,7 +326,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao04.jpg">
@@ -363,7 +346,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao05.jpg">
@@ -383,7 +366,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao06.jpg">
@@ -403,7 +386,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao07.jpg">
@@ -423,7 +406,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao08.jpg">
@@ -443,7 +426,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div>
                             <img src="../images/acomodacoes/acomodacao09.jpg">
@@ -463,7 +446,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                         <div id="flex-div">
                             <img src="../images/acomodacoes/acomodacao01.jpg">
@@ -483,7 +466,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                             </a>
                         </div>
                         <div>
@@ -504,7 +487,7 @@
                                     <img src="../images/acomodacoes/iconsAcomodacoes/bagagem.png">
                                 </div>
                             </div>
-                            <button class="btn">Reserve Agora</button>
+                            <button class="btn-reserve-agora">Reserve Agora</button>
                         </div>
                     </section>
 
@@ -553,18 +536,18 @@
                 
                 
                 <article id="principios">
-                    <div id="box">
-                        <div class="box">
+                    <div id="box-acomod">
+                        <div class="box-acomod">
                             <h2 id="titles-sobre"><img src="../images/acomodacoes/iconsAcomodacoes/objetivo.png" alt=""> Missão</h2>
                             <span>Tornar a vida das pessoas mais felizes oferecendo-lhes momentos prazerosos em um local exuberante, com muitas paisagens naturais, ar fresco e acomodações maravilhosas.
                             </span>
                         </div>
-                        <div class="box">
+                        <div class="box-acomod">
                             <h2 id="titles-sobre"><img src="../images/acomodacoes/iconsAcomodacoes/visao.png" alt=""> Visão</h2>
                             <span>Mostrar o quão maravilhoso é ter uma vida saudavel, em meio a natureza, com momentos prazerosos, em um local privilegiado e com uma equipe dedicada a te trazer momentos felizes.
                             </span>
                         </div>
-                        <div class="box">
+                        <div class="box-acomod">
                             <h2 id="titles-sobre"><img src="../images/acomodacoes/iconsAcomodacoes/diamond.png" alt=""> Valores</h2>
                             <span>Nossos valores são fortalecidos por 6 pilares principais, são eles: equipe, dedicação, comprometimento, família e paixão pelo que fazemos.
                             </span>
@@ -578,13 +561,67 @@
     </main>
 
     <footer>
-        <div class="container">
-            
-            <div id="redes-sociais">
-                <a href="#"><img src="../images/icons/icons8-facebook-novo.svg" alt="icone facebook"></a>
-                <a href="#"><img src="../images/icons/icons8-instagram.svg" alt="icone do instagram"></a>
-                <a href="#"><img src="../images/icons/icons8-whatsapp.svg" alt="icone do whatsapp"></a>
+        <div class="container-footer">
+            <div class="card-footer">
+                <h3>Contato</h3>
+                <div class="column">
+                    <a href="tel:+55999129999">
+                        <img src="./../images/global/icons/icons8-telefone-48.svg" alt="">
+                        <p>+5584999129999</p>
+                    </a>
+                    <a href="mailto:hotelh@suporte.com.br">
+                        <img src="./../images/global/icons/envelope-solid.svg" alt="">
+                        <p>hotelh@suporte.com.br</p>
+                    </a>
+                    <a href="#">
+                        <img src="./../images/global/icons/icons8-maps-64.svg" alt="">
+                        <p>321, Rua das Maravilhas, <br> Brazil</p>
+                    </a>
+                </div>
+                <div class="icons">
+                    <a href="#">
+                        <img src="./../images/global/icons/icons8-instagram.svg" alt="">
+                    </a><a href="">
+                        <img src="./../images/global/icons/icons8-twitter.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./../images/global/icons/icons8-facebook-novo.svg" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="./../images/global/icons/icons8-whatsapp.svg" alt="">
+                    </a>
+                </div>
             </div>
+            <div class="card-footer">
+                <h3>Serviços</h3>
+                <div class="column">
+                    <a href="#">Home</a>
+                    <a href="#">Sobre</a>
+                    <a href="acomodacoes.html">Acomodações</a>
+                    <a href="#">Reserva</a>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h3>Carreira</h3>
+                <div class="column">
+                    <a href="#">Trabalhe Conosco</a>
+                    <a href="#">Desenvolvedor</a>
+                    <a href="#">Trainner</a>
+                </div>
+            </div>
+            <div class="card-footer">
+                <h3>Links Rápidos</h3>
+                <div class="column">
+                    <a href="#">Admin</a>
+                    <a href="#">Contato</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+    
+        </div>
+        <div class="directs">
+            <p>&copy;2023 - Grupo 5 TEX</p>
+        </div>
     </footer>
     </div>
 </body>

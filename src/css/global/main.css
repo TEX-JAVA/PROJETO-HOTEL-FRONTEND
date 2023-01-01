@@ -100,7 +100,7 @@ div.card-acomodacoes {
 }
 
 .bg-acomodacoes {
-    background-image: url(/images/global/acomodacoes3.jpg);
+    background-image: url(../../../images/global/acomodacoes3.jpg);
     height: 500px;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -171,7 +171,7 @@ div.card-acomodacoes {
 }
 
 section#gastronomia {
-    background-image: url(/images/global/gastronomia1jpg);
+    background-image: url(../../../images/global/gastronomia1jpg);
     height: 500px;
     background-attachment: fixed;
     position: relative;
