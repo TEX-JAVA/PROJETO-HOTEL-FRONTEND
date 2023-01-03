@@ -68,11 +68,12 @@ article.flexbox div {
     flex: 1;
 }
 
+section+section {
+    padding: 30px 0px;
+}
 
 section#sobre {
     background-color: #fff;
-    padding: 50px 0px;
-
 }
 
 section#acomodacoes {
@@ -88,7 +89,7 @@ div.card-acomodacoes {
     position: absolute;
     padding: 40px;
     right: 0;
-    top: -25px;
+    top: -108px;
 }
 
 .card-acomodacoes {
@@ -100,7 +101,7 @@ div.card-acomodacoes {
 }
 
 .bg-acomodacoes {
-    background-image: url(../../../images/global/acomodacoes3.jpg);
+    background-image: url(../../../images/home/sobre.avif);
     height: 500px;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -115,6 +116,8 @@ div.card-acomodacoes {
     flex-wrap: wrap;
     column-gap: 40px;
     margin: 30px 0px;
+    transition: .3s;
+
 }
 
 .box-acomodacoes {
@@ -125,6 +128,9 @@ div.card-acomodacoes {
     align-items: center;
 }
 
+.box-acomodacoes img:hover > :not(:hover){
+    opacity: .4 ;
+}    
 
 .box-acomodacoes img {
     width: 30px;
@@ -132,13 +138,12 @@ div.card-acomodacoes {
 
 .container-quartos {
     display: flex;
-    gap: 20px;
     flex-wrap: wrap;
     position: relative;
 }
 
-.container-quartos:hover~div {
-    background-color: red;
+.container-quartos div:nth-of-type(2) {
+    margin: 0px 20px;
 }
 
 .absolute {
@@ -170,8 +175,8 @@ div.card-acomodacoes {
     box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
 }
 
-section#gastronomia {
-    background-image: url(../../../images/global/gastronomia1jpg);
+.bg-gastronomia {
+    background-image: url(../../../images/home/gastronomia1jpg);
     height: 500px;
     background-attachment: fixed;
     position: relative;
@@ -193,6 +198,8 @@ section#gastronomia {
 }
 
 .center {
+    background-image: url('../../../images/home/GASTRONOMIA.png');
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,10 +209,95 @@ section#gastronomia {
 
 }
 
+.padding-gastro {
+    padding: 25px 0px;
+}
+
+.pratos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px
+}
+
+.prato {
+    height: 250px;
+    transition: .3s;
+}
+
+.pratos:hover > :not(:hover){
+    opacity: .4;
+}
+.prato img {
+    width: 100%;
+    height: 100%;
+}
+
+.bg1,
+.bg2,
+.bg3,
+.bg4,
+.bg5,
+.bg6,
+.bg7,
+.bg8,
+.bg9,
+.bg10 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.bg1 {
+    background-image: url('../../../images/home/prato9.jpg');
+}
+
+.bg2 {
+    background-image: url('../../../images/home/prato2.jpg');
+}
+
+.bg3 {
+    background-image: url('../../../images/home/prato3.jpg');
+}
+
+.bg4 {
+    background-image: url('../../../images/home/prato4.jpg');
+}
+
+.bg5 {
+    background-image: url('../../../images/home/prato5.jpg');
+}
+
+.bg6 {
+    background-image: url('../../../images/home/prato7.jpg');
+}
+
 .gastronomia-text {
     color: #fff;
     font-size: 1.5rem;
     border: 10px double #f1f1f1;
     padding: 50px 80px 100px 100px;
     line-height: 2;
+}
+
+section#topOfertas {
+    height: 700px;
+}
+
+.bg-topOfertas {
+    background-color: #008F8C;
+    height: 100%;
+
+}
+
+.containerPromocao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+
+}
+
+.promocao {
+    height: 450px;
+    background-color: black;
 }

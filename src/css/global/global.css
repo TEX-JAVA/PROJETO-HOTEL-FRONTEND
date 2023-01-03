@@ -31,6 +31,8 @@ option {
 	max-width: 1250px;
 	margin: 10px auto;
 	position: relative;
+	padding: 10px 0px;
+
 }
 
 .padding {
@@ -54,6 +56,11 @@ button {
 	cursor: pointer;
 }
 
+.flex {
+	display: flex;
+	align-items: center;
+}
+
 button:hover {
 	-webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
@@ -63,3 +70,5 @@ button:hover {
 button:hover {
 	background-color: #0fc2c0;
 }
+
+

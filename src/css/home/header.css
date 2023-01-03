@@ -11,10 +11,6 @@ header {
 	opacity: 0.9;
 }
 
-.flex {
-	display: flex;
-	align-items: center;
-}
 
 header a img {
 	width: 45px;
