@@ -9,7 +9,7 @@ video {
     object-fit: cover;
 }
 
-h2 {
+.h2-index {
     margin: 30px 0;
     font-size: 2rem;
     font-style: oblique;

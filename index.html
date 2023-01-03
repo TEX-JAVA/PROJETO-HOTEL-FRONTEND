@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1770fde015.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -55,15 +56,35 @@
         </nav>
         <div class="flex gap-div">
             <select>
-                <option style="width: 40px;">🇧🇷</option>
+                <option>🇧🇷</option>
                 <option>🇱🇷</option>
                 <option>🇪🇸</option>
             </select>
-            <a href="" class="flex gap-login">
-                <img src="./images/global/icons/bars-solid.svg" alt="">
-                <p>Olá, Visitante!</p>
-            </a>
-            <a href="" class="flex">
+            <ul>
+                <li>
+                    <input type="checkbox" id="login_check" />
+                    <label for="login_check">
+                        <i class="fa-solid fa-bars" id="btn"></i>
+                        <i class="fa-solid fa-xmark" id="cancel"></i>
+                        <p>Olá! Visitante</p>
+                    </label>
+                    <form action="#" method="post">
+                        <div class="login_form">
+                            <ul class="login_list">
+                                <li><input type="email" class="txt" placeholder="E-mail" /></li>
+                                <li><input type="password" class="txt" placeholder="Senha" /></li>
+                                <p><input type="checkbox" />Salvar Senha</p>
+                                <li><input type="button" class="login_button" value="Login" /></li>
+                            </ul>
+                            <div class="login_suporte">
+                                <a href="#">Esqueci minha senha</a>
+                                <a href="#">Não tenho uma conta</a>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+            <a href="#" class="flex">
                 <p>Sair</p>
             </a>
         </div>
@@ -82,7 +103,7 @@
                     <p class="line">
                         Elevando o conforto ao mais alto nível
                     </p>
-                    <h2>Bem-Vindo ao Hotel H</h2>
+                    <h2 class="h2-index">Bem-Vindo ao Hotel H</h2>
                     <div class="margin">
                         <p>O hotel hotel h é a escolha certa para os visitantes que procuram uma combinação de charme,
                             paz,
@@ -98,7 +119,7 @@
             <div class="bg-acomodacoes">
                 <article class="container relative">
                     <div class="card-acomodacoes">
-                        <h2>Nossas Acomodações</h2>
+                        <h2 class="h2-index">Nossas Acomodações</h2>
                         <p>O Hotel H é lider em conforto e na qualidade de hospedagem. contomas com excelentes espaços
                             para sua diversão e entretenimento.</p>
                         <div class="container-acomodacoes">
@@ -128,16 +149,16 @@
                 <p class="line">
                     Elevando o conforto ao mais alto nível
                 </p>
-                <h2>Quartos e Suites</h2>
+                <h2 class="h2-index">Quartos e Suites</h2>
                 <div class="container-quartos">
                     <div class="box">
-                        <img src="./images/global/quarto1.jpg" alt="">
+                        <img src="./images/global/quarto1.jpg" title="quarto com almofadas" alt="quarto com almofadas">
                     </div>
                     <div class="box">
-                        <img src="./images/global/quarto3.jpg" alt="">
+                        <img src="./images/global/quarto3.jpg" title="uarto com vista para o mar" alt="quarto com vista para o mar">
                     </div>
                     <div class="box">
-                        <img src="./images/global/quarto2.jpg" alt="">
+                        <img src="./images/global/quarto2.jpg" title="corredor de quartos" alt="corredor de quartos">
                     </div>
                     <button class="absolute">Saiba mais</button>
                 </div>
@@ -147,9 +168,11 @@
             <div class="opaco"></div>
             <article class="container center">
                 <div class="gastronomia-text">
-                    <h2>Gastronomia</h2>
-                    <p>Pratos preparados com Carinho pelo Chef Roque, com ingredientes Frescos e temperos de Londres.</p>
+                    <h2 class="h2-index">Gastronomia</h2>
+                    <p>Pratos preparados com Carinho pelo Chef Roque, com ingredientes Frescos e temperos de Londres.
+                    </p>
                 </div>
+                
             </article>
             <article class="container">
                 <p class="line">
