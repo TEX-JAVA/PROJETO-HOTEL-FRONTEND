@@ -3,7 +3,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
-	padding: 12px;
+	padding: 11px;
 	z-index: 10;
 	width: 100%;
 	background-color: #023535;
@@ -30,10 +30,7 @@ header nav ul {
 	gap: 20px;
 }
 
-select,
-option {
-	color: #fff !important;
-}
+
 .gap-div {
 	gap: 15px;
 }
@@ -58,7 +55,8 @@ select,
 option {
 	background-color: transparent;
 	outline: none;
-	font-size: 1.2rem;
+	color: #fff;
+	font-size: 1.4rem;
 }
 
 @media (max-width: 1260px) {
@@ -70,7 +68,7 @@ option {
 		padding: 8px;
 	}
 
-	#login_check + label p {
+	#login_check+label p {
 		display: none;
 	}
 }
