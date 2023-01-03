@@ -1,0 +1,338 @@
+/* SLOGAN */
+
+:root {
+  --color-light-black: #191919;
+  --color-white: #ffffff;
+}
+
+.slogan {
+  position: relative;
+  background-color: var(--color-light-black);
+  background-image: url("../../../images/acomodacoes/capa.jpeg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 175px;
+  padding-bottom: 175px;
+  items-align: center;
+  text-align: center;
+  opacity: 100%;
+}
+
+.slogan-text {
+  index: 1;
+  color: white;
+  text-align: center;
+  font-size: 2.8rem;
+}
+
+.slogan-title-text {
+  index: 1;
+  color: white;
+  text-align: center;
+  font-size: 75px;
+}
+
+.background-overlay {
+  background-color: var(--color-light-black);
+  opacity: 0.65;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.btn-acomodacao {
+  border: solid 2px #5dc4c8;
+  border-radius: 10px;
+  padding: 25px;
+  width: 200px;
+  height: 70px;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  background: #023535;
+  display: inline-block;
+  margin: 20px 0;
+  opacity: 80%;
+}
+
+.btn-acomodacao:hover {
+  cursor: pointer;
+  background: #5dc4c8;
+  padding: 20px;
+  opacity: 100%;
+  color: #023535;
+  border: solid 2px #023535;
+  border-radius: 10px;
+  font-weight: 800;
+  opacity: 70%;
+  scale: 1.05;
+}
+
+.btn-acomodacao span {
+  font: small-caps bold 24px/1 sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+/* Nossas Acomodações */
+
+section .flex {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+section .flex > div {
+  text-align: center;
+  flex: 1 1 30px;
+  margin: 10px;
+  border: 1px solid #023535;
+  background-color: #5dc4c8;
+  border-radius: 0px 0px 10px 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  opacity: 80%;
+}
+
+.flex > div:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px #023535;
+  opacity: 100%;
+}
+
+section .flex img {
+  max-width: 100%;
+  display: block;
+}
+
+#text-acomodacoes {
+  text-align: center;
+  margin: 70px 0px 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #023535;
+}
+
+#acomodacao {
+  font-size: 16px;
+  padding: 6px 0px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#descricao {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn-reserve-agora {
+  margin: 10px auto;
+  width: 200px;
+  height: 50px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #023535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-reserve-agora:hover {
+  cursor: pointer;
+  background: #015958;
+  border: 2px solid #023535;
+  scale: 1.02;
+}
+
+#icon-service-acomodacoes {
+  display: inline-block;
+  width: 20px;
+  padding-top: 20px;
+  margin: 5px;
+}
+
+/* CSS CAIXAS */
+
+#box-acomod {
+  display: flex;
+  gap: 4%;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
+.box-acomod:hover {
+  transform: scale(1.02);
+  opacity: 100%;
+}
+
+div .box-acomod {
+  display:inline-block;
+  background-color: #5dc4c8;
+  border: 1px solid #023535;
+  border-radius: 20px;
+  width: 340px; 
+  height: 280px;
+  align-items: center;
+  align-content: space-between;
+  opacity: 80%;
+  
+}
+
+div .box-acomod{
+  text-align: center;
+  color: #023535;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 0px 20px 0px;
+
+}
+
+div .box-acomod img{
+  width: 30px;
+  height: 30px;
+ 
+}
+
+
+/* PROMOCÃO */
+
+#promocao {
+  margin: 0px 60px 0px;
+}
+
+#promocao div {
+  flex: 1 1 550px;
+  flex-wrap: wrap;
+  max-width: 1120px;
+  margin: 0px auto;
+  text-align: center;
+
+}
+
+#text-promocao {
+  text-align: center;
+  margin-top: 100px;
+  margin: 70px 0px 30px;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: #023535;
+}
+
+#promocao > div:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px #023535;
+  opacity: 100%;
+}
+
+#promocao img {
+  max-width: 100%;
+  display: block;
+}
+
+#img-promocao {
+  max-width: 100%;
+  display: block;
+  border: 2px solid #015958;
+}
+
+.promocao-text {
+  display: flex;
+  background-color: #5dc4c8;
+  border: 1px solid #015958;
+  max-width: 1150px;
+  align-items: center;
+  margin: 10px;
+}
+
+.promocao-text div {
+  text-align: center;
+  padding: 0px 0px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.promocao-text div p {
+  text-align: center;
+  font-size: 1.5em;
+  padding: 20px 0px;
+}
+
+#promocao-text:hover {
+  transform: scale(1.05);
+}
+
+#title-promocao {
+  padding: 20px;
+  color: #ff4500;
+  font-size: 3rem;
+  text-shadow: 10px 10px 5px gray;
+}
+
+#text-de {
+  color: red;
+  text-decoration: line-through;
+  padding: 0px;
+}
+
+#title-preco {
+  text-align: center;
+  padding: 0px;
+  font-size: 3rem;
+  text-shadow: 10px 10px 5px gray;
+}
+
+#promocao-aviso {
+  color: #ff4500;
+  font-size: 2rem;
+}
+
+#icon-service {
+  display: inline-block;
+  width: 40px;
+  padding: 30px 10px 10px;
+  margin: px;
+}
+
+.btn-promocao {
+  margin: 10px auto;
+  width: 240px;
+  height: 70px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #023535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-promocao:hover {
+  cursor: pointer;
+  background: #015958;
+  border: 2px solid #023535;
+  scale: 1.02;
+}
+
+/* MENSAGEM */
+
+#mensagem {
+  text-align: center;
+  margin: 100px 60px 30px;
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-size: 2em;
+  font-weight: bold;
+  justify: center;
+  index: 1;
+}
