@@ -6,7 +6,7 @@
 video {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .h2-index {
@@ -76,9 +76,6 @@ section#sobre {
     background-color: #fff;
 }
 
-section#acomodacoes {
-    margin-bottom: 80px;
-}
 
 div.card-acomodacoes {
     z-index: 10px;
@@ -89,7 +86,7 @@ div.card-acomodacoes {
     position: absolute;
     padding: 40px;
     right: 0;
-    top: -108px;
+    top: -135px;
 }
 
 .card-acomodacoes {
@@ -128,9 +125,9 @@ div.card-acomodacoes {
     align-items: center;
 }
 
-.box-acomodacoes img:hover > :not(:hover){
-    opacity: .4 ;
-}    
+.box-acomodacoes img:hover> :not(:hover) {
+    opacity: .4;
+}
 
 .box-acomodacoes img {
     width: 30px;
@@ -200,17 +197,13 @@ div.card-acomodacoes {
 .center {
     background-image: url('../../../images/home/GASTRONOMIA.png');
     background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     width: 100%;
     height: 500px;
 
 }
 
 .padding-gastro {
-    padding: 25px 0px;
+    padding: 60px 0px;
 }
 
 .pratos {
@@ -224,9 +217,10 @@ div.card-acomodacoes {
     transition: .3s;
 }
 
-.pratos:hover > :not(:hover){
+.pratos:hover> :not(:hover) {
     opacity: .4;
 }
+
 .prato img {
     width: 100%;
     height: 100%;
@@ -272,32 +266,31 @@ div.card-acomodacoes {
     background-image: url('../../../images/home/prato7.jpg');
 }
 
-.gastronomia-text {
-    color: #fff;
-    font-size: 1.5rem;
-    border: 10px double #f1f1f1;
-    padding: 50px 80px 100px 100px;
-    line-height: 2;
-}
-
-section#topOfertas {
-    height: 700px;
-}
-
-.bg-topOfertas {
-    background-color: #008F8C;
+.bg-avaliacao {
+    background-image: url('../../../images/home/banner-avaliacao.svg');
     height: 100%;
-
 }
 
-.containerPromocao {
+section#avaliacao{
+    height: 600px;
+    margin: 20px 0px;
+}
+
+.container-avaliacao {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px;
-
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 20px
 }
 
-.promocao {
-    height: 450px;
-    background-color: black;
+.card-avaliacao{
+    height: 300px;
+}
+
+.card-avaliacao img{
+    width: 150px;
+}
+
+div.container{
+    background-color: #008F8C;
 }

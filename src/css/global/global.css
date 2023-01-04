@@ -29,14 +29,10 @@ option {
 
 .container {
 	max-width: 1250px;
-	margin: 10px auto;
+	margin: 30px auto;
 	position: relative;
 	padding: 10px 0px;
 
-}
-
-.padding {
-	padding: 50px 0px;
 }
 
 .relative {
