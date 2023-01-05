@@ -14,7 +14,7 @@
   background-size: cover;
   padding-top: 175px;
   padding-bottom: 175px;
-  items-align: center;
+  align-items: center;
   text-align: center;
   opacity: 100%;
 }
@@ -83,7 +83,7 @@
 section .flex {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1150px;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
@@ -95,8 +95,8 @@ section .flex > div {
   background-color: #5dc4c8;
   border-radius: 0px 0px 10px 10px;
   font-family: "Nunito", sans-serif;
-  font-weight: bold;
   opacity: 80%;
+  transition: .3s;
 }
 
 .flex > div:hover {
@@ -192,7 +192,7 @@ div .box-acomod{
   font-size: 1.2em;
   font-weight: bold;
   margin-bottom: 1em;
-  padding: 0px 20px 0px;
+  padding: 40px;
 
 }
 
@@ -249,7 +249,7 @@ div .box-acomod img{
   display: flex;
   background-color: #5dc4c8;
   border: 1px solid #015958;
-  max-width: 1150px;
+  max-width: 1250px;
   align-items: center;
   margin: 10px;
 }

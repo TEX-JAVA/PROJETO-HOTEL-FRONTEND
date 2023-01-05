@@ -1,24 +1,26 @@
 footer {
     background-color: #015958;
-    display: block;
 }
 
 .container-footer {
-    padding: 10px 20px;
+    padding: 10px 0;
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     max-width: 1400px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card-footer {
+    flex-basis: auto;
+    margin: 10px;
 }
 
 h3 {
     color: #fff;
     font-size: 1.6rem;
     margin: 25px 0;
-}
-
-.card-footer {
-    flex: 1;
-    margin: 10px;
 }
 
 .icons {
@@ -36,7 +38,8 @@ h3 {
 }
 
 
-.icons a img:hover, .column a:hover{
+.icons a img:hover,
+.column a:hover {
     opacity: 1
 }
 

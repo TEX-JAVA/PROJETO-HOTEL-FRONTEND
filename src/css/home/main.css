@@ -1,3 +1,5 @@
+/* Section Banner Video */
+
 .banner {
     width: 100%;
     height: 100vh;
@@ -9,16 +11,35 @@ video {
     object-fit: fill;
 }
 
+/* Section Geral */
+
+section+section {
+    padding: 30px 0px;
+}
+
+/* Section Sobre */
+
+.flexbox {
+    display: flex;
+    gap: 30px
+}
+
+.flexbox img {
+    flex: 1.3;
+    width: 200px;
+    object-fit: cover;
+}
+
+.flexbox div {
+    flex: 1;
+}
+
 .h2-index {
     margin: 30px 0;
     font-size: 2rem;
     font-style: oblique;
 }
 
-.flexbox {
-    display: flex;
-    gap: 30px
-}
 
 .line {
     margin: 20px 0;
@@ -58,19 +79,6 @@ video {
 
 }
 
-article.flexbox img {
-    flex: 1.3;
-    width: 200px;
-    object-fit: cover;
-}
-
-article.flexbox div {
-    flex: 1;
-}
-
-section+section {
-    padding: 30px 0px;
-}
 
 section#sobre {
     background-color: #fff;
@@ -111,7 +119,7 @@ div.card-acomodacoes {
 .container-acomodacoes {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 40px;
+    column-gap: 10px;
     margin: 30px 0px;
     transition: .3s;
 
@@ -120,7 +128,7 @@ div.card-acomodacoes {
 .box-acomodacoes {
     display: grid;
     grid-template-columns: .2fr auto;
-    row-gap: 20px;
+    row-gap: 10px;
     column-gap: 10px;
     align-items: center;
 }
@@ -140,29 +148,29 @@ div.card-acomodacoes {
 }
 
 .container-quartos div:nth-of-type(2) {
-    margin: 0px 20px;
+    margin: 0px 10px;
 }
 
 .absolute {
     position: absolute;
-    left: 37%;
-    bottom: -50px;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 180%);
     width: 300px;
 }
 
 
 .box {
     flex: 1;
-    flex-wrap: wrap;
     background-color: #f1f1f1;
-    height: 500px;
+    height: 400px;
     cursor: pointer;
     transition: .3s;
 }
 
 .box img {
     width: 100%;
-    height: 100%;
+        height: 100%;
     object-fit: cover;
 }
 
@@ -208,7 +216,7 @@ div.card-acomodacoes {
 .pratos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 20px
+    gap: 10px
 }
 
 .prato {
@@ -289,7 +297,7 @@ section#avaliacao {
     height: 300px;
     color: #fff;
     margin: 12% auto;
-   
+
 }
 
 .card-avaliacao img {
@@ -313,4 +321,29 @@ section#avaliacao {
     font-size: 22px;
     position: relative;
     top: -18px;
+}
+
+@media (max-width: 1260px) {
+    .flexbox {
+        display: flex;
+        gap: 30px
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .banner {
+        display: none;
+    }
+
+    .margin {
+        margin-left: 0;
+    }
+
+
 }
