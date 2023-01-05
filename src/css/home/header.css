@@ -3,7 +3,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	position: fixed;
-	padding: .9%;
+	padding: 12px;
 	z-index: 10;
 	width: 100%;
 	background-color: #023535;
