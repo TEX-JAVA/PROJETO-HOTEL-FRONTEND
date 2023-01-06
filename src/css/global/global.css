@@ -2,6 +2,8 @@
 @import url('../home/main.css');
 @import url('../home/footer.css');
 @import url('../login/login.css');
+@import url('../login/menu-sidebar.css');
+
 
 * {
 	padding: 0;

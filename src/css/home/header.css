@@ -67,6 +67,7 @@ option {
 	#login_check+label p {
 		display: none;
 	}
+
 }
 
 @media (max-width: 768px) {
@@ -81,4 +82,5 @@ option {
 	.flex p {
 		display: none;
 	}
+
 }

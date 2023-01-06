@@ -1,0 +1,81 @@
+.menu-sidebar{
+    /* display: none; */
+    display: flex;
+    position: fixed; 
+    width: 36vh;
+    top: 0vh; 
+    right: -200vh;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #023535;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+}            
+.menu-sidebar-lista li{
+    width: 100%;
+    padding: 0px 10px;
+    line-height: 70px;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px black solid;
+}
+
+.menu-sidebar-lista{
+    width: 100%;
+}
+
+.menu-sidebar-lista li a{
+    
+}
+.menu-sidebar-lista li:hover{
+    background-color: #0fc2c0;
+    padding-left: 20px;
+}
+
+.menu-sidebar-lista li a p{
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+.menu-sidebar-lista li a i{
+    color: white;
+}
+
+.menu-sidebar-login{
+    height: 73.61px;
+    padding: 12px;
+}
+
+#slide-menu-sidebar{
+    display: none;
+}
+
+label #slide-btn, label #slide-cancel{
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: all 0.5s ease;
+}
+
+label #slide-cancel{
+    right: -40vh;
+}
+
+label #slide-btn{
+    right: 10vh;
+}
+
+#slide-menu-sidebar:checked ~ .menu-sidebar{
+    right: 0vh;
+}
+
+#slide-menu-sidebar:checked ~ label #slide-cancel{
+    right: 40vh;
+}
+
+#slide-menu-sidebar:checked ~ label #slide-btn{
+    display: none;
+}
+
+
+
