@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Administração - HOTEL H</title>
+        <link
+            rel="shortcut icon"
+            href="../../images/global/icons/hackerrank.svg"
+        />
+        <link
+            rel="stylesheet"
+            href="./css/admin-login.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./css/admin-home.css"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/1770fde015.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#">
+                <img
+                    src="../../images/global/logo.png"
+                    alt="imagem de logo"
+                />
+                <p>Hotel H</p>
+            </a>
+            <nav>
+                <ul class="flex">
+                    <li>
+                        <a href="">
+                            <img
+                                src="../../images/global/icons/envelope-solid.svg"
+                                alt="icone de contato"
+                            />
+                            <p>Contato</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex gap-div">
+                <select>
+                    <option>🇧🇷</option>
+                    <option>🇱🇷</option>
+                    <option>🇪🇸</option>
+                </select>
+                <ul>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="login_check"
+                        />
+                        <label for="login_check">
+                            <i
+                                class="fa-solid fa-bars"
+                                id="btn"
+                            ></i>
+                            <i
+                                class="fa-solid fa-xmark"
+                                id="cancel"
+                            ></i>
+                            <p>Olá! Visitante</p>
+                        </label>
+                        <form
+                            action="#"
+                            method="post"
+                        >
+                            <div class="login_form">
+                                <ul class="login_list">
+                                    <li>
+                                        <input
+                                            type="email"
+                                            class="txt"
+                                            placeholder="E-mail"
+                                        />
+                                    </li>
+                                    <li>
+                                        <input
+                                            type="password"
+                                            class="txt"
+                                            placeholder="Senha"
+                                        />
+                                    </li>
+                                    <div class="salvar-senhar">
+                                        <input
+                                            name="senha"
+                                            type="checkbox"
+                                            id="senha"
+                                        />
+                                        <label for="senha">Salvar senha</label>
+                                    </div>
+                                    <li>
+                                        <input
+                                            type="button"
+                                            class="login_button"
+                                            value="Login"
+                                        />
+                                    </li>
+                                </ul>
+                                <div class="login_suporte">
+                                    <a href="#">Esqueci minha senha</a>
+                                    <a href="#">Não tenho uma conta</a>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <a
+                    href="#"
+                    class="flex"
+                >
+                    <p>Sair</p>
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="container-admin">
+                <div class="div-employees-onshift">
+                    <table class="admin-employees">
+                        <caption>
+                            <h2>Funcionários</h2>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Função</th>
+                                <th scope="col">Turno</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Nome">João A.</td>
+                                <td data-label="Função">Camareiro</td>
+                                <td data-label="Turno">Tarde</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    scope="row"
+                                    data-label="Nome"
+                                >
+                                    Alberto J.
+                                </td>
+                                <td data-label="Função">Gerente</td>
+                                <td data-label="Turno">Tarde</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    scope="row"
+                                    data-label="Nome"
+                                >
+                                    Jãoberto A.
+                                </td>
+                                <td data-label="Função">Chef</td>
+                                <td data-label="Turno">Tarde</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    scope="row"
+                                    data-label="Nome"
+                                >
+                                    Jussara A.
+                                </td>
+                                <td data-label="Função">Gerente</td>
+                                <td data-label="Turno">Tarde</td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="admin-employees.html">Ir para Funcionários</a>
+                </div>
+                <div class="div-guests-onsite">
+
+                    <table class="admin-guests-onpremisses">
+                        <caption>
+                            <h2>
+                                Hóspedes nas premissas
+                            </h2>
+                        </caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Data do CheckIn</th>
+                                <th scope="col">Data Esperada do Checkout</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="Nome">João A.</td>
+                                <td data-label="Data do CheckIn">06/01/2023 - 12hs</td>
+                                <td data-label="Data esperada do CheckOut">13/01/2023 - 17hs</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    scope="row"
+                                    data-label="Nome"
+                                >
+                                    Alberto J.
+                                </td>
+                                <td data-label="Data do CheckIn">06/01/2023 - 12hs</td>
+                                <td data-label="Data esperada do CheckOut">13/01/2023 - 17hs</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    scope="row"
+                                    data-label="Nome"
+                                >
+                                    Jãoberto A.
+                                </td>
+                                <td data-label="Data do CheckIn">06/01/2023 - 12hs</td>
+                                <td data-label="Data esperada do CheckOut">13/01/2023 - 17hs</td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td
+                                    scope="row"
+                                    data-label="Nome"
+                                >
+                                    Jussara A.
+                                </td>
+                                <td data-label="Data do CheckIn">06/01/2023 - 12hs</td>
+                                <td data-label="Data esperada do CheckOut">13/01/2023 - 17hs</td>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="">Ir para Hóspedes</a>
+                </div>
+                <div class="div-graph-occupancy">
+                    <h2>
+                        Ocupação
+                    </h2>
+                    <img
+                        class="admin-graph-occupancy"
+                        src="../placeholder-images/occupancy-graph.jpg"
+                        alt="gráfico de ocupação"
+                    />
+                </div>
+                <div class="div-list-reserves-incoming">
+                    <h2>
+                        Hóspedes esperados nos próximos dias
+                    </h2>
+                    <ul class="expected-guests-today">
+                        <h2>Hoje</h2>
+                        <li>Horácio</li>
+                        <li>Horácio</li>
+                        <li>Horácio</li>
+                        <li>Horácio</li>
+                    </ul>
+                    <ul class="expected-guests-tomorrow">
+                        <h2>Amanhã</h2>
+                        <li>Horácio</li>
+                        <li>Horácio</li>
+                        <li>Horácio</li>
+                        <li>Horácio</li>
+                    </ul>
+                    <a href="">Ir para Lista de Reservas</a>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="directs">
+                <p>&copy;2023 - Grupo 5 TEX</p>
+            </div>
+        </footer>
+    </body>
+</html>

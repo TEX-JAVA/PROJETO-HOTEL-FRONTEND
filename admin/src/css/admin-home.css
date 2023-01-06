@@ -1,0 +1,109 @@
+main {
+    height: 94vh;
+    padding: 0;
+    padding-top: 8vh;
+}
+
+main a {
+    background-color: teal;
+    color: antiquewhite;
+    padding: 5px;
+    bottom: 10px;
+    border-radius: 5px;
+}
+
+.container-admin {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 100%;
+    background-color: bisque;
+}
+
+.div-employees-onshift {
+    grid-area: 1 / 1 / 3 / 4;
+    margin: auto;
+}
+
+.div-employees-onshift table {
+    background-color: teal;
+}
+
+.div-employees-onshift td {
+    padding: 1% 20px;
+}
+
+.div-employees-onshift thead tr {
+    background-color: cadetblue;
+}
+
+.div-employees-onshift tbody tr:nth-child(even) {
+    background-color: cadetblue;
+}
+.div-employees-onshift tbody tr:nth-child(odd) {
+    background-color: wheat;
+}
+
+.div-guests-onsite {
+    grid-area: 1 / 4 / 3 / 7;
+    margin: auto;
+}
+
+.div-guests-onsite table {
+    background-color: teal;
+}
+
+.div-guests-onsite td {
+    padding: 1% 20px;
+}
+
+.div-guests-onsite thead tr {
+    background-color: cadetblue;
+}
+
+.div-guests-onsite tbody tr:nth-child(even) {
+    background-color: cadetblue;
+}
+.div-guests-onsite tbody tr:nth-child(odd) {
+    background-color: wheat;
+}
+
+.div-graph-occupancy {
+    grid-area: 3 / 1 / 5 / 4;
+    display: flex;
+    flex-direction: column;
+}
+
+.div-graph-occupancy h2 {
+    text-align: center;
+}
+
+.div-graph-occupancy img {
+    max-height: 90%;
+}
+
+.div-list-reserves-incoming {
+    grid-area: 3 / 4 / 5 / 7;
+    margin: auto;
+}
+
+.div-list-reserves-incoming ul {
+    align-content: center;
+}
+
+.div-list-reserves-incoming li {
+    padding: 1% 0;
+}
+
+.div-list-reserves-incoming li:nth-child(even) {
+    background-color: cadetblue;
+}
+.div-list-reserves-incoming li:nth-child(odd) {
+    background-color: wheat;
+}
+
+footer .container-footer {
+    max-height: 5vh;
+}
