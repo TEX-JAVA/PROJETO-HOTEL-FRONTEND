@@ -32,16 +32,18 @@ label #cancel {
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-}	
+}
 
-.salvar-senhar input{
+.salvar-senhar input {
 	margin-right: 10px;
 	width: 20px;
 }
-.salvar-senhar label{
+
+.salvar-senhar label {
 	font-size: 1.4rem;
 	color: #fff;
 }
+
 label p:hover {
 	cursor: pointer;
 }

@@ -1,5 +1,4 @@
 .menu-sidebar{
-    /* display: none; */
     display: flex;
     position: fixed; 
     width: 36vh;
@@ -24,9 +23,6 @@
     width: 100%;
 }
 
-.menu-sidebar-lista li a{
-    
-}
 .menu-sidebar-lista li:hover{
     background-color: #0fc2c0;
     padding-left: 20px;
@@ -53,7 +49,7 @@
 label #slide-btn, label #slide-cancel{
     position: absolute;
     cursor: pointer;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     transition: all 0.5s ease;
 }
 
@@ -62,7 +58,7 @@ label #slide-cancel{
 }
 
 label #slide-btn{
-    right: 10vh;
+    right: 3vw;
 }
 
 #slide-menu-sidebar:checked ~ .menu-sidebar{

@@ -27,9 +27,13 @@ header nav ul {
 }
 
 
-.gap-div {
-	gap: 15px;
+
+.flexMenu{
+	display: flex;
+	align-items: center;
+	gap: 15px;	
 }
+
 
 .gap-login {
 	gap: 7px;
@@ -55,6 +59,13 @@ option {
 	font-size: 1.4rem;
 }
 
+
+@media(min-width: 768px) {
+	.sidebar {
+		display: none;
+	}
+}
+
 @media (max-width: 1260px) {
 	nav ul li a p {
 		display: none;
@@ -65,6 +76,10 @@ option {
 	}
 
 	#login_check+label p {
+		display: none;
+	}
+
+	.teste {
 		display: none;
 	}
 
@@ -82,5 +97,14 @@ option {
 	.flex p {
 		display: none;
 	}
+
+	.menu-login {
+		display: none;
+	}
+
+	.menuLogin {
+		display: none;
+	}
+
 
 }
