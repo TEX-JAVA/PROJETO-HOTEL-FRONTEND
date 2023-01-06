@@ -79,10 +79,6 @@ option {
 		display: none;
 	}
 
-	.teste {
-		display: none;
-	}
-
 }
 
 @media (max-width: 768px) {
@@ -98,13 +94,28 @@ option {
 		display: none;
 	}
 
-	.menu-login {
+	#login_check + label #btn {
 		display: none;
 	}
 
-	.menuLogin {
-		display: none;
+	#login_check + label #cancel{
+		right: 9.5vh;
 	}
 
+	.login_form {
+		right: 8vh !important;
+		z-index: 1;
+	}
 
+	#slide-cancel{
+		background-color: red;
+		opacity: 0.5;
+		border-radius: 50%;
+		width: 25px;
+		text-align: center;
+	}
+
+	#login_check:checked #menu-sidebar{
+		right: -200vh;
+	}
 }
