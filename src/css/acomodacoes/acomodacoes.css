@@ -20,27 +20,17 @@
 }
 
 .slogan-text {
-  index: 1;
   color: white;
   text-align: center;
-  font-size: 2.8rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .slogan-title-text {
-  index: 1;
-  color: white;
-  text-align: center;
-  font-size: 75px;
-}
+  z-index: 1;
+  font-size: 3rem;
+  color: #fff;
 
-.background-overlay {
-  background-color: var(--color-light-black);
-  opacity: 0.65;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
 }
 
 .btn-acomodacao {
@@ -84,24 +74,23 @@ section .flex {
   display: flex;
   flex-wrap: wrap;
   max-width: 1250px;
-  margin: 0 auto;
+  margin: 40px auto;
+  row-gap: 30px;
 }
 
-section .flex > div {
+section .flex>div {
   text-align: center;
   flex: 1 1 30px;
   margin: 10px;
-  border: 1px solid #023535;
-  background-color: #5dc4c8;
-  border-radius: 0px 0px 10px 10px;
-  font-family: "Nunito", sans-serif;
+  border: 3px solid #f1f1f1;
   opacity: 80%;
   transition: .3s;
 }
 
-.flex > div:hover {
-  transform: scale(1.01);
-  box-shadow: 0 0 20px #023535;
+.flex>div:hover {
+  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   opacity: 100%;
 }
 
@@ -110,13 +99,14 @@ section .flex img {
   display: block;
 }
 
-#text-acomodacoes {
+.text-acomodacoes,
+.text-promocao {
   text-align: center;
-  margin: 70px 0px 20px;
+  margin: 70px auto;
   font-size: 2rem;
   font-weight: bold;
   font-family: sans-serif;
-  color: #023535;
+  color: rgb(2, 53, 53);
 }
 
 #acomodacao {
@@ -162,10 +152,10 @@ section .flex img {
 
 #box-acomod {
   display: flex;
-  gap: 4%;
+  margin: 43px 0px;
   flex-wrap: wrap;
-  justify-content: center;
- }
+  justify-content: space-around;
+}
 
 .box-acomod:hover {
   transform: scale(1.02);
@@ -173,19 +163,18 @@ section .flex img {
 }
 
 div .box-acomod {
-  display:inline-block;
-  background-color: #5dc4c8;
-  border: 1px solid #023535;
+  display: inline-block;
+  border: 3px solid rgb(241, 241, 241);
   border-radius: 20px;
-  width: 340px; 
+  width: 340px;
   height: 280px;
   align-items: center;
   align-content: space-between;
   opacity: 80%;
-  
+
 }
 
-div .box-acomod{
+div .box-acomod {
   text-align: center;
   color: #023535;
   font-family: "Nunito", sans-serif;
@@ -196,39 +185,27 @@ div .box-acomod{
 
 }
 
-div .box-acomod img{
+div .box-acomod img {
   width: 30px;
   height: 30px;
- 
+
 }
 
 
 /* PROMOCÃO */
 
 #promocao {
-  margin: 0px 60px 0px;
+  background-color: #f1f1f1;
 }
 
 #promocao div {
   flex: 1 1 550px;
   flex-wrap: wrap;
-  max-width: 1120px;
+  max-width: 1250px;
   margin: 0px auto;
-  text-align: center;
-
 }
 
-#text-promocao {
-  text-align: center;
-  margin-top: 100px;
-  margin: 70px 0px 30px;
-  font-size: 2em;
-  font-weight: bold;
-  font-family: sans-serif;
-  color: #023535;
-}
-
-#promocao > div:hover {
+#promocao>div:hover {
   transform: scale(1.01);
   box-shadow: 0 0 20px #023535;
   opacity: 100%;
@@ -292,6 +269,7 @@ div .box-acomod img{
   text-shadow: 10px 10px 5px gray;
 }
 
+
 #promocao-aviso {
   color: #ff4500;
   font-size: 2rem;
@@ -329,10 +307,13 @@ div .box-acomod img{
 #mensagem {
   text-align: center;
   margin: 100px 60px 30px;
-  font-family: "Nunito", sans-serif;
   font-style: italic;
   font-size: 2em;
   font-weight: bold;
-  justify: center;
-  index: 1;
+  z-index: 1;
+}
+
+.h2-mensagem {
+  font-size: 1.8rem;
+  text-align: center;
 }
