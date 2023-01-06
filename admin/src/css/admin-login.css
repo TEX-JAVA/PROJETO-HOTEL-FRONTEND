@@ -1,0 +1,527 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+ul,
+li,
+button,
+select,
+a,
+input,
+select,
+option {
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 30px auto;
+    position: relative;
+    padding: 10px 10px;
+}
+
+.relative {
+    position: relative;
+}
+
+button {
+    display: block;
+    margin: 30px 0px;
+    width: 130px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #008f8c;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+}
+
+button:hover {
+    background-color: #0fc2c0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 12px;
+    z-index: 10;
+    width: 100%;
+    background-color: #023535;
+    flex-wrap: wrap;
+    opacity: 0.9;
+}
+
+header a img {
+    width: 45px;
+}
+
+header a:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+header nav ul {
+    gap: 20px;
+}
+
+.flexMenu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.gap-login {
+    gap: 7px;
+}
+
+header nav ul li a img,
+header div a img {
+    width: 20px;
+    height: 20px;
+}
+
+header p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+select,
+option {
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 1260px) {
+    nav ul li a p {
+        display: none;
+    }
+
+    nav ul li {
+        padding: 10px;
+    }
+
+    #login_check + label p {
+        display: none;
+    }
+
+    .teste {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    select {
+        display: none;
+    }
+
+    .flex p {
+        display: none;
+    }
+
+    .menu-login {
+        display: none;
+    }
+
+    .menuLogin {
+        display: none;
+    }
+}
+
+#login_check {
+    display: none;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+label #btn,
+label #cancel {
+    color: white;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+label #btn {
+    transition: all 0.2s ease;
+}
+
+label #cancel {
+    display: none;
+    right: 110px;
+    padding: 3px 9px;
+    z-index: 2;
+}
+
+.salvar-senhar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.salvar-senhar input {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.salvar-senhar label {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+label p:hover {
+    cursor: pointer;
+}
+
+#login_check:checked ~ form .login_form {
+    opacity: 0.9;
+    top: 80px;
+}
+
+#login_check:checked ~ label #btn {
+    top: 0px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#login_check:checked ~ label #cancel {
+    position: absolute;
+    display: block;
+    top: 90px;
+}
+
+.login_form {
+    visibility: visible;
+    top: -500px;
+    right: 100px;
+    position: absolute;
+    padding: 30px;
+    width: 350px;
+    background-color: #023535;
+    opacity: 0.9;
+    border-radius: 30px;
+    margin-left: auto;
+    text-align: center;
+    transition: all 0.2s ease;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.login_list {
+    margin: 0;
+    padding: 10px 0px;
+    list-style: none;
+    display: block;
+}
+
+.login_list .txt {
+    height: 50px;
+    width: 250px;
+    margin: 10px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.login_list p {
+    font-size: 1.2rem;
+    text-align: center;
+    text-transform: none;
+}
+
+.login_list p input {
+    margin-right: 10px;
+}
+
+.login_list .login_button {
+    width: 200px;
+    background-color: #015958;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 10px 2px 20px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login_list .login_button:hover {
+    background-color: #5dc4c8;
+    transition: 0.3s;
+}
+
+.login_suporte {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.4rem;
+}
+
+.login_suporte a {
+    color: white;
+    padding: 5px;
+    box-shadow: none;
+    font-size: 1.3rem;
+    justify-content: center;
+}
+
+.login_suporte a:hover {
+    text-decoration: underline;
+}
+
+.menu-sidebar {
+    display: flex;
+    position: fixed;
+    width: 36vh;
+    top: 0vh;
+    right: -200vh;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #023535;
+    opacity: 0.9;
+    transition: all 0.5s ease;
+}
+.menu-sidebar-lista li {
+    width: 100%;
+    padding: 0px 10px;
+    line-height: 70px;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 1px black solid;
+}
+
+.menu-sidebar-lista {
+    width: 100%;
+}
+
+.menu-sidebar-lista li:hover {
+    background-color: #0fc2c0;
+    padding-left: 20px;
+}
+
+.menu-sidebar-lista li a p {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+.menu-sidebar-lista li a i {
+    color: white;
+}
+
+.menu-sidebar-login {
+    height: 73.61px;
+    padding: 12px;
+}
+
+#slide-menu-sidebar {
+    display: none;
+}
+
+label #slide-btn,
+label #slide-cancel {
+    position: absolute;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: all 0.5s ease;
+}
+
+label #slide-cancel {
+    right: -40vh;
+}
+
+label #slide-btn {
+    right: 3vw;
+}
+
+#slide-menu-sidebar:checked ~ .menu-sidebar {
+    right: 0vh;
+}
+
+#slide-menu-sidebar:checked ~ label #slide-cancel {
+    right: 40vh;
+}
+
+#slide-menu-sidebar:checked ~ label #slide-btn {
+    display: none;
+}
+
+footer {
+    background-color: #015958;
+}
+
+.container-footer {
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    max-width: 1400px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card-footer {
+    flex-basis: auto;
+    margin: 10px;
+}
+
+h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 25px 0;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+    gap: 10px;
+}
+
+.icons a img {
+    width: 30px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.icons a img:hover,
+.column a:hover {
+    opacity: 1;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.column a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.column a img {
+    width: 20px;
+}
+
+.card-footer p {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.card-footer a {
+    color: #fff;
+    font-size: 19.2px;
+}
+
+.directs {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    font-size: 1.1rem;
+    background-color: #023535;
+}
+
+main {
+    max-height: 70%;
+    padding: 22vh 0;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: #015958 solid 1px;
+    border-radius: 10%;
+    box-shadow: #015958 8px 8px;
+    color: #0fc2c0;
+    justify-content: center;
+}
+
+form h1 {
+    padding: 5px;
+}
+
+.admin-login-info {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.admin-login-info button {
+    padding: 0;
+}
+
+.admin-login-info input {
+    width: 70%;
+    height: 3vh;
+    border-radius: 5%;
+    box-shadow: #023535 3px 3px;
+    text-align: center;
+}
+
+.form-div {
+    display: flex;
+    align-items: center;
+}
+
+.admin-login-info a {
+    position: relative;
+}
