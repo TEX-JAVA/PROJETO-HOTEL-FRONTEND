@@ -23,11 +23,6 @@
     width: 100%;
 }
 
-.menu-sidebar-lista li:hover{
-    background-color: #0fc2c0;
-    padding-left: 20px;
-}
-
 .menu-sidebar-lista li a p{
     display: block;
     text-align: left;
