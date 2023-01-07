@@ -1,0 +1,267 @@
+/* SLOGAN */
+
+:root {
+  --color-light-black: #191919;
+  --color-white: #ffffff;
+}
+
+.slogan {
+  position: relative;
+  background-color: var(--color-light-black);
+  background-image: url("../../../images/acomodacoes/capa.jpeg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 175px;
+  padding-bottom: 175px;
+  align-items: center;
+  text-align: center;
+  opacity: 100%;
+}
+
+.slogan-text {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.slogan-title-text {
+  z-index: 1;
+  font-size: 3rem;
+  color: #fff;
+
+}
+
+.btn-acomodacao {
+  border: solid 2px #5dc4c8;
+  border-radius: 10px;
+  padding: 25px;
+  width: 200px;
+  height: 70px;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  background: #023535;
+  display: inline-block;
+  margin: 20px 0;
+  opacity: 80%;
+}
+
+.btn-acomodacao:hover {
+  cursor: pointer;
+  background: #5dc4c8;
+  padding: 20px;
+  opacity: 100%;
+  color: #023535;
+  border: solid 2px #023535;
+  border-radius: 10px;
+  font-weight: 800;
+  opacity: 70%;
+  scale: 1.05;
+}
+
+.btn-acomodacao span {
+  font: small-caps bold 24px/1 sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+/* Nossas Acomodações */
+
+section .flex {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1250px;
+  margin: 40px auto;
+  row-gap: 30px;
+}
+
+section .flex>div {
+  text-align: center;
+  flex: 1 1 30px;
+  margin: 10px;
+  border: 3px solid #f1f1f1;
+  opacity: 80%;
+  transition: .3s;
+}
+
+.flex>div:hover {
+  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  opacity: 100%;
+}
+
+section .flex img {
+  max-width: 100%;
+  display: block;
+}
+
+.text-acomodacoes,
+.text-promocao {
+  text-align: center;
+  margin: 70px auto;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgb(2, 53, 53);
+}
+
+#acomodacao {
+  font-size: 16px;
+  padding: 6px 0px 0px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#descricao {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.btn-reserve-agora {
+  margin: 10px auto;
+  width: 200px;
+  height: 50px;
+  font-size: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: #023535;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-reserve-agora:hover {
+  cursor: pointer;
+  background: #015958;
+  border: 2px solid #023535;
+  scale: 1.02;
+}
+
+#icon-service-acomodacoes {
+  display: inline-block;
+  width: 20px;
+  padding-top: 20px;
+  margin: 5px;
+}
+
+/* CSS CAIXAS */
+
+#box-acomod {
+  display: flex;
+  margin: 43px 0px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box-acomod:hover {
+  transform: scale(1.02);
+  opacity: 100%;
+}
+
+div .box-acomod {
+  display: inline-block;
+  border: 3px solid rgb(241, 241, 241);
+  border-radius: 20px;
+  width: 340px;
+  height: 280px;
+  align-items: center;
+  align-content: space-between;
+  opacity: 80%;
+
+}
+
+div .box-acomod {
+  text-align: center;
+  color: #023535;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 40px;
+
+}
+
+div .box-acomod img {
+  width: 30px;
+  height: 30px;
+
+}
+
+/* PROMOCÃO */
+
+#promocao {
+  background-color: #f1f1f1;
+  padding-bottom: 80px;
+}
+
+.container-promocao {
+  max-width: 1250px;
+  margin: 20px auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card-promocao {
+  background-color: red;
+  width: 100%;
+  height: 500px;
+  overscroll-behavior: inherit;
+}
+
+.card-promocao:hover {
+  padding: 10px;
+}
+
+.card-promocao:nth-child(1) {
+  transform: rotate(356deg);
+}
+
+.card-promocao:nth-child(2) {
+  position: relative;
+  top: -15px;
+}
+
+.card-promocao:nth-child(3) {
+  transform: rotate(-356deg);
+}
+
+#promocao>div {
+  transform: scale(1.01);
+  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  opacity: 100%;
+}
+
+/* MENSAGEM */
+
+#mensagem {
+  text-align: center;
+  margin: 100px 60px 30px;
+  font-style: italic;
+  font-size: 2em;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.h2-mensagem {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.bg-mensagem {
+  background-image: url(../../../images/home/banner-avaliacao.svg);
+}
+
+.container-mensagem {
+  max-width: 1250px;
+  margin: 0px auto 0px auto;
+  position: relative;
+  padding: 40px 0px;
+}
