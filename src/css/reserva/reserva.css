@@ -1,0 +1,244 @@
+footer {
+  margin-top: 140px;
+}
+
+.container-page-reserva {
+  max-width: 1250px;
+  margin: 30px auto;
+  position: relative;
+  padding: 10px 0px;
+}
+
+.slogan {
+  position: relative;
+  background-color: var(--color-light-black);
+  background-image: url("../../../images/reserva/de2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -200px;
+  padding: 26vh;
+}
+
+/* div da reserva horizontal*/
+.div-reserva-superior {
+  position: relative;
+  bottom: 96px;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.div-reserva {
+  background-color: #023535;
+  width: 800px;
+  padding: 20px;
+  opacity: 0.92;
+}
+
+.button-a {
+  color: white;
+  background-image: linear-gradient(to top, #015958, #016664);
+  padding: 6.3px 10px 6.3px 10px;
+  margin-left: 18px;
+  font-weight: bold;
+  /* border: 1px white double; */
+  opacity: 0.92;
+}
+
+.button-a:hover {
+  background-image: linear-gradient(to bottom, #015958, #008f8c);
+}
+
+.div-reserva table tr td input {
+  padding: 8px;
+  width: 114px;
+  margin-right: 18px;
+  margin-left: 5px;
+}
+
+.div-reserva table tr td label {
+  display: inline;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+}
+
+@font-face {
+  src: url(../../../fonts/KaushanScript-Regular.ttf);
+  font-family: "KaushanScript-Regular";
+  font-weight: normal;
+}
+
+.texto-reserva {
+  color: white;
+  font-family: "KaushanScript-Regular";
+  font-size: 1.7rem;
+  padding: 5px;
+  text-align: center;
+}
+
+/* navegação imagens */
+
+.image-text {
+  display: flex;
+  margin: 20px 0;
+}
+.dash {
+  height: 5px;
+  background-color: #023535;
+  width: 500px;
+  margin: 10px 0 40px 80px;
+}
+
+.image-reserva {
+  width: 300px;
+}
+
+.image-text p {
+  padding-left: 15px;
+}
+
+.container-main {
+  display: flex;
+  margin-top: 0;
+}
+
+.image-text-pai {
+  width: 60%;
+}
+
+/* ESTILO DO RESUMO DA RESERVA*/
+@media (max-width: 850px) {
+  .resumo_reserva_pai {
+    width: 700px;
+  }
+}
+
+@media (max-width: 690px) {
+  .resumo_reserva_pai {
+    width: 590px;
+  }
+}
+
+@media (max-width: 590px) {
+  .resumo_reserva_pai {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .resumo_reserva_pai {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .resumo_reserva_pai {
+    width: 300px;
+  }
+}
+
+@media (max-width: 300px) {
+  .resumo_reserva_pai {
+    width: 250px;
+  }
+}
+
+.resumo_reserva_pai {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-top: 44px;
+}
+
+.resumo_reserva {
+  width: 400px;
+  height: 650px;
+  /* background-color: #023535; */
+  /* background-image: linear-gradient(to left, #0d5e5e, #023535); */
+  background-image: url("../../../images/reserva/pe2.jpg");
+  background-size: cover;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.resumo_reserva:hover {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.resumo_reserva div {
+  width: 300px;
+  height: 380px;
+  margin: 20% 10% 2% 12%;
+  /* background-color: rgba(1, 89, 87, 0.6); */
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.3)
+  );
+  position: relative;
+  top: -36px;
+}
+
+.a-servicos {
+  color: white;
+  font-size: 1.3rem;
+  text-decoration: underline;
+}
+
+.a-servicos:hover {
+  font-weight: bold;
+}
+
+.resumo_reserva p {
+  position: relative;
+  top: 10px;
+  padding: 10px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+}
+.resumo_reserva div input {
+  opacity: 0.9;
+  font-size: 0.95rem;
+  border: none;
+}
+
+.resumo_reserva div input:focus {
+  outline: none;
+  opacity: 1;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+}
+
+.resumo-direita {
+  font-size: 2.6rem;
+  color: white;
+  text-align: center;
+  top: 200px;
+  font-weight: normal;
+  font-family: "KaushanScript-Regular";
+}
+
+.button-b {
+  color: white;
+  padding: 16.3px 14px 16.3px 14px;
+  font-weight: bold;
+  /* border: 1px white double; */
+  /* opacity: 0.92; */
+  top: 6px;
+  position: relative;
+  /* background-color: rgba(1, 89, 87, 0.8); */
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.5)
+  );
+}
+.button-b:hover {
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.6)
+  );
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
