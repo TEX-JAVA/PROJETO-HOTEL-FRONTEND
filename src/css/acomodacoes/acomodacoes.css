@@ -191,115 +191,52 @@ div .box-acomod img {
 
 }
 
-
 /* PROMOCÃO */
 
 #promocao {
   background-color: #f1f1f1;
+  padding-bottom: 80px;
 }
 
-#promocao div {
-  flex: 1 1 550px;
-  flex-wrap: wrap;
+.container-promocao {
   max-width: 1250px;
-  margin: 0px auto;
+  margin: 20px auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
 
-#promocao>div:hover {
+.card-promocao {
+  background-color: red;
+  width: 100%;
+  height: 500px;
+  overscroll-behavior: inherit;
+}
+
+.card-promocao:hover {
+  padding: 10px;
+}
+
+.card-promocao:nth-child(1) {
+  transform: rotate(356deg);
+}
+
+.card-promocao:nth-child(2) {
+  position: relative;
+  top: -15px;
+}
+
+.card-promocao:nth-child(3) {
+  transform: rotate(-356deg);
+}
+
+#promocao>div {
   transform: scale(1.01);
-  box-shadow: 0 0 20px #023535;
+  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   opacity: 100%;
-}
-
-#promocao img {
-  max-width: 100%;
-  display: block;
-}
-
-#img-promocao {
-  max-width: 100%;
-  display: block;
-  border: 2px solid #015958;
-}
-
-.promocao-text {
-  display: flex;
-  background-color: #5dc4c8;
-  border: 1px solid #015958;
-  max-width: 1250px;
-  align-items: center;
-  margin: 10px;
-}
-
-.promocao-text div {
-  text-align: center;
-  padding: 0px 0px;
-  font-family: "Nunito", sans-serif;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.promocao-text div p {
-  text-align: center;
-  font-size: 1.5em;
-  padding: 20px 0px;
-}
-
-#promocao-text:hover {
-  transform: scale(1.05);
-}
-
-#title-promocao {
-  padding: 20px;
-  color: #ff4500;
-  font-size: 3rem;
-  text-shadow: 10px 10px 5px gray;
-}
-
-#text-de {
-  color: red;
-  text-decoration: line-through;
-  padding: 0px;
-}
-
-#title-preco {
-  text-align: center;
-  padding: 0px;
-  font-size: 3rem;
-  text-shadow: 10px 10px 5px gray;
-}
-
-
-#promocao-aviso {
-  color: #ff4500;
-  font-size: 2rem;
-}
-
-#icon-service {
-  display: inline-block;
-  width: 40px;
-  padding: 30px 10px 10px;
-  margin: px;
-}
-
-.btn-promocao {
-  margin: 10px auto;
-  width: 240px;
-  height: 70px;
-  font-size: 15px;
-  text-transform: uppercase;
-  cursor: pointer;
-  background: #023535;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn-promocao:hover {
-  cursor: pointer;
-  background: #015958;
-  border: 2px solid #023535;
-  scale: 1.02;
 }
 
 /* MENSAGEM */
@@ -316,4 +253,15 @@ div .box-acomod img {
 .h2-mensagem {
   font-size: 1.8rem;
   text-align: center;
+}
+
+.bg-mensagem {
+  background-image: url(../../../images/home/banner-avaliacao.svg);
+}
+
+.container-mensagem {
+  max-width: 1250px;
+  margin: 0px auto 0px auto;
+  position: relative;
+  padding: 40px 0px;
 }

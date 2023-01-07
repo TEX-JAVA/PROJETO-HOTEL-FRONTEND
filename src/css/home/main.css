@@ -170,7 +170,7 @@ div.card-acomodacoes {
 
 .box img {
     width: 100%;
-        height: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -273,11 +273,8 @@ div.card-acomodacoes {
     background-image: url('../../../images/home/prato7.jpg');
 }
 
-
-
-section#avaliacao {
-    min-height: 400px;
-    margin: 20px 0px;
+section#avaliacao { 
+    margin: 20px 0 0;
 }
 
 .bg-avaliacao {
@@ -294,7 +291,6 @@ section#avaliacao {
 }
 
 .card-avaliacao {
-    height: 300px;
     color: #fff;
     margin: 12% auto;
 
