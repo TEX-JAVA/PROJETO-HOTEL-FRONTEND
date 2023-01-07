@@ -1,0 +1,54 @@
+main {
+    display: flex;
+    background-color: bisque;
+}
+
+.div-employees-container table {
+    background-color: teal;
+}
+
+.div-employees-container td {
+    padding: 1% 20px;
+}
+
+.div-employees-container thead tr {
+    background-color: cadetblue;
+}
+
+.div-employees-container tbody tr:nth-child(even) {
+    background-color: cadetblue;
+}
+.div-employees-container tbody tr:nth-child(odd) {
+    background-color: wheat;
+}
+
+.div-employees-container tbody tr:nth-child(even) option {
+    background-color: cadetblue;
+}
+
+.div-employees-container tbody tr:nth-child(odd) option {
+    background-color: wheat;
+}
+
+.div-employees-container option,
+.div-employees-container select {
+    color: black;
+}
+
+.div-employees-container a {
+    background-color: teal;
+    border-radius: 2px;
+    position: relative;
+    bottom: -10px;
+    color: bisque;
+    padding: 5px;
+    margin: 10px;
+}
+
+.pages-manager {
+    display: flex;
+    margin: 0 auto;
+    padding: 15px;
+    gap: 10px;
+    justify-content: center;
+}

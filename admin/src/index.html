@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Administração - HOTEL H</title>
+        <link
+            rel="shortcut icon"
+            href="../../images/global/icons/hackerrank.svg"
+        />
+        <link
+            rel="stylesheet"
+            href="./css/admin-login.css"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com"
+        />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            src="https://kit.fontawesome.com/1770fde015.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#">
+                <img
+                    src="../../images/global/logo.png"
+                    alt="imagem de logo"
+                />
+                <p>Hotel H</p>
+            </a>
+            <nav>
+                <ul class="flex">
+                    <li>
+                        <a href="">
+                            <img
+                                src="../../images/global/icons/envelope-solid.svg"
+                                alt="icone de contato"
+                            />
+                            <p>Contato</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex gap-div">
+                <select>
+                    <option>🇧🇷</option>
+                    <option>🇱🇷</option>
+                    <option>🇪🇸</option>
+                </select>
+                <ul>
+                    <li>
+                        <input
+                            type="checkbox"
+                            id="login_check"
+                        />
+                        <label for="login_check">
+                            <i
+                                class="fa-solid fa-bars"
+                                id="btn"
+                            ></i>
+                            <i
+                                class="fa-solid fa-xmark"
+                                id="cancel"
+                            ></i>
+                            <p>Olá! Visitante</p>
+                        </label>
+                        <form
+                            action="#"
+                            method="post"
+                        >
+                            <div class="login_form">
+                                <ul class="login_list">
+                                    <li>
+                                        <input
+                                            type="email"
+                                            class="txt"
+                                            placeholder="E-mail"
+                                        />
+                                    </li>
+                                    <li>
+                                        <input
+                                            type="password"
+                                            class="txt"
+                                            placeholder="Senha"
+                                        />
+                                    </li>
+                                    <div class="salvar-senhar">
+                                        <input
+                                            name="senha"
+                                            type="checkbox"
+                                            id="senha"
+                                        />
+                                        <label for="senha">Salvar senha</label>
+                                    </div>
+                                    <li>
+                                        <input
+                                            type="button"
+                                            class="login_button"
+                                            value="Login"
+                                        />
+                                    </li>
+                                </ul>
+                                <div class="login_suporte">
+                                    <a href="#">Esqueci minha senha</a>
+                                    <a href="#">Não tenho uma conta</a>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                <a
+                    href="#"
+                    class="flex"
+                >
+                    <p>Sair</p>
+                </a>
+            </div>
+        </header>
+        <main>
+            <form action="post">
+                <h1>Login</h1>
+                <fieldset class="admin-login-info">
+                    <div class="form-div">
+                        <label for="user">Usuário:</label
+                        ><input
+                            id="user"
+                            type="text"
+                            placeholder="Identificação"
+                        />
+                    </div>
+                    <div class="form-div">
+                        <label for="password">Senha:</label>
+                        <input
+                            id="password"
+                            type="password"
+                            placeholder="Senha"
+                        />
+                    </div>
+                    <button type="submit">Entrar</button>
+                    <a href="">Esqueci a senha</a>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            <div class="container-footer">
+                <div class="card-footer">
+                    <h3>Contato</h3>
+                    <div class="column">
+                        <a href="mailto:admin@hotelh.com">
+                            <img
+                                src="../../images/global/icons/envelope-solid.svg"
+                                alt=""
+                            />
+                            <p>admin@hotelh.com</p>
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../../images/global/icons/icons8-maps-64.svg"
+                                alt=""
+                            />
+                            <p>
+                                321, Rua das Maravilhas, <br />
+                                Brazil
+                            </p>
+                        </a>
+                    </div>
+                    <div class="icons">
+                        <a href="#">
+                            <img
+                                src="../../images/global/icons/icons8-instagram.svg"
+                                alt=""
+                            /> </a
+                        ><a href="">
+                            <img
+                                src="../../images/global/icons/icons8-twitter.svg"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../../images/global/icons/icons8-facebook-novo.svg"
+                                alt=""
+                            />
+                        </a>
+                        <a href="#">
+                            <img
+                                src="../../images/global/icons/icons8-whatsapp.svg"
+                                alt=""
+                            />
+                        </a>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <h3>Carreira</h3>
+                    <div class="column">
+                        <a href="#">Trabalhe Conosco</a>
+                        <a href="#">Desenvolvedor</a>
+                        <a href="#">Trainner</a>
+                    </div>
+                </div>
+            </div>
+            <div class="directs">
+                <p>&copy;2023 - Grupo 5 TEX</p>
+            </div>
+        </footer>
+    </body>
+</html>
