@@ -23,7 +23,7 @@
   <body>
     <header>
       <a href="../index.html">
-        <img src="./../images/global/logo.png" alt="imagem de logo" />
+        <img src="../images/global/logo.png" alt="imagem de logo" />
         <p>Hotel H</p>
       </a>
       <nav>
@@ -31,16 +31,16 @@
           <li>
             <a href="#sobre">
               <img
-                src="./../images/global/icons/house-solid.svg"
+                src="../images/global/icons/house-solid.svg"
                 alt="icone de sobre"
               />
               <p>Sobre</p>
             </a>
           </li>
           <li>
-            <a href="#acomodacoes">
+            <a href="../pages/acomodacoes.html">
               <img
-                src="./../images/global/icons/bed-solid.svg"
+                src="../images/global/icons/bed-solid.svg"
                 alt="icone de acomodações"
               />
               <p>Acomodacões</p>
@@ -49,25 +49,25 @@
           <li>
             <a href="#gastronomia">
               <img
-                src="./../images/global/icons/utensils-solid.svg"
+                src="../images/global/icons/utensils-solid.svg"
                 alt="icone de gastronomia"
               />
               <p>Gastronomia</p>
             </a>
           </li>
           <li>
-            <a href="#topOfertas">
+            <a href="#topOf">
               <img
-                src="./../images/global/icons/star-solid.svg"
+                src="../images/global/icons/star-solid.svg"
                 alt="icone de top ofertas"
               />
-              <p>Top Ofertas</p>
+              <p>Reservas</p>
             </a>
           </li>
           <li>
-            <a href="#contato">
+            <a href="../pages/contato.html">
               <img
-                src="./../images/global/icons/envelope-solid.svg"
+                src="../images/global/icons/envelope-solid.svg"
                 alt="icone de contato"
               />
               <p>Contato</p>
@@ -75,19 +75,97 @@
           </li>
         </ul>
       </nav>
-      <div class="flex gap-div">
+      <div class="flexMenu menuLogin">
         <select>
-          <option style="width: 40px">🇧🇷</option>
+          <option>🇧🇷</option>
           <option>🇱🇷</option>
           <option>🇪🇸</option>
         </select>
-        <a href="" class="flex gap-login">
-          <img src="./../images/global/icons/bars-solid.svg" alt="" />
-          <p>Olá, Visitante!</p>
-        </a>
-        <a href="" class="flex">
+        <ul>
+          <li>
+            <input type="checkbox" id="login_check" />
+            <label for="login_check">
+              <i class="fa-solid fa-bars" id="btn"></i>
+              <i class="fa-solid fa-xmark" id="cancel"></i>
+              <p>Olá! Visitante</p>
+            </label>
+            <form action="#" method="post">
+              <div class="login_form">
+                <ul class="login_list">
+                  <li>
+                    <input type="email" class="txt" placeholder="E-mail" />
+                  </li>
+                  <li>
+                    <input type="password" class="txt" placeholder="Senha" />
+                  </li>
+                  <div class="salvar-senhar">
+                    <input name="senha" type="checkbox" id="senha" />
+                    <label for="senha">Salvar senha</label>
+                  </div>
+                  <li>
+                    <input type="button" class="login_button" value="Login" />
+                  </li>
+                </ul>
+                <div class="login_suporte">
+                  <a href="#">Esqueci minha senha</a>
+                  <a href="#">Não tenho uma conta</a>
+                </div>
+              </div>
+            </form>
+          </li>
+        </ul>
+        <a href="#" class="flex">
           <p>Sair</p>
         </a>
+      </div>
+      <div class="sidebar">
+        <input type="checkbox" id="slide-menu-sidebar" />
+        <label for="slide-menu-sidebar">
+          <i class="fa-solid fa-bars" id="slide-btn"></i>
+          <i class="fa-solid fa-xmark" id="slide-cancel"></i>
+        </label>
+        <div class="menu-sidebar">
+          <ul class="menu-sidebar-lista">
+            <li class="menu-sidebar-login">
+              <a href="#">
+                <label for="login_check">
+                  <i class="fa-solid fa-user"></i>
+                  <p>Login</p>
+                </label>
+              </a>
+            </li>
+            <li>
+              <a href="#sobre">
+                <i class="fa-solid fa-house"></i>
+                <p>Sobre</p>
+              </a>
+            </li>
+            <li>
+              <a href="../pages/acomodacoes.html">
+                <i class="fa-solid fa-bed"></i>
+                <p>Acomodações</p>
+              </a>
+            </li>
+            <li>
+              <a href="#gastronomia">
+                <i class="fa-solid fa-utensils"></i>
+                <p>Gastronomia</p>
+              </a>
+            </li>
+            <li>
+              <a href="#topOf">
+                <i class="fa-solid fa-star"></i>
+                <p>Reservas</p>
+              </a>
+            </li>
+            <li>
+              <a href="../pages/contato.html">
+                <i class="fa-solid fa-envelope"></i>
+                <p>Contato</p>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
