@@ -73,7 +73,7 @@
 section .flex {
   display: flex;
   max-width: 1250px;
-  margin: 40px auto;
+  margin: 40px auto 20px;
   row-gap: 30px;
   overflow: auto;
   scroll-behavior: auto;
@@ -102,10 +102,12 @@ section .flex img {
 
 .text-acomodacoes {
   text-align: center;
-  margin: 70px auto;
+  margin: 70px auto 0px;
   font-size: 2rem;
   font-weight: bold;
   font-family: sans-serif;
+  color: rgb(2, 53, 53);
+  filter: drop-shadow(rgba(0, 0, 0, 0.9) 1px 1px 0px);
 }
 
 .text-promocao {
@@ -341,11 +343,6 @@ div .box-acomod img {
   font-size: 1.8rem;
   text-align: center;
 }
-
-.bg-mensagem {
-  background-image: url(../../../images/home/banner-avaliacao.svg);
-}
-
 .container-mensagem {
   max-width: 1250px;
   margin: 0px auto 0px auto;
@@ -436,7 +433,7 @@ div .box-acomod img {
     display: flex;
     flex-wrap: wrap;
     max-width: 1250px;
-    margin: 40px auto;
+    margin: 20px auto;
     row-gap: 30px;
   }
 }
