@@ -1,0 +1,151 @@
+@import "./mixins.scss";
+@import "./variaveis.scss";
+
+#login_check {
+	display: none;
+}
+
+#login_check:checked {
+	& ~ form .login_form {
+		opacity: 0.9;
+		top: 80px;
+	}
+
+	& ~ label #btn {
+		top: 0px;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	& ~ label #cancel {
+		position: absolute;
+		display: block;
+		top: 90px;
+	}
+}
+
+.login_labels {
+	@include flex-center;
+	gap: 10px;
+}
+
+.login_labels #btn,
+.login_labels #cancel {
+	color: $btnColor;
+	cursor: pointer;
+	font-size: $fsGrande;
+}
+
+.login_labels #btn {
+	transition: all 0.2s ease;
+}
+
+.login_labels #cancel {
+	display: none;
+	right: 110px;
+	padding: 3px 9px;
+	z-index: 2;
+}
+
+.login_labels p:hover {
+	cursor: pointer;
+}
+
+.salvar-senhar {
+	@include flex-center;
+
+	& input {
+		margin-right: 10px;
+		width: 20px;
+	}
+
+	& label {
+		font-size: $fsGrande;
+		color: $colorFont;
+	}
+}
+
+.login_form {
+	visibility: visible;
+	top: -500px;
+	right: 100px;
+	position: absolute;
+	padding: 30px;
+	width: 350px;
+	background-color: $bgColor;
+	opacity: 0.9;
+	border-radius: 30px;
+	margin-left: auto;
+	text-align: center;
+	transition: all 0.2s ease;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.login_list {
+	margin: 0;
+	padding: 10px 0px;
+	list-style: none;
+	display: block;
+
+	& .txt {
+		height: 50px;
+		width: 250px;
+		margin: 10px;
+		font-size: $fsGrande;
+		border-radius: 5px;
+		padding-left: 10px;
+	}
+
+	& p {
+		font-size: $fsMedia;
+		text-align: center;
+		text-transform: none;
+
+		& input {
+			margin-right: 10px;
+		}
+	}
+
+	& .login_button {
+		width: 200px;
+		background-color: #015958;
+		border-radius: 30px;
+		border: none;
+		color: $colorFont;
+		padding: 15px 32px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: $fsGrande;
+		margin: 10px 2px 20px 2px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+	& .login_button:hover {
+		background-color: #5dc4c8;
+		transition: 0.3s;
+	}
+}
+
+.login_suporte {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	font-size: $fsGrande;
+
+	& a {
+		color: $colorFont;
+		padding: 5px;
+		box-shadow: none;
+		font-size: $fsMedia;
+		justify-content: center;
+	}
+
+	& a:hover {
+		text-decoration: underline;
+	}
+}
