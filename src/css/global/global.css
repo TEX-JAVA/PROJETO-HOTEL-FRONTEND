@@ -1,10 +1,9 @@
-@import url('../home/header.css');
-@import url('../home/main.css');
-@import url('../home/footer.css');
-@import url('../login/login.css');
-@import url('../login/menu-sidebar.css');
-@import url('../gastronomia/gastronomia.css');
-
+@import url("../home/header.css");
+@import url("../home/main.css");
+@import url("../home/footer.css");
+@import url("../login/login_sass.css");
+@import url("../login/menu-sidebar.css");
+@import url("../gastronomia/gastronomia.css");
 
 * {
 	padding: 0;
@@ -35,7 +34,6 @@ option {
 	margin: 30px auto;
 	position: relative;
 	padding: 10px 10px;
-
 }
 
 .relative {
@@ -69,5 +67,3 @@ button:hover {
 button:hover {
 	background-color: #0fc2c0;
 }
-
-
