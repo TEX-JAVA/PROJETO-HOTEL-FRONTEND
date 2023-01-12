@@ -1,9 +1,15 @@
-@import url("../home/header.css");
-@import url("../home/main.css");
-@import url("../home/footer.css");
-@import url("../login/login_sass.css");
-@import url("../login/menu-sidebar.css");
-@import url("../gastronomia/gastronomia.css");
+@import "../home/header.scss";
+@import "../home/footer.scss";
+@import "../home/main.scss";
+@import "../login/login.scss";
+@import "../login/menu-sidebar.scss";
+@import "../sobre/sobre.scss";
+@import "../acomodacoes/acomodacoes.scss";
+@import "../gastronomia/gastronomia.scss";
+@import "../reserva/reserva.scss";
+@import "../contato/contato.scss";
+
+
 
 * {
 	padding: 0;
@@ -34,6 +40,7 @@ option {
 	margin: 30px auto;
 	position: relative;
 	padding: 10px 10px;
+
 }
 
 .relative {
