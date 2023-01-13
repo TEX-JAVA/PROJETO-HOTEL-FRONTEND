@@ -1,6 +1,6 @@
 
 /*Carrossel inicial*/
-.hotel {
+.text-nossoHotel {
     
     position: absolute;
     align-items: center;
@@ -10,6 +10,7 @@
     transform: translate(-50%);
     color: #fff;
     font-size: 2.8rem;
+    text-shadow: 2px 2px 3px #000;
 
 }
 .carousel {
@@ -20,30 +21,29 @@ position: relative;
 
 }
 
-.navigation {
-position: absolute;
-bottom: 20px;
-left: 50%;
-display: flex;
-transform: translate(-50%);
+.navigation-slides {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translate(-50%);
 }
 
-.bar {
-width: 70px;
-height: 17px;
-border: 2px solid #fff;
-margin: 6px;
-border-radius: 5px;
-cursor: pointer;
-transition: .4s;
+.barra-slides {
+    width: 70px;
+    height: 17px;
+    border: 2px solid #fff;
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+    &:hover{
+        background-color: #fff;
+    }
 }
 
-.bar:hover {
-background-color: #fff;
 
-}
-
-.input-sobre {
+.slides-input {
 display: none;
 }
 
@@ -54,37 +54,114 @@ height: 100%;
 }
 
 .slide {
-width: 20%;
-transition: .6s;
-}
-
-.slide img {
-width: 100%;
-height: 100%;
+    width: 20%;
+    transition: .6s;
+    img{
+        width: 100%;
+        height: 100%;
+    }
 }
 
 #slide1:checked ~ .s1{
-margin-left: 0;
+    margin-left: 0;
 
 }
 
 #slide2:checked ~ .s1{
-margin-left: -20%;
+    margin-left: -20%;
 
 }
 
 #slide3:checked ~ .s1{
-margin-left: -40%;
+    margin-left: -40%;
 
 }
 
 #slide4:checked ~ .s1{
-margin-left: -60%;
+    margin-left: -60%;
 
 }
 
 #slide5:checked ~ .s1{
-margin-left: -80%;
+    margin-left: -80%;
 
 }
 
+/*História */
+.container-historia{
+    display: flex;
+    margin: 20px;
+}
+
+.image-historia {
+    width: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    &:hover{
+        opacity: .5;
+    }
+}
+
+.container-text {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.3rem;
+    h2{
+        margin-bottom: 20px;
+    text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+}
+
+/*Eventos*/
+
+.container-eventos{
+    width: 100%;
+     h2 {
+    text-align: center;
+    margin: 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    }
+    p{
+        text-align: center;
+        margin: 20px;
+        font-family: "Nunito", sans-serif;
+        font-size: 1.3rem;
+    }
+}
+
+.container-image-eventos{
+    display: flex;
+    margin: 20px;
+    img{
+        width: 30%;
+        margin: 20px 1.5%;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover{
+            opacity: .5;
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .container-historia{
+        flex-direction: column;
+        img{
+            width: 100%;
+            margin: 20px 0;
+        }
+        
+    }
+    .container-image-eventos{
+        flex-direction: column;
+        img{
+            width: 100%;
+            margin: 20px 0;    
+        }   
+        
+    }
+}

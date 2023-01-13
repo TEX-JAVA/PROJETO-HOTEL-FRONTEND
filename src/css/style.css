@@ -1362,7 +1362,7 @@ div .box-acomod img {
 }
 
 /*Carrossel inicial*/
-.hotel {
+.text-nossoHotel {
   position: absolute;
   align-items: center;
   bottom: 50%;
@@ -1371,6 +1371,7 @@ div .box-acomod img {
   transform: translate(-50%);
   color: #fff;
   font-size: 2.8rem;
+  text-shadow: 2px 2px 3px #000;
 }
 
 .carousel {
@@ -1380,7 +1381,7 @@ div .box-acomod img {
   position: relative;
 }
 
-.navigation {
+.navigation-slides {
   position: absolute;
   bottom: 20px;
   left: 50%;
@@ -1388,7 +1389,7 @@ div .box-acomod img {
   transform: translate(-50%);
 }
 
-.bar {
+.barra-slides {
   width: 70px;
   height: 17px;
   border: 2px solid #fff;
@@ -1397,12 +1398,11 @@ div .box-acomod img {
   cursor: pointer;
   transition: 0.4s;
 }
-
-.bar:hover {
+.barra-slides:hover {
   background-color: #fff;
 }
 
-.input-sobre {
+.slides-input {
   display: none;
 }
 
@@ -1416,7 +1416,6 @@ div .box-acomod img {
   width: 20%;
   transition: 0.6s;
 }
-
 .slide img {
   width: 100%;
   height: 100%;
@@ -1442,6 +1441,80 @@ div .box-acomod img {
   margin-left: -80%;
 }
 
+/*História */
+.container-historia {
+  display: flex;
+  margin: 20px;
+}
+
+.image-historia {
+  width: 400px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.image-historia:hover {
+  opacity: 0.5;
+}
+
+.container-text {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+}
+.container-text h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.container-text p {
+  text-align: center;
+}
+
+/*Eventos*/
+.container-eventos {
+  width: 100%;
+}
+.container-eventos h2 {
+  text-align: center;
+  margin: 10px;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.container-eventos p {
+  text-align: center;
+  margin: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.3rem;
+}
+
+.container-image-eventos {
+  display: flex;
+  margin: 20px;
+}
+.container-image-eventos img {
+  width: 30%;
+  margin: 20px 1.5%;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.container-image-eventos img:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 768px) {
+  .container-historia {
+    flex-direction: column;
+  }
+  .container-historia img {
+    width: 100%;
+    margin: 20px 0;
+  }
+  .container-image-eventos {
+    flex-direction: column;
+  }
+  .container-image-eventos img {
+    width: 100%;
+    margin: 20px 0;
+  }
+}
 * {
   padding: 0;
   margin: 0;
