@@ -2,8 +2,7 @@
 footer {
   background-color: #015958;
 }
-
-.container-footer {
+footer .container-footer {
   padding: 10px 0;
   display: flex;
   flex-wrap: wrap;
@@ -12,66 +11,56 @@ footer {
   width: 100%;
   justify-content: space-between;
 }
-
-.card-footer {
+footer .card-footer {
   flex-basis: auto;
   margin: 10px;
 }
-
-h3 {
+footer .card-footer h3 {
   color: #fff;
   font-size: 1.6rem;
   margin: 25px 0;
 }
-
-.icons {
+footer .card-footer a {
+  color: #fff;
+  font-size: 19.2px;
+}
+footer .card-footer .column {
+  display: flex;
+  flex-direction: column;
+}
+footer .card-footer .column a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+footer .card-footer .column a img {
+  width: 20px;
+}
+footer .card-footer .column a:hover {
+  opacity: 1;
+}
+footer .card-footer .column p {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+footer .card-footer .icons {
   display: flex;
   align-items: center;
   margin: 30px 0;
   gap: 10px;
 }
-
-.icons a img {
+footer .card-footer .icons a img {
   width: 30px;
   opacity: 0.7;
   transition: 0.3s;
 }
-
-.icons a img:hover,
-.column a:hover {
+footer .card-footer .icons a img:hover {
   opacity: 1;
 }
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.column a {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  opacity: 0.7;
-  transition: 0.3s;
-}
-
-.column a img {
-  width: 20px;
-}
-
-.card-footer p {
-  color: #fff;
-  font-size: 1.2rem;
-  line-height: 1.5;
-}
-
-.card-footer a {
-  color: #fff;
-  font-size: 19.2px;
-}
-
-.directs {
+footer .directs {
   text-align: center;
   color: #fff;
   padding: 20px;
@@ -81,55 +70,50 @@ h3 {
 
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   position: fixed;
   padding: 12px;
   z-index: 10;
   width: 100%;
   background-color: #023535;
-  flex-wrap: wrap;
   opacity: 0.9;
 }
-
 header a img {
   width: 45px;
 }
-
 header a:nth-child(1) {
   display: flex;
   align-items: center;
   gap: 8px;
 }
-
-header nav ul {
-  gap: 20px;
-}
-
-.flexMenu {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.gap-login {
-  gap: 7px;
-}
-
-header nav ul li a img,
-header div a img {
-  width: 20px;
-  height: 20px;
-}
-
 header p {
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #fff;
 }
-
-select,
-option {
+header nav ul {
+  display: flex;
+  gap: 20px;
+}
+header nav ul li a img {
+  width: 20px;
+  height: 20px;
+}
+header div a img {
+  width: 20px;
+  height: 20px;
+}
+header .flexMenu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .gap-login {
+  gap: 7px;
+}
+header select, header option {
   background-color: transparent;
   outline: none;
   color: #fff;
@@ -173,7 +157,7 @@ option {
     z-index: 1;
   }
   #slide-cancel {
-    background-color: red;
+    background-color: rgb(90, 137, 88);
     opacity: 0.5;
     border-radius: 50%;
     width: 25px;
@@ -1465,10 +1449,6 @@ div .box-acomod img {
   font-family: "Nunito", sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 ul,
 li,
 button,
@@ -1489,10 +1469,6 @@ option {
   padding: 10px 10px;
 }
 
-.relative {
-  position: relative;
-}
-
 button {
   display: block;
   margin: 30px 0px;
@@ -1504,11 +1480,6 @@ button {
   font-size: 1.2rem;
   transition: 0.3s;
   cursor: pointer;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
 }
 
 button:hover {

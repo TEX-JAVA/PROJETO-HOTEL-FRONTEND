@@ -1,81 +1,85 @@
-footer {
+@import "../mixin/mixin";
+
+footer{
     background-color: $bg-footer;
+
+    .container-footer{
+        padding: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 1400px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .card-footer{
+        flex-basis: auto;
+        margin: 10px;
+
+        h3{
+            color: $colorPadrao;
+            font-size: 1.6rem;
+            margin: 25px 0;
+        }
+
+        a{
+            color: $colorPadrao;
+            font-size: 19.2px;
+        }
+        .column{
+            @include flex;
+            flex-direction: column;
+            
+            a{
+                @include flexAlign;
+                gap: 10px;
+                opacity: .7;
+                transition: .3s;
+
+                img{
+                    width: 20px;
+                }
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+
+            p{
+                color: $colorPadrao;
+                font-size: 1.2rem;
+                line-height: 1.5;
+            }
+        }
+        .icons{
+            @include flexAlign;
+            margin: 30px 0;
+            gap: 10px;
+
+            a{
+                img{
+                    width: 30px;
+                    opacity: .7;
+                    transition: .3s;
+                
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+
+    .directs {
+        text-align: center;
+        color: $colorPadrao;
+        padding: 20px;
+        font-size: 1.1rem;
+        background-color: #023535;
+    }
 }
 
-.container-footer {
-    padding: 10px 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    max-width: 1400px;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.card-footer {
-    flex-basis: auto;
-    margin: 10px;
-}
-
-h3 {
-    color: #fff;
-    font-size: 1.6rem;
-    margin: 25px 0;
-}
-
-.icons {
-    display: flex;
-    align-items: center;
-    margin: 30px 0;
-    gap: 10px;
-}
 
 
-.icons a img {
-    width: 30px;
-    opacity: .7;
-    transition: .3s;
-}
 
-
-.icons a img:hover,
-.column a:hover {
-    opacity: 1
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px
-}
-
-.column a {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    opacity: .7;
-    transition: .3s;
-}
-
-.column a img {
-    width: 20px;
-}
-
-.card-footer p {
-    color: #fff;
-    font-size: 1.2rem;
-    line-height: 1.5;
-}
-
-.card-footer a {
-    color: #fff;
-    font-size: 19.2px;
-}
-
-.directs {
-    text-align: center;
-    color: #fff;
-    padding: 20px;
-    font-size: 1.1rem;
-    background-color: #023535;
-}
