@@ -72,10 +72,11 @@
 
 section .flex {
   display: flex;
-  flex-wrap: wrap;
   max-width: 1250px;
-  margin: 40px auto;
+  margin: 40px auto 20px;
   row-gap: 30px;
+  overflow: auto;
+  scroll-behavior: auto;
 }
 
 section .flex>div {
@@ -99,14 +100,25 @@ section .flex img {
   display: block;
 }
 
-.text-acomodacoes,
-.text-promocao {
+.text-acomodacoes {
   text-align: center;
-  margin: 70px auto;
+  margin: 70px auto 0px;
   font-size: 2rem;
   font-weight: bold;
   font-family: sans-serif;
   color: rgb(2, 53, 53);
+  filter: drop-shadow(rgba(0, 0, 0, 0.9) 1px 1px 0px);
+}
+
+.text-promocao {
+  text-align: center;
+  margin: 30px auto 70px;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgb(2, 53, 53);
+  filter: drop-shadow(rgba(0, 0, 0, 0.9) 1px 1px 0px);
+
 }
 
 #acomodacao {
@@ -188,14 +200,18 @@ div .box-acomod {
 div .box-acomod img {
   width: 30px;
   height: 30px;
-
 }
 
 /* PROMOCÃO */
+.bg-backgroud {
+  position: relative;
+  margin: 80px auto 80px;
+  background-color: #f1f1f1;
+}
 
 #promocao {
-  background-color: #f1f1f1;
-  padding-bottom: 80px;
+  background-position: center;
+  opacity: 0.92;
 }
 
 .container-promocao {
@@ -203,41 +219,114 @@ div .box-acomod img {
   margin: 20px auto;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 30px;
+  background-color: white;
 }
 
 .card-promocao {
-  background-color: red;
+  background-color: #f1f1f1;
   width: 100%;
-  height: 500px;
+  height: 100%;
   overscroll-behavior: inherit;
 }
 
-.card-promocao:hover {
-  padding: 10px;
-}
-
 .card-promocao:nth-child(1) {
-  transform: rotate(356deg);
+  position: relative;
 }
 
 .card-promocao:nth-child(2) {
   position: relative;
-  top: -15px;
 }
 
 .card-promocao:nth-child(3) {
-  transform: rotate(-356deg);
+  position: relative;
 }
 
-#promocao>div {
-  transform: scale(1.01);
-  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-  opacity: 100%;
+.card-promocao img {
+  width: 100%;
 }
+
+#preço-promo-red {
+  filter: drop-shadow(1px 1px 0px rgb(0 0 0 / 90%));
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: red;
+}
+
+.promo-img01 {
+  display: block;
+  border: 10px solid white;
+}
+
+#preço-promo01 {
+  position: absolute;
+  top: 8px;
+  background-color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 2px 20px 2px 8px;
+}
+
+.promo-img02 {
+  display: block;
+  margin: 0px auto 50px;
+  border: 10px solid white;
+  margin-top: -36px;
+}
+
+#preço-promo02 {
+  position: absolute;
+  top: 3px;
+  background-color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 2px 20px 2px 8px;
+}
+
+.promo-img03 {
+  margin: -20px auto 30px;
+  border: 10px solid white;
+}
+
+#preço-promo03 {
+  position: absolute;
+  top: 30px;
+  background-color: white;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 2px 20px 2px 8px;
+}
+
+.card-promocao p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.conteudo {
+  padding: 0px 20px 20px;
+}
+
+.icons-acomod {
+  display: flex;
+  margin: auto;
+  width: 120px;
+  gap: 15%;
+  padding-top: 40px;
+}
+
+#star {
+  display: flex;
+  margin: auto;
+  width: 20px;
+  margin: 0px 0px 20px;
+}
+
+
+
 
 /* MENSAGEM */
 
@@ -254,14 +343,97 @@ div .box-acomod img {
   font-size: 1.8rem;
   text-align: center;
 }
-
-.bg-mensagem {
-  background-image: url(../../../images/home/banner-avaliacao.svg);
-}
-
 .container-mensagem {
   max-width: 1250px;
   margin: 0px auto 0px auto;
   position: relative;
   padding: 40px 0px;
+}
+
+@media (min-width: 769px) {
+
+  #preço-promo01 {
+    position: absolute;
+    top: 8px;
+    right: -8px;
+    background-color: white;
+    transform: rotate(355deg);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    padding: 2px 20px 2px 8px;
+  }
+
+  .promo-img01 {
+    display: block;
+    margin: -20px auto 30px;
+    transform: rotate(355deg);
+    border: 10px solid white;
+  }
+
+  .promo-img03 {
+
+    transform: rotate(-355deg);
+    border: 10px px solid white;
+  }
+
+  #preço-promo01 {
+    position: absolute;
+    top: 8px;
+    right: -8px;
+    background-color: white;
+    transform: rotate(355deg);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    padding: 2px 20px 2px 8px;
+  }
+
+  #preço-promo03 {
+    position: absolute;
+    top: 30px;
+    right: -8px;
+    background-color: white;
+    transform: rotate(-355deg);
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    padding: 2px 20px 2px 8px;
+  }
+
+  #preço-promo02 {
+    position: absolute;
+    top: 3px;
+    right: -8px;
+    background-color: white;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    padding: 2px 20px 2px 8px;
+  }
+
+  .container-promocao {
+    max-width: 1250px;
+    margin: 20px auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    background-color: white;
+  }
+
+  #promocao>div {
+    transform: scale(0.95);
+    -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+  }
+
+  section .flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1250px;
+    margin: 20px auto;
+    row-gap: 30px;
+  }
 }
