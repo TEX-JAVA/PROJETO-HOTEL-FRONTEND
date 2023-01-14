@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function() {
 const usuario = "Fulaninho";
 const btnLogin = document.getElementById("login");
 const btnSair = document.getElementById("sair");
@@ -29,7 +30,8 @@ btnLogin.onclick = () => {
 btnSair.onclick = () => {
 	localStorage.clear("nome");
 	localStorage.clear("email");
-	document.getElementById("visitante").innerHTML = `Olá! Visitante`;
+	document.getElementById("visitante").innerHTML = `Olá, Visitante!`;
 	document.getElementById("menu-sidebar-visitante").innerHTML = "Login";
 	location.reload();
 }
+})
