@@ -1,386 +1,329 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HOTEL H</title>
-    <link rel="shortcut icon" href="./images/global/icons/hackerrank.svg" />
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/1770fde015.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
 
-  <body>
-    <header>
-      <a href="#">
-        <img src="./images/global/logo.png" alt="imagem de logo" />
-        <p>Hotel H</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOTEL H</title>
+  <link rel="shortcut icon" href="./images/global/icons/hackerrank.svg" />
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/1770fde015.js" crossorigin="anonymous"></script>
+  <script src="./js/val_login.js"></script>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html">
+      <img src="./images/global/logo.png" alt="imagem de logo" />
+      <p>Hotel H</p>
+    </a>
+    <nav>
+      <ul class="flex">
+        <li>
+          <a href="./pages/sobre.html">
+            <img src="./images/global/icons/house-solid.svg" alt="icone de sobre" />
+            <p>Sobre</p>
+          </a>
+        </li>
+        <li>
+          <a href="./pages/acomodacoes.html">
+            <img src="./images/global/icons/bed-solid.svg" alt="icone de acomodações" />
+            <p>Acomodacões</p>
+          </a>
+        </li>
+        <li>
+          <a href="#gastronomia">
+            <img src="./images/global/icons/utensils-solid.svg" alt="icone de gastronomia" />
+            <p>Gastronomia</p>
+          </a>
+        </li>
+        <li>
+          <a href="./pages/reserva.html">
+            <img src="./images/global/icons/star-solid.svg" alt="icone de top ofertas" />
+            <p>Reservas</p>
+          </a>
+        </li>
+        <li>
+          <a href="./pages/contato.html">
+            <img src="./images/global/icons/envelope-solid.svg" alt="icone de contato" />
+            <p>Contato</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="flexMenu menuLogin">
+      <select>
+        <option>🇧🇷</option>
+        <option>🇱🇷</option>
+        <option>🇪🇸</option>
+      </select>
+      <ul>
+        <li>
+          <input type="checkbox" id="login_check" />
+          <label for="login_check" class="login_label">
+            <i class="fa-solid fa-bars" id="btn"></i>
+            <i class="fa-solid fa-xmark" id="cancel"></i>
+            <p id="visitante">Olá, Visitante!</p>
+          </label>
+          <form action="#" method="post">
+            <div class="login_form">
+              <ul class="login_list">
+                <li>
+                  <input type="email" class="txt" placeholder="E-mail" id="login_email" />
+                </li>
+                <li>
+                  <input type="password" class="txt" placeholder="Senha" id="login_senha" />
+                </li>
+                <div class="salvar-senhar">
+                  <input name="senha" type="checkbox" id="senha" />
+                  <label for="senha" class="salvar-senha-label">Salvar senha</label>
+                </div>
+                <li>
+                  <button type="button" class="login_button" value="Login" id="login">Login</button>
+                </li>
+              </ul>
+              <div class="login_suporte">
+                <a href="#">Esqueci minha senha</a>
+                <a href="#">Não tenho uma conta</a>
+              </div>
+            </div>
+          </form>
+        </li>
+      </ul>
+      <a href="#" class="flex">
+        <p>Sair</p>
       </a>
-      <nav>
-        <ul class="flex">
+    </div>
+    <div class="sidebar">
+      <input type="checkbox" id="slide-menu-sidebar" />
+      <label for="slide-menu-sidebar" class="slide-menu-sidebar-label">
+        <i class="fa-solid fa-bars" id="slide-btn"></i>
+        <i class="fa-solid fa-xmark" id="slide-cancel"></i>
+      </label>
+      <div class="menu-sidebar">
+        <ul class="menu-sidebar-lista">
+          <li class="menu-sidebar-login">
+            <a href="#">
+              <label for="login_check" class="sidebar-login-label">
+                <i class="fa-solid fa-user"></i>
+                <p id="menu-sidebar-visitante">Login</p>
+              </label>
+            </a>
+          </li>
           <li>
-            <a href="./pages/sobre.html">
-              <img
-                src="./images/global/icons/house-solid.svg"
-                alt="icone de sobre"
-              />
+            <a href="#sobre">
+              <i class="fa-solid fa-house"></i>
               <p>Sobre</p>
             </a>
           </li>
           <li>
             <a href="./pages/acomodacoes.html">
-              <img
-                src="./images/global/icons/bed-solid.svg"
-                alt="icone de acomodações"
-              />
-              <p>Acomodacões</p>
+              <i class="fa-solid fa-bed"></i>
+              <p>Acomodações</p>
             </a>
           </li>
           <li>
             <a href="#gastronomia">
-              <img
-                src="./images/global/icons/utensils-solid.svg"
-                alt="icone de gastronomia"
-              />
+              <i class="fa-solid fa-utensils"></i>
               <p>Gastronomia</p>
             </a>
           </li>
           <li>
-            <a href="./pages/reserva.html">
-              <img
-                src="./images/global/icons/star-solid.svg"
-                alt="icone de top ofertas"
-              />
+            <a href="#topOf">
+              <i class="fa-solid fa-star"></i>
               <p>Reservas</p>
             </a>
           </li>
           <li>
             <a href="./pages/contato.html">
-              <img
-                src="./images/global/icons/envelope-solid.svg"
-                alt="icone de contato"
-              />
+              <i class="fa-solid fa-envelope"></i>
               <p>Contato</p>
             </a>
           </li>
         </ul>
-      </nav>
-      <div class="flexMenu menuLogin">
-        <select>
-          <option>🇧🇷</option>
-          <option>🇱🇷</option>
-          <option>🇪🇸</option>
-        </select>
-        <ul>
-          <li>
-            <input type="checkbox" id="login_check" />
-            <label for="login_check">
-              <i class="fa-solid fa-bars" id="btn"></i>
-              <i class="fa-solid fa-xmark" id="cancel"></i>
-              <p>Olá, Visitante!</p>
-            </label>
-            <form action="#" method="post">
-              <div class="login_form">
-                <ul class="login_list">
-                  <li>
-                    <input type="email" class="txt" placeholder="E-mail" />
-                  </li>
-                  <li>
-                    <input type="password" class="txt" placeholder="Senha" />
-                  </li>
-                  <div class="salvar-senhar">
-                    <input name="senha" type="checkbox" id="senha" />
-                    <label for="senha">Salvar senha</label>
-                  </div>
-                  <li>
-                    <input type="button" class="login_button" value="Login" />
-                  </li>
-                </ul>
-                <div class="login_suporte">
-                  <a href="#">Esqueci minha senha</a>
-                  <a href="#">Não tenho uma conta</a>
-                </div>
-              </div>
-            </form>
-          </li>
-        </ul>
-        <a href="#" class="flex">
-          <p>Sair</p>
-        </a>
       </div>
-      <div class="sidebar">
-        <input type="checkbox" id="slide-menu-sidebar" />
-        <label for="slide-menu-sidebar">
-          <i class="fa-solid fa-bars" id="slide-btn"></i>
-          <i class="fa-solid fa-xmark" id="slide-cancel"></i>
-        </label>
-        <div class="menu-sidebar">
-          <ul class="menu-sidebar-lista">
-            <li class="menu-sidebar-login">
-              <a href="#">
-                <label for="login_check">
-                  <i class="fa-solid fa-user"></i>
-                  <p>Login</p>
-                </label>
-              </a>
-            </li>
-            <li>
-              <a href="#sobre">
-                <i class="fa-solid fa-house"></i>
-                <p>Sobre</p>
-              </a>
-            </li>
-            <li>
-              <a href="./pages/acomodacoes.html">
-                <i class="fa-solid fa-bed"></i>
-                <p>Acomodações</p>
-              </a>
-            </li>
-            <li>
-              <a href="#gastronomia">
-                <i class="fa-solid fa-utensils"></i>
-                <p>Gastronomia</p>
-              </a>
-            </li>
-            <li>
-              <a href="#topOf">
-                <i class="fa-solid fa-star"></i>
-                <p>Reservas</p>
-              </a>
-            </li>
-            <li>
-              <a href="./pages/contato.html">
-                <i class="fa-solid fa-envelope"></i>
-                <p>Contato</p>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="banner">
-        <video autoplay loop muted>
-          <source src="./video/hotel.mp4" />
-        </video>
-      </section>
-      <section id="sobre">
-        <article class="container padding flexbox">
-          <img src="./images/home/sobre.jpg" alt="" />
-          <div class="card">
-            <p class="line">Elevando o conforto ao mais alto nível</p>
-            <h2 class="h2-index">Bem-Vindo ao Hotel H</h2>
-            <div class="margin">
-              <p>
-                O hotel hotel h é a escolha certa para os visitantes que
-                procuram uma combinação de charme, paz, tranquilidade e uma
-                localização conveniente para explorar os arredores.
-              </p>
-              <a href="#"><button>Saiba mais</button></a>
-            </div>
+  <main>
+    <section class="banner">
+      <video autoplay loop muted>
+        <source src="./video/hotel.mp4" />
+      </video>
+    </section>
+    <section id="sobre">
+      <article class="container padding flexbox">
+        <img src="./images/home/sobre.jpg" alt="" />
+        <div class="card">
+          <p class="line">Elevando o conforto ao mais alto nível</p>
+          <h2 class="h2-index">Bem-Vindo ao Hotel H</h2>
+          <div class="margin">
+            <p>
+              O hotel hotel h é a escolha certa para os visitantes que
+              procuram uma combinação de charme, paz, tranquilidade e uma
+              localização conveniente para explorar os arredores.
+            </p>
+            <a href="#"><button>Saiba mais</button></a>
           </div>
-        </article>
-      </section>
-      <section id="acomodacoes">
-        <div class="bg-acomodacoes">
-          <article class="container relative">
-            <div class="card-acomodacoes">
-              <h2 class="h2-index">Acomodações</h2>
-              <p>
-                O Hotel H é lider em conforto e na qualidade de hospedagem.
-                contomas com excelentes espaços para sua diversão e
-                entretenimento.
-              </p>
-              <div class="container-acomodacoes">
-                <div class="box-acomodacoes">
-                  <img
-                    src="./images/global/icons/icons8-massagem-com-óleo-30.svg"
-                    alt="svg de massagem"
-                  />
-                  <p>Spa e Massagem</p>
-                  <img
-                    src="./images/global/icons/icons8-haltere-30.svg"
-                    alt="svg de academia"
-                  />
-                  <p>Academia</p>
-                  <img
-                    src="./images/global/icons/icons8-danca-de-salao-30.svg"
-                    alt="svg de salão de festa"
-                  />
-                  <p>Salão de Festas</p>
-                </div>
-                <div class="box-acomodacoes">
-                  <img
-                    src="./images/global/icons/icons8-cozinha-50 .svg"
-                    alt="svg de refeitorio"
-                  />
-                  <p>Refeitório</p>
-                  <img
-                    src="./images/global/icons/icons8-piscina-50 .svg"
-                    alt="svg de piscinas"
-                  />
-                  <p>Piscinas</p>
-                  <img
-                    src="./images/global/icons/icons8-parque-tematico-50.svg"
-                    alt="svg de parque de diversão"
-                  />
-                  <p>Parque de Diversão</p>
-                </div>
+        </div>
+      </article>
+    </section>
+    <section id="acomodacoes">
+      <div class="bg-acomodacoes">
+        <article class="container relative">
+          <div class="card-acomodacoes">
+            <h2 class="h2-index">Acomodações</h2>
+            <p>
+              O Hotel H é lider em conforto e na qualidade de hospedagem.
+              contomas com excelentes espaços para sua diversão e
+              entretenimento.
+            </p>
+            <div class="container-acomodacoes">
+              <div class="box-acomodacoes">
+                <img src="./images/global/icons/icons8-massagem-com-óleo-30.svg" alt="svg de massagem" />
+                <p>Spa e Massagem</p>
+                <img src="./images/global/icons/icons8-haltere-30.svg" alt="svg de academia" />
+                <p>Academia</p>
+                <img src="./images/global/icons/icons8-danca-de-salao-30.svg" alt="svg de salão de festa" />
+                <p>Salão de Festas</p>
+              </div>
+              <div class="box-acomodacoes">
+                <img src="./images/global/icons/icons8-cozinha-50 .svg" alt="svg de refeitorio" />
+                <p>Refeitório</p>
+                <img src="./images/global/icons/icons8-piscina-50 .svg" alt="svg de piscinas" />
+                <p>Piscinas</p>
+                <img src="./images/global/icons/icons8-parque-tematico-50.svg" alt="svg de parque de diversão" />
+                <p>Parque de Diversão</p>
               </div>
             </div>
-          </article>
-        </div>
-        <article class="container">
-          <p class="line">Elevando o conforto ao mais alto nível</p>
-          <h2 class="h2-index">Quartos e Suites</h2>
-          <div class="container-quartos">
-            <div class="box">
-              <img
-                src="./images/home/quarto1.jpg"
-                title="quarto com almofadas"
-                alt="quarto com almofadas"
-              />
-            </div>
-            <div class="box">
-              <img
-                src="./images/home/quarto3.jpg"
-                title="uarto com vista para o mar"
-                alt="quarto com vista para o mar"
-              />
-            </div>
-            <div class="box">
-              <img
-                src="./images/home/quarto2.jpg"
-                title="corredor de quartos"
-                alt="corredor de quartos"
-              />
-            </div>
-            <a href="./pages/acomodacoes.html"
-              ><button class="absolute">Saiba mais</button></a
-            >
           </div>
         </article>
-      </section>
-      <section id="gastronomia">
-        <div class="bg-gastronomia">
-          <div class="opaco"></div>
-          <article class="container center"></article>
+      </div>
+      <article class="container">
+        <p class="line">Elevando o conforto ao mais alto nível</p>
+        <h2 class="h2-index">Quartos e Suites</h2>
+        <div class="container-quartos">
+          <div class="box">
+            <img src="./images/home/quarto1.jpg" title="quarto com almofadas" alt="quarto com almofadas" />
+          </div>
+          <div class="box">
+            <img src="./images/home/quarto3.jpg" title="uarto com vista para o mar" alt="quarto com vista para o mar" />
+          </div>
+          <div class="box">
+            <img src="./images/home/quarto2.jpg" title="corredor de quartos" alt="corredor de quartos" />
+          </div>
+          <a href="./pages/acomodacoes.html"><button class="absolute">Saiba mais</button></a>
         </div>
-        <article class="container padding-gastro">
-          <p class="line">Elevando o conforto ao mais alto nível</p>
-          <h2 class="h2-index">Pratos</h2>
-          <div class="pratos">
-            <div class="prato bg1"></div>
-            <div class="prato bg2"></div>
-            <div class="prato bg3"></div>
-            <div class="prato bg4"></div>
-            <div class="prato bg5"></div>
-            <div class="prato bg6"></div>
-          </div>
-          <a href="#"><button class="absolute">Saiba Mais</button></a>
-        </article>
-      </section>
-      <section id="avaliacao" class="bg-avaliacao">
-        <div class="container-avaliacao container">
-          <div class="card-avaliacao">
-            <h1 class="h1-avaliacao">9.2 <span class="span-top">/10</span></h1>
-            <p>12141 comentários</p>
-            <img src="./images/home/decolar-1.webp" alt="" />
-          </div>
-          <div class="card-avaliacao">
-            <h1 class="h1-avaliacao">9.2 <span class="span-top">/10</span></h1>
-            <p>10123 comentários</p>
-            <img src="./images/home/trip-1.webp" alt="" />
-          </div>
-          <div class="card-avaliacao">
-            <h1 class="h1-avaliacao">9.2 <span class="span-top">/10</span></h1>
-            <p>8971 comentários</p>
-            <img src="./images/home/google.webp" alt="" />
-          </div>
+      </article>
+    </section>
+    <section id="gastronomia">
+      <div class="bg-gastronomia">
+        <div class="opaco"></div>
+        <article class="container center"></article>
+      </div>
+      <article class="container padding-gastro">
+        <p class="line">Elevando o conforto ao mais alto nível</p>
+        <h2 class="h2-index">Pratos</h2>
+        <div class="pratos">
+          <div class="prato bg1"></div>
+          <div class="prato bg2"></div>
+          <div class="prato bg3"></div>
+          <div class="prato bg4"></div>
+          <div class="prato bg5"></div>
+          <div class="prato bg6"></div>
         </div>
-      </section>
-    </main>
+        <a href="#"><button class="absolute">Saiba Mais</button></a>
+      </article>
+    </section>
+    <section id="avaliacao" class="bg-avaliacao">
+      <div class="container-avaliacao container">
+        <div class="card-avaliacao">
+          <h1 class="h1-avaliacao">9.2 <span class="span-top">/10</span></h1>
+          <p>12141 comentários</p>
+          <img src="./images/home/decolar-1.webp" alt="" />
+        </div>
+        <div class="card-avaliacao">
+          <h1 class="h1-avaliacao">9.2 <span class="span-top">/10</span></h1>
+          <p>10123 comentários</p>
+          <img src="./images/home/trip-1.webp" alt="" />
+        </div>
+        <div class="card-avaliacao">
+          <h1 class="h1-avaliacao">9.2 <span class="span-top">/10</span></h1>
+          <p>8971 comentários</p>
+          <img src="./images/home/google.webp" alt="" />
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-      <div class="container-footer">
-        <div class="card-footer">
-          <h3>Contato</h3>
-          <div class="column">
-            <a href="tel:+55999129999">
-              <img src="./images/global/icons/icons8-telefone-48.svg" alt="" />
-              <p>+5584999129999</p>
-            </a>
-            <a href="mailto:hotelh@suporte.com.br">
-              <img src="./images/global/icons/envelope-solid.svg" alt="" />
-              <p>hotelh@suporte.com.br</p>
-            </a>
-            <a href="#">
-              <img src="./images/global/icons/icons8-maps-64.svg" alt="" />
-              <p>
-                321, Rua das Maravilhas, <br />
-                Brazil
-              </p>
-            </a>
-          </div>
-          <div class="icons">
-            <a href="#">
-              <img
-                src="./images/global/icons/icons8-instagram.svg"
-                alt=""
-              /> </a
-            ><a href="">
-              <img src="./images/global/icons/icons8-twitter.svg" alt="" />
-            </a>
-            <a href="#">
-              <img
-                src="./images/global/icons/icons8-facebook-novo.svg"
-                alt=""
-              />
-            </a>
-            <a href="#">
-              <img src="./images/global/icons/icons8-whatsapp.svg" alt="" />
-            </a>
-          </div>
+  <footer>
+    <div class="container-footer">
+      <div class="card-footer">
+        <h3>Contato</h3>
+        <div class="column">
+          <a href="tel:+55999129999">
+            <img src="./images/global/icons/icons8-telefone-48.svg" alt="" />
+            <p>+5584999129999</p>
+          </a>
+          <a href="mailto:hotelh@suporte.com.br">
+            <img src="./images/global/icons/envelope-solid.svg" alt="" />
+            <p>hotelh@suporte.com.br</p>
+          </a>
+          <a href="#">
+            <img src="./images/global/icons/icons8-maps-64.svg" alt="" />
+            <p>
+              321, Rua das Maravilhas, <br />
+              Brazil
+            </p>
+          </a>
         </div>
-        <div class="card-footer">
-          <h3>Serviços</h3>
-          <div class="column">
-            <a href="#">Home</a>
-            <a href="./pages/sobre.html">Sobre</a>
-            <a href="pages/acomodacoes.html">Acomodações</a>
-            <a href="./pages/reserva.html">Reserva</a>
-          </div>
-        </div>
-        <div class="card-footer">
-          <h3>Carreira</h3>
-          <div class="column">
-            <a href="#">Trabalhe Conosco</a>
-            <a href="#">Desenvolvedor</a>
-            <a href="#">Trainner</a>
-          </div>
-        </div>
-        <div class="card-footer">
-          <h3>Links Rápidos</h3>
-          <div class="column">
-            <a href="#">Admin</a>
-            <a href="./pages/contato.html">Contato</a>
-            <a href="#">Blog</a>
-          </div>
+        <div class="icons">
+          <a href="#">
+            <img src="./images/global/icons/icons8-instagram.svg" alt="" /> </a><a href="">
+            <img src="./images/global/icons/icons8-twitter.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./images/global/icons/icons8-facebook-novo.svg" alt="" />
+          </a>
+          <a href="#">
+            <img src="./images/global/icons/icons8-whatsapp.svg" alt="" />
+          </a>
         </div>
       </div>
-      <div class="directs">
-        <p>&copy;2023 - Grupo 5 TEX</p>
+      <div class="card-footer">
+        <h3>Serviços</h3>
+        <div class="column">
+          <a href="#">Home</a>
+          <a href="./pages/sobre.html">Sobre</a>
+          <a href="pages/acomodacoes.html">Acomodações</a>
+          <a href="./pages/reserva.html">Reserva</a>
+        </div>
       </div>
-    </footer>
-  </body>
+      <div class="card-footer">
+        <h3>Carreira</h3>
+        <div class="column">
+          <a href="#">Trabalhe Conosco</a>
+          <a href="#">Desenvolvedor</a>
+          <a href="#">Trainner</a>
+        </div>
+      </div>
+      <div class="card-footer">
+        <h3>Links Rápidos</h3>
+        <div class="column">
+          <a href="#">Admin</a>
+          <a href="./pages/contato.html">Contato</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div class="directs">
+      <p>&copy;2023 - Grupo 5 TEX</p>
+    </div>
+  </footer>
+</body>
+
 </html>

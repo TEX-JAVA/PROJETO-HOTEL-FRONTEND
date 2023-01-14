@@ -1,68 +1,69 @@
 #login_check {
 	display: none;
+
+	&:checked ~ form .login_form {
+		opacity: 0.9;
+		top: 80px;
+	}
+
+	&:checked ~ .login_label #btn {
+		top: 0px;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&:checked ~ .login_label #cancel {
+		position: absolute;
+		display: block;
+		top: 90px;
+	}
 }
 
-label {
+.login_label {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-}
 
-label #btn,
-label #cancel {
-	color: white;
-	cursor: pointer;
-	font-size: 1.4rem;
-}
+	& #btn,
+	& #cancel {
+		color: white;
+		cursor: pointer;
+		font-size: 1.4rem;
+	}
 
-label #btn {
-	transition: all 0.2s ease;
-}
+	& #btn {
+		transition: all 0.2s ease;
+	}
 
-label #cancel {
-	display: none;
-	right: 110px;
-	padding: 3px 9px;
-	z-index: 2;
-}
+	& #cancel {
+		display: none;
+		right: 110px;
+		padding: 3px 9px;
+		z-index: 2;
+	}
 
+	& #visitante:hover {
+		cursor: pointer;
+	}
+}
 
 .salvar-senhar {
+	gap: 10px;
 	display: flex;
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-}
 
-.salvar-senhar input {
-	margin-right: 10px;
-	width: 20px;
-}
+	& .salvar-senha-label {
+		width: 20px;
+		color: white;
+		display: contents;
+	}
 
-.salvar-senhar label {
-	font-size: 1.4rem;
-	color: #fff;
-}
-
-label p:hover {
-	cursor: pointer;
-}
-
-#login_check:checked~form .login_form {
-	opacity: 0.9;
-	top: 80px;
-}
-
-#login_check:checked~label #btn {
-	top: 0px;
-	opacity: 0;
-	pointer-events: none;
-}
-
-#login_check:checked~label #cancel {
-	position: absolute;
-	display: block;
-	top: 90px;
+	& .login_label {
+		font-size: 1.4rem;
+		color: #fff;
+	}
 }
 
 .login_form {
@@ -88,46 +89,44 @@ label p:hover {
 	padding: 10px 0px;
 	list-style: none;
 	display: block;
-}
 
-.login_list .txt {
-	height: 50px;
-	width: 250px;
-	margin: 10px;
-	font-size: 1.4rem;
-	border-radius: 5px;
-	padding-left: 10px;
-}
+	& .txt {
+		height: 50px;
+		width: 250px;
+		margin: 10px;
+		font-size: 1.4rem;
+		border-radius: 5px;
+		padding-left: 10px;
+	}
+	& p {
+		font-size: 1.2rem;
+		text-align: center;
+		text-transform: none;
+	}
 
-.login_list p {
-	font-size: 1.2rem;
-	text-align: center;
-	text-transform: none;
-}
+	& p input {
+		margin-right: 10px;
+	}
 
-.login_list p input {
-	margin-right: 10px;
-}
+	& .login_button {
+		width: 200px;
+		background-color: #015958;
+		border-radius: 30px;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.4rem;
+		margin: 10px 2px 20px 2px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
 
-.login_list .login_button {
-	width: 200px;
-	background-color: #015958;
-	border-radius: 30px;
-	border: none;
-	color: white;
-	padding: 15px 32px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 1.4rem;
-	margin: 10px 2px 20px 2px;
-	cursor: pointer;
-	transition: 0.3s;
-}
-
-.login_list .login_button:hover {
-	background-color: #5dc4c8;
-	transition: 0.3s;
+	& .login_button:hover {
+		background-color: #5dc4c8;
+		transition: 0.3s;
+	}
 }
 
 .login_suporte {
@@ -136,16 +135,16 @@ label p:hover {
 	margin: 0px;
 	padding: 0px;
 	font-size: 1.4rem;
-}
 
-.login_suporte a {
-	color: white;
-	padding: 5px;
-	box-shadow: none;
-	font-size: 1.3rem;
-	justify-content: center;
-}
+	& a {
+		color: white;
+		padding: 5px;
+		box-shadow: none;
+		font-size: 1.3rem;
+		justify-content: center;
+	}
 
-.login_suporte a:hover {
-	text-decoration: underline;
+	& a:hover {
+		text-decoration: underline;
+	}
 }
