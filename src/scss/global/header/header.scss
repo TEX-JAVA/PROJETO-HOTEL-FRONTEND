@@ -8,31 +8,31 @@ header {
 	width: 100%;
 	background-color: $bg-header;
 	opacity: 0.9;
-	a{
-		img{
+	a {
+		img {
 			width: 45px;
 		}
 
-	&:nth-child(1){
-		@include flexAlign;
-		gap: 8px;
-	}
+		&:nth-child(1) {
+			@include flexAlign;
+			gap: 8px;
+		}
 	}
 
-	p{
+	p {
 		font-size: 1.2rem;
 		text-transform: uppercase;
 		color: #fff;
 	}
 
-	nav{
-		ul{
+	nav {
+		ul {
 			@include flex;
 			gap: 20px;
 
-			li{
-				a{
-					img{
+			li {
+				a {
+					img {
 						@include iconsPadrao;
 					}
 				}
@@ -40,24 +40,25 @@ header {
 		}
 	}
 
-	div{
-		a{
-			img{
+	div {
+		a {
+			img {
 				@include iconsPadrao;
 			}
 		}
 	}
 
-	.flexMenu{
+	.flexMenu {
 		@include flexAlign;
 		gap: 15px;
 	}
 
-	.gap-login{
+	.gap-login {
 		gap: 7px;
 	}
 
-	select, option{
+	select,
+	option {
 		background-color: transparent;
 		outline: none;
 		color: #fff;
@@ -65,10 +66,7 @@ header {
 	}
 }
 
-
-
-
-@media(min-width: 769px) {
+@media (min-width: 769px) {
 	.sidebar {
 		display: none;
 	}
@@ -83,10 +81,9 @@ header {
 		padding: 10px;
 	}
 
-	#login_check+label p {
+	#login_check + label #visitante {
 		display: none;
 	}
-
 }
 
 @media (max-width: 768px) {
@@ -102,11 +99,11 @@ header {
 		display: none;
 	}
 
-	#login_check + label #btn {
+	#login_check + .login_label #btn {
 		display: none;
 	}
 
-	#login_check + label #cancel{
+	#login_check + .login_label #cancel {
 		right: 9.5vh;
 	}
 
@@ -115,7 +112,7 @@ header {
 		z-index: 1;
 	}
 
-	#slide-cancel{
+	#slide-cancel {
 		background-color: rgb(90, 137, 88);
 		opacity: 0.5;
 		border-radius: 50%;
@@ -123,7 +120,7 @@ header {
 		text-align: center;
 	}
 
-	#login_check:checked #menu-sidebar{
+	#login_check:checked #menu-sidebar {
 		right: -200vh;
 	}
 }
