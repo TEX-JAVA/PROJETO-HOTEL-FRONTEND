@@ -1,0 +1,126 @@
+@import "../mixin/mixin";
+
+header {
+	@include flexBox;
+	position: fixed;
+	padding: 12px;
+	z-index: 10;
+	width: 100%;
+	background-color: $bg-header;
+	opacity: 0.9;
+	a {
+		img {
+			width: 45px;
+		}
+
+		&:nth-child(1) {
+			@include flexAlign;
+			gap: 8px;
+		}
+	}
+
+	p {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		color: #fff;
+	}
+
+	nav {
+		ul {
+			@include flex;
+			gap: 20px;
+
+			li {
+				a {
+					img {
+						@include iconsPadrao;
+					}
+				}
+			}
+		}
+	}
+
+	div {
+		a {
+			img {
+				@include iconsPadrao;
+			}
+		}
+	}
+
+	.flexMenu {
+		@include flexAlign;
+		gap: 15px;
+	}
+
+	.gap-login {
+		gap: 7px;
+	}
+
+	select,
+	option {
+		background-color: transparent;
+		outline: none;
+		color: #fff;
+		font-size: 1.4rem;
+	}
+}
+
+@media (min-width: 769px) {
+	.sidebar {
+		display: none;
+	}
+}
+
+@media (max-width: 1260px) {
+	nav ul li a p {
+		display: none;
+	}
+
+	nav ul li {
+		padding: 10px;
+	}
+
+	#login_check + label #visitante {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	nav {
+		display: none;
+	}
+
+	select {
+		display: none;
+	}
+
+	.flex p {
+		display: none;
+	}
+
+	#login_check + .login_label #btn {
+		display: none;
+	}
+
+	#login_check + .login_label #cancel {
+		right: 9.5vh;
+	}
+
+	.login_form {
+		right: 8vh !important;
+		z-index: 1;
+	}
+
+	#slide-cancel {
+		background-color: rgb(90, 137, 88);
+		opacity: 0.5;
+		border-radius: 50%;
+		width: 25px;
+		text-align: center;
+	}
+
+	#login_check:checked #menu-sidebar {
+		right: -200vh;
+	}
+}

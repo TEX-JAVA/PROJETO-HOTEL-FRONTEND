@@ -1,0 +1,79 @@
+.menu-sidebar {
+	display: flex;
+	position: fixed;
+	width: 36vh;
+	top: 0vh;
+	right: -200vh;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background-color: #023535;
+	opacity: 0.9;
+	transition: all 0.5s ease;
+}
+
+.menu-sidebar-lista {
+	width: 100%;
+
+	& li {
+		width: 100%;
+		padding: 0px 10px;
+		line-height: 70px;
+		transition: all 0.2s ease-in-out;
+		border-bottom: 1px black solid;
+	}
+
+	& li a p {
+		display: block;
+		text-align: left;
+		width: 100%;
+	}
+	& li a i {
+		color: white;
+	}
+}
+
+.menu-sidebar-login {
+	height: 73.61px;
+	padding: 12px;
+
+	& a .sidebar-login-label {
+		cursor: pointer;
+		display: contents;
+	}
+}
+
+#slide-menu-sidebar {
+	display: none;
+
+	&:checked ~ .menu-sidebar {
+		right: 0vh;
+	}
+
+	&:checked ~ .slide-menu-sidebar-label #slide-cancel {
+		right: 40vh;
+		background-color: red;
+	}
+
+	&:checked ~ .slide-menu-sidebar-label #slide-btn {
+		display: none;
+	}
+}
+.slide-menu-sidebar-label {
+	& #slide-btn,
+	& #slide-cancel {
+		position: relative !important;
+		cursor: pointer;
+		color: white;
+		font-size: 1.6rem;
+		transition: all 0.5s ease;
+	}
+
+	& #slide-cancel {
+		right: -40vh;
+	}
+
+	& #slide-btn {
+		right: -3vw;
+	}
+}

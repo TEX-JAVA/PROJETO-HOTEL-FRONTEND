@@ -1,0 +1,150 @@
+#login_check {
+	display: none;
+
+	&:checked ~ form .login_form {
+		opacity: 0.9;
+		top: 80px;
+	}
+
+	&:checked ~ .login_label #btn {
+		top: 0px;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&:checked ~ .login_label #cancel {
+		position: absolute;
+		display: block;
+		top: 90px;
+	}
+}
+
+.login_label {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	& #btn,
+	& #cancel {
+		color: white;
+		cursor: pointer;
+		font-size: 1.4rem;
+	}
+
+	& #btn {
+		transition: all 0.2s ease;
+	}
+
+	& #cancel {
+		display: none;
+		right: 110px;
+		padding: 3px 9px;
+		z-index: 2;
+	}
+
+	& #visitante:hover {
+		cursor: pointer;
+	}
+}
+
+.salvar-senhar {
+	gap: 10px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	& .salvar-senha-label {
+		width: 20px;
+		color: white;
+		display: contents;
+	}
+
+	& .login_label {
+		font-size: 1.4rem;
+		color: #fff;
+	}
+}
+
+.login_form {
+	visibility: visible;
+	top: -500px;
+	right: 100px;
+	position: absolute;
+	padding: 30px;
+	width: 350px;
+	background-color: #023535;
+	opacity: 0.9;
+	border-radius: 30px;
+	margin-left: auto;
+	text-align: center;
+	transition: all 0.2s ease;
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.login_list {
+	margin: 0;
+	padding: 10px 0px;
+	list-style: none;
+	display: block;
+
+	& .txt {
+		height: 50px;
+		width: 250px;
+		margin: 10px;
+		font-size: 1.4rem;
+		border-radius: 5px;
+		padding-left: 10px;
+	}
+	& p {
+		font-size: 1.2rem;
+		text-align: center;
+		text-transform: none;
+	}
+
+	& p input {
+		margin-right: 10px;
+	}
+
+	& .login_button {
+		width: 200px;
+		background-color: #015958;
+		border-radius: 30px;
+		border: none;
+		color: white;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.4rem;
+		margin: 10px 2px 20px 2px;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+	& .login_button:hover {
+		background-color: #5dc4c8;
+		transition: 0.3s;
+	}
+}
+
+.login_suporte {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	font-size: 1.4rem;
+
+	& a {
+		color: white;
+		padding: 5px;
+		box-shadow: none;
+		font-size: 1.3rem;
+		justify-content: center;
+	}
+
+	& a:hover {
+		text-decoration: underline;
+	}
+}

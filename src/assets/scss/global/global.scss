@@ -1,0 +1,62 @@
+@import "../variaveis/variaveis_globais.scss";
+@import "./footer/footer.scss";
+@import "./header/header.scss";
+@import "../home/main.scss";
+@import "../login/login.scss";
+@import "../login/menu-sidebar.scss";
+@import "../acomodacoes/acomodacoes.scss";
+@import "../contato/contato.scss";
+@import "../gastronomia/gastronomia.scss";
+@import "../reserva/reserva.scss";
+@import "../sobre/sobre.scss";
+@import "../global/mixin/mixin";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Nunito", sans-serif;
+}
+
+ul,
+li,
+button,
+select,
+a,
+input,
+select,
+option {
+	text-decoration: none;
+	list-style: none;
+	border: 0;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 30px auto;
+	position: relative;
+	padding: 10px 10px;
+}
+
+button {
+	display: block;
+	margin: 30px 0px;
+	width: 130px;
+	height: 50px;
+	border-radius: 50px;
+	background-color: #008f8c;
+	color: #fff;
+	font-size: 1.2rem;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+button:hover {
+	-webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.7);
+	-moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.7);
+	box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.7);
+}
+
+button:hover {
+	background-color: #0fc2c0;
+}

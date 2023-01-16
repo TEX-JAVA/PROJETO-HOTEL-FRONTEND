@@ -1,0 +1,43 @@
+.contato_form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+}
+
+.contato_form div + div {
+    margin-top: 1em;
+}
+
+.contato_form label {
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+}
+
+.contato_form input,
+.contato_form textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+.contato_form input:focus,
+.contato_form textarea:focus {
+    border-color: #000;
+}
+
+.contato_form textarea {
+    vertical-align: top;
+    height: 5em;
+}
+
+.contato_form .button {
+    padding-left: 90px;
+}
+
+.contato_form button {
+    margin-left: 0.5em;
+}

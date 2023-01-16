@@ -1,0 +1,36 @@
+@mixin containerPadrao{
+    max-width: 1250px;
+    margin: 30px auto;
+    position: relative;
+    padding: 10px 10px;
+}
+
+@mixin buttonPadrao{
+    display: block;
+    border-radius: 50px;
+    background-color: #008f8c;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+@mixin flex{
+    display: flex;
+}
+
+@mixin flexAlign{
+    @include flex;
+    align-items: center;
+}
+
+@mixin flexBox{
+    @include flexAlign;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+@mixin iconsPadrao{
+    width: 20px;
+    height: 20px;
+}

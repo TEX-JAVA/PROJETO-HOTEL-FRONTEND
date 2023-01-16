@@ -1,0 +1,430 @@
+/* SLOGAN */
+
+:root {
+	--color-light-black: #191919;
+	--color-white: #ffffff;
+}
+
+.slogan {
+	position: relative;
+	background-color: var(--color-light-black);
+	background-image: url("../../../images/acomodacoes/capa.jpeg");
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	padding-top: 175px;
+	padding-bottom: 175px;
+	align-items: center;
+	text-align: center;
+	opacity: 100%;
+}
+
+.slogan-text {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.slogan-title-text {
+	z-index: 1;
+	font-size: 3rem;
+	color: #fff;
+}
+
+.btn-acomodacao {
+	border: solid 2px #5dc4c8;
+	border-radius: 10px;
+	padding: 25px;
+	width: 200px;
+	height: 70px;
+	font-weight: 700;
+	font-size: 18px;
+	color: white;
+	cursor: pointer;
+	background: #023535;
+	display: inline-block;
+	margin: 20px 0;
+	opacity: 80%;
+}
+
+.btn-acomodacao:hover {
+	cursor: pointer;
+	background: #5dc4c8;
+	padding: 20px;
+	opacity: 100%;
+	color: #023535;
+	border: solid 2px #023535;
+	border-radius: 10px;
+	font-weight: 800;
+	opacity: 70%;
+	scale: 1.05;
+}
+
+.btn-acomodacao span {
+	font: small-caps bold 24px/1 sans-serif;
+	font-size: 25px;
+	font-weight: 900;
+}
+
+/* Nossas Acomodações */
+
+section .flex {
+	display: flex;
+	max-width: 1250px;
+	margin: 40px auto 20px;
+	row-gap: 30px;
+	overflow: auto;
+	scroll-behavior: auto;
+}
+
+section .flex > div {
+	text-align: center;
+	flex: 1 1 30px;
+	margin: 10px;
+	border: 3px solid #f1f1f1;
+	opacity: 80%;
+	transition: 0.3s;
+}
+
+.flex > div:hover {
+	-webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+	opacity: 100%;
+}
+
+section .flex img {
+	max-width: 100%;
+	display: block;
+}
+
+.text-acomodacoes {
+	text-align: center;
+	margin: 70px auto 0px;
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: rgb(2, 53, 53);
+	filter: drop-shadow(rgba(0, 0, 0, 0.9) 1px 1px 0px);
+}
+
+.text-promocao {
+	text-align: center;
+	margin: 30px auto 70px;
+	font-size: 2rem;
+	font-weight: bold;
+	font-family: sans-serif;
+	color: rgb(2, 53, 53);
+	filter: drop-shadow(rgba(0, 0, 0, 0.9) 1px 1px 0px);
+}
+
+#acomodacao {
+	font-size: 16px;
+	padding: 6px 0px 0px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+#descricao {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+.btn-reserve-agora {
+	margin: 10px auto;
+	width: 200px;
+	height: 50px;
+	font-size: 15px;
+	text-transform: uppercase;
+	cursor: pointer;
+	background: #023535;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-reserve-agora:hover {
+	cursor: pointer;
+	background: #015958;
+	border: 2px solid #023535;
+	scale: 1.02;
+}
+
+#icon-service-acomodacoes {
+	display: inline-block;
+	width: 20px;
+	padding-top: 20px;
+	margin: 5px;
+}
+
+/* CSS CAIXAS */
+
+#box-acomod {
+	display: flex;
+	margin: 43px 0px;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.box-acomod:hover {
+	transform: scale(1.02);
+	opacity: 100%;
+}
+
+div .box-acomod {
+	display: inline-block;
+	border: 3px solid rgb(241, 241, 241);
+	border-radius: 20px;
+	width: 340px;
+	height: 280px;
+	align-items: center;
+	align-content: space-between;
+	opacity: 80%;
+}
+
+div .box-acomod {
+	text-align: center;
+	color: #023535;
+	font-family: "Nunito", sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 1em;
+	padding: 40px;
+}
+
+div .box-acomod img {
+	width: 30px;
+	height: 30px;
+}
+
+/* PROMOCÃO */
+.bg-backgroud {
+	position: relative;
+	margin: 80px auto 80px;
+	background-color: #f1f1f1;
+}
+
+#promocao {
+	background-position: center;
+	opacity: 0.92;
+}
+
+.container-promocao {
+	max-width: 1250px;
+	margin: 20px auto;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 30px;
+	background-color: white;
+}
+
+.card-promocao {
+	background-color: #f1f1f1;
+	width: 100%;
+	height: 100%;
+	overscroll-behavior: inherit;
+}
+
+.card-promocao:nth-child(1) {
+	position: relative;
+}
+
+.card-promocao:nth-child(2) {
+	position: relative;
+}
+
+.card-promocao:nth-child(3) {
+	position: relative;
+}
+
+.card-promocao img {
+	width: 100%;
+}
+
+// #preço-promo-red {
+//   filter: drop-shadow(1px 1px 0px rgb(0 0 0 / 90%));
+//   font-size: 1.8rem;
+//   font-weight: 900;
+//   color: red;
+// }
+
+.promo-img01 {
+	display: block;
+	border: 10px solid white;
+}
+
+#preço-promo01 {
+	position: absolute;
+	top: 8px;
+	background-color: white;
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: bolder;
+	padding: 2px 20px 2px 8px;
+}
+
+.promo-img02 {
+	display: block;
+	margin: 0px auto 50px;
+	border: 10px solid white;
+	margin-top: -36px;
+}
+
+#preço-promo02 {
+	position: absolute;
+	top: 3px;
+	background-color: white;
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: bolder;
+	padding: 2px 20px 2px 8px;
+}
+
+.promo-img03 {
+	margin: -20px auto 30px;
+	border: 10px solid white;
+}
+
+#preço-promo03 {
+	position: absolute;
+	top: 30px;
+	background-color: white;
+	text-align: center;
+	font-size: 1.1rem;
+	font-weight: bolder;
+	padding: 2px 20px 2px 8px;
+}
+
+.card-promocao p {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.conteudo {
+	padding: 0px 20px 20px;
+}
+
+.icons-acomod {
+	display: flex;
+	margin: auto;
+	width: 120px;
+	gap: 15%;
+	padding-top: 40px;
+}
+
+#star {
+	display: flex;
+	margin: auto;
+	width: 20px;
+	margin: 0px 0px 20px;
+}
+
+/* MENSAGEM */
+
+#mensagem {
+	text-align: center;
+	margin: 100px 60px 30px;
+	font-style: italic;
+	font-size: 2em;
+	font-weight: bold;
+	z-index: 1;
+}
+
+.h2-mensagem {
+	font-size: 1.8rem;
+	text-align: center;
+}
+.container-mensagem {
+	max-width: 1250px;
+	margin: 0px auto 0px auto;
+	position: relative;
+	padding: 40px 0px;
+}
+
+@media (min-width: 769px) {
+	#preço-promo01 {
+		position: absolute;
+		top: 8px;
+		right: -8px;
+		background-color: white;
+		transform: rotate(355deg);
+		text-align: center;
+		font-size: 1.1rem;
+		font-weight: bolder;
+		padding: 2px 20px 2px 8px;
+	}
+
+	.promo-img01 {
+		display: block;
+		margin: -20px auto 30px;
+		transform: rotate(355deg);
+		border: 10px solid white;
+	}
+
+	.promo-img03 {
+		transform: rotate(-355deg);
+		border: 10px px solid white;
+	}
+
+	#preço-promo01 {
+		position: absolute;
+		top: 8px;
+		right: -8px;
+		background-color: white;
+		transform: rotate(355deg);
+		text-align: center;
+		font-size: 1.1rem;
+		font-weight: bolder;
+		padding: 2px 20px 2px 8px;
+	}
+
+	#preço-promo03 {
+		position: absolute;
+		top: 30px;
+		right: -8px;
+		background-color: white;
+		transform: rotate(-355deg);
+		text-align: center;
+		font-size: 1.1rem;
+		font-weight: bolder;
+		padding: 2px 20px 2px 8px;
+	}
+
+	#preço-promo02 {
+		position: absolute;
+		top: 3px;
+		right: -8px;
+		background-color: white;
+		text-align: center;
+		font-size: 1.1rem;
+		font-weight: bolder;
+		padding: 2px 20px 2px 8px;
+	}
+
+	.container-promocao {
+		max-width: 1250px;
+		margin: 20px auto;
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 30px;
+		background-color: white;
+	}
+
+	#promocao > div {
+		transform: scale(0.95);
+		-webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+		box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
+	}
+
+	section .flex {
+		display: flex;
+		flex-wrap: wrap;
+		max-width: 1250px;
+		margin: 20px auto;
+		row-gap: 30px;
+	}
+}
