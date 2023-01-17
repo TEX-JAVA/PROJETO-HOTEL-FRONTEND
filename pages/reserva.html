@@ -375,16 +375,19 @@
                             />
                             <p>CHECK-IN:</p>
                             <input
+                                id="checkin-date"
                                 type="date"
                                 style="text-align: center; height: 24px"
                             />
                             <p>CHECK-OUT:</p>
                             <input
+                                id="checkout-date"
                                 type="date"
                                 style="text-align: center; height: 24px"
                             />
                             <p>PESSOAS:</p>
                             <input
+                                id="nb-adults"
                                 type="number"
                                 style="
                                     width: 60px;
@@ -402,13 +405,14 @@
                         </div>
                         <a
                             class="button-b"
-                            href="#"
+                            data-modal="modal-two"
+                            id="continue-btn"
                             >CONTINUAR</a
                         >
                     </div>
                 </div>
             </div>
-            <!-- Modal-->
+            <!-- Modal Mais serviços-->
             <div
                 class="modal"
                 id="modal-one"
@@ -480,7 +484,55 @@
                     <button class="modal-close modal-exit">X</button>
                 </div>
             </div>
-            <!-- Modal End-->
+            <!-- Modal Mais Serviços-->
+            <!-- Modal Resumo das Reservas-->
+            <div
+                class="modal"
+                id="modal-two"
+            >
+                <div class="modal-bg modal-exit"></div>
+                <div class="modal-container reservations">
+                    <div class="left-side">
+                        <img
+                            src="https://i.ibb.co/DzZyM1v/hotel.jpg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="right-side">
+                        <h2>Hotel H</h2>
+                        <h4>O hotel que faz sentido para você</h4>
+                        <ul>
+                            <li>
+                                <p>Chegada</p>
+                                <h3 id="checkin-date-value"></h3>
+                            </li>
+                            <li>
+                                <p>Saida</p>
+                                <h3 id="checkout-date-value"></h3>
+                            </li>
+                            <li>
+                                <p>Numero de convidados</p>
+                                <h3 id="nb-adults-value"></h3>
+                            </li>
+                            <li>
+                                <p>Inclui:</p>
+                                <h3 id="services-list-value"></h3>
+                            </li>
+                            <li>
+                                <p>Preço por Adulto</p>
+                                <h3 id="price-per-adult"></h3>
+                            </li>
+                            <li>
+                                <p>Preço Total</p>
+                                <h3 id="total-price"></h3>
+                            </li>
+                        </ul>
+                        <button class="btn">Confirmar a Reserva</button>
+                    </div>
+                    <button class="modal-close modal-exit">X</button>
+                </div>
+            </div>
+            <!-- Modal Resumo das Reservas-->
         </main>
         <footer>
             <div class="container-footer">
