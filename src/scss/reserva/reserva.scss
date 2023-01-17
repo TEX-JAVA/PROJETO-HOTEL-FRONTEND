@@ -41,7 +41,23 @@
   opacity: 0.92;
 }
 
+
+
 .button-a:hover {
+  background-image: linear-gradient(to bottom, #015958, #008f8c);
+}
+
+.button-c {
+  color: white;
+  background-image: linear-gradient(to top, #015958, #016664);
+  padding: 6.3px 10px 6.3px 10px;
+  margin-left: 18px;
+  font-weight: bold;
+  opacity: 0.92;
+  max-width: 140px;
+}
+
+.button-c:hover {
   background-image: linear-gradient(to bottom, #015958, #008f8c);
 }
 
@@ -50,6 +66,14 @@
   width: 114px;
   margin-right: 18px;
   margin-left: 5px;
+}
+
+.select-apartamento{
+  padding: 8px;
+    width: 114px;
+    margin-right: 18px;
+    margin-left: 5px;
+
 }
 
 .div-reserva table tr td label {
@@ -88,6 +112,12 @@
 
 .image-reserva {
   width: 300px;
+}
+
+.div-pa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .image-text p {
