@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             if (!localStorage.getItem("services")) localStorage.setItem("services", "");
             
-            let services = localStorage.getItem("services");
+            services = localStorage.getItem("services");
             if (services === "") services = [];
             else services = services.split(",");
 
