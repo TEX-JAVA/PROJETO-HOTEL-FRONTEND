@@ -72,34 +72,18 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     // Final dos eventos para o checkin, checkout e adultos
     // Eventos para os quartos
-    const roomCards = document.querySelectorAll(".room-card");
-    roomCards.forEach(function (card) {
-        // Código para adicionar a classe selected e o border
-        // baseado no localStorage
-        const roomName = card.id;
-        if (roomName === room) card.classList.add("selected");
-        else card.classList.remove("selected");
-        if (card.classList.contains("selected")) card.style.border = "2px solid teal";
-        else card.style.border = "none";
-        // Final do código para adicionar a classe selected e o border
-        // baseado no localStorage
-        // Código baseado nos cliques para adicionar os quartos ao localStorage
-        card.addEventListener("click", function (event) {
-            event.preventDefault();
-            room = card.id;
-            localStorage.setItem("room", room);
-            roomCards.forEach(function (card) {
-                const roomName = card.id;
-                if (roomName === room) card.classList.add("selected");
-                else card.classList.remove("selected");
-                if (card.classList.contains("selected")) card.style.border = "2px solid teal";
-                else card.style.border = "none";
+    Object.keys(roomsAndPrices).forEach((room) => {
+            let roomBtn = document.getElementById(`btn-${room}`);
+            roomBtn.addEventListener("click", function (event) {
+                event.preventDefault();
+                room = room;
+                document.getElementById("room-type").value = room;
+                localStorage.setItem("room", room);
             })
         })
-    })
-        // Final do código baseado nos cliques para adicionar os quartos ao localStorage
+    // Final dos eventos para os quartos
     // Código para selecionar os serviços
-    const cards = document.querySelectorAll(".card");
+    const cards = document.querySelectorAll(".card-modal");
     cards.forEach(function (card) {
         // Código para adicionar a classe selected e o border
         // baseado no localStorage
@@ -164,12 +148,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     // Final da funcao para validar a abertuda do modal
     
+    // Codigo para o checkin, checkout, tipo de quarto e adultos no localStorage
     const continueBtn = document.getElementById("continue-btn");
     continueBtn.addEventListener("click", function (event) {
-    // Codigo para o checkin, checkout e adultos no localStorage
-        
-        // Final do codigo para o checkin, chekout e adultos
-        // Codigo para o resumo da reserva
+        // Codigo para calculo do preco por adulto
         const pricePerAdult = () => {
             let total = 0;
             let roomPrice = roomsAndPrices[room];
@@ -200,11 +182,14 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             const modal = document.getElementById(trigger.dataset.modal);
             modal.classList.add("open");
+            let footer = document.getElementsByTagName("footer")[0];
+            footer.style.visibility = "hidden";
             const exits = modal.querySelectorAll(".modal-exit");
             exits.forEach(function (exit) {
                 exit.addEventListener("click", function (event) {
                     event.preventDefault();
                     modal.classList.remove("open");
+                    footer.style.visibility = "visible";
                 });
             });
         });
