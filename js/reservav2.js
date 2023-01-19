@@ -153,6 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
     continueBtn.addEventListener("click", function (event) {
         // Codigo para calculo do preco por adulto
         const pricePerAdult = () => {
+            services = localStorage.getItem("services").split(",");
             let total = 0;
             let roomPrice = roomsAndPrices[room];
             if (services[0] !== "") {
@@ -165,7 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
             total *= nbDays;
             return total;
         }
-
+        services = localStorage.getItem("services").split(",");
         document.getElementById('checkin-date-value').innerHTML = checkin;
         document.getElementById('checkout-date-value').innerHTML = checkout;
         document.getElementById('nb-adults-value').innerHTML = guests;
