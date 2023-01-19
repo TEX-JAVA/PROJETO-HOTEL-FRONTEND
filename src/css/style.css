@@ -1235,10 +1235,13 @@ div .box-acomod img {
   color: white;
   background-image: linear-gradient(to top, #015958, #016664);
   padding: 6.3px 10px 6.3px 10px;
-  margin-left: 18px;
   font-weight: bold;
   opacity: 0.92;
-  max-width: 120px;
+  max-width: 140px;
+}
+
+.button-c:hover {
+  background-image: linear-gradient(to bottom, #015958, #008f8c);
 }
 
 .div-reserva table tr td input {
@@ -1278,7 +1281,9 @@ div .box-acomod img {
 /* navegação imagens */
 .image-text {
   display: flex;
-  margin: 20px 0;
+  column-gap: 18px;
+  border-radius: 42px;
+  padding: 21px;
 }
 
 .dash {
@@ -1296,10 +1301,6 @@ div .box-acomod img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.image-text p {
-  padding-left: 15px;
 }
 
 .container-main {
@@ -1378,6 +1379,7 @@ div .box-acomod img {
 .a-servicos {
   color: white;
   font-size: 1.3rem;
+  cursor: pointer;
   text-decoration: underline;
 }
 
@@ -1476,7 +1478,7 @@ div .box-acomod img {
   cursor: pointer;
 }
 
-.card {
+.card-modal {
   --card-gradient: rgba(0, 0, 0, 0.8);
   --card-gradient: #5e9ad9, #e271ad;
   --card-blend-mode: overlay;
@@ -1487,7 +1489,7 @@ div .box-acomod img {
   background-image: linear-gradient(var(--card-gradient), white max(9.5rem, 27vh));
   overflow: hidden;
 }
-.card img {
+.card-modal img {
   border-radius: 0.5rem 0.5rem 0 0;
   width: 100%;
   object-fit: cover;
@@ -1495,14 +1497,14 @@ div .box-acomod img {
   aspect-ratio: 4/3;
   mix-blend-mode: var(--card-blend-mode);
 }
-.card img ~ * {
+.card-modal img ~ * {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.card > :last-child {
+.card-modal > :last-child {
   margin-bottom: 0;
 }
-.card:hover, .card:focus-within {
+.card-modal:hover, .card-modal:focus-within {
   --card-gradient: #24a9d5 max(8.5rem, 20vh);
 }
 

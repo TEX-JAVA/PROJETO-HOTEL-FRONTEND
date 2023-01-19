@@ -1,22 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Código para abrir e fechar o modal
-    const modals = document.querySelectorAll("[data-modal]");
-
-    modals.forEach(function (trigger) {
-        trigger.addEventListener("click", function (event) {
-            event.preventDefault();
-            const modal = document.getElementById(trigger.dataset.modal);
-            modal.classList.add("open");
-            const exits = modal.querySelectorAll(".modal-exit");
-            exits.forEach(function (exit) {
-                exit.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    modal.classList.remove("open");
-                });
-            });
-        });
-    });
-    // Final do código para abrir e fechar o modal
+document.addEventListener("DOMContentLoaded", function () {
     // Objeto com nomes dos serviços e preços
     const servicesAndPrices = {
         "wifi": 16,
@@ -25,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
         "mini-bar": 120,
         "gym": 10,
     }
+
+    /* Selecionar apartamento */
+
+
+
+    /*  */
     // Código para selecionar os serviços
     const cards = document.querySelectorAll(".card");
     cards.forEach(function (card) {
@@ -35,12 +23,12 @@ document.addEventListener("DOMContentLoaded", function() {
         let services = localStorage.getItem("services");
         if (services === "") services = [];
         else services = services.split(",");
-        
+
         const serviceName = card.id;
-        if (services.includes(serviceName)){ card.classList.add("selected");}
-        else {card.classList.remove("selected");}
-        
-        if (card.classList.contains("selected")){card.style.border = "2px solid teal";}
+        if (services.includes(serviceName)) { card.classList.add("selected"); }
+        else { card.classList.remove("selected"); }
+
+        if (card.classList.contains("selected")) { card.style.border = "2px solid teal"; }
         else { card.style.border = "none"; }
         // Final do código para adicionar a classe selected e o border
         // baseado no localStorage
@@ -49,19 +37,19 @@ document.addEventListener("DOMContentLoaded", function() {
         card.addEventListener("click", function (event) {
             event.preventDefault();
             if (!localStorage.getItem("services")) localStorage.setItem("services", "");
-            
+
             let services = localStorage.getItem("services");
             if (services === "") services = [];
             else services = services.split(",");
 
             const serviceName = card.id;
             card.classList.toggle("selected");
-            
+
             if (card.classList.contains("selected")) card.style.border = "2px solid teal";
             else card.style.border = "none";
-            
+
             if (!localStorage.getItem("services")) localStorage.setItem("services", "");
-            
+
             if (card.classList.contains("selected")) services.push(serviceName);
             else {
                 const index = services.indexOf(serviceName);
@@ -76,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const continueBtn = document.getElementById("continue-btn");
     continueBtn.addEventListener("click", function (event) {
-    // Codigo para o checkin, checkout e adultos no localStorage
+        // Codigo para o checkin, checkout e adultos no localStorage
         const checkinDate = document.getElementById("checkin-date");
         const checkoutDate = document.getElementById("checkout-date");
         const nbAdults = document.getElementById("nb-adults");
@@ -108,6 +96,32 @@ document.addEventListener("DOMContentLoaded", function() {
         const nbAdultsValue = localStorage.getItem("nb-adults");
         const servicesArray = localStorage.getItem("services").split(",");
         const roomPrice = 200;
+
+        let dateCheckoutDateValue = new Date(checkOutDateValue) / (1000 * 3600 * 24);;
+        let dateCheckInDateValue = new Date(checkInDateValue) / (1000 * 3600 * 24);;
+
+        console.log(dateCheckInDateValue)
+        console.log(dateCheckoutDateValue)
+
+        if (dateCheckInDateValue > dateCheckoutDateValue) {
+            alert("ERRO! DATA ERRADA");
+        } else if (dateCheckoutDateValue >= dateCheckInDateValue) {
+            const modals = document.querySelectorAll("[data-modal]");
+
+            modals.forEach(function (trigger) {
+                trigger.addEventListener("click", function (event) {
+                    const modal = document.getElementById(trigger.dataset.modal);
+                    modal.classList.add("open");
+                    const exits = modal.querySelectorAll(".modal-exit");
+                    exits.forEach(function (exit) {
+                        exit.addEventListener("click", function (event) {
+                            modal.classList.remove("open");
+                        });
+                    });
+                });
+            });
+        }
+
         const pricePerAdult = () => {
             let total = 0;
             if (servicesArray[0] !== "") {
