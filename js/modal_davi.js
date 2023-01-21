@@ -16,7 +16,9 @@ function servicosSelecionados() {
     localStorage.clear("services")
     let total = 0
     let selecionados = []
-    document.getElementsByName('servicos').forEach(i =>{
+    let servicos = document.getElementsByName('servicos')
+
+    servicos.forEach(i =>{
         if(i.checked){
             selecionados.push(i.getAttribute('value'))
             total += servicesAndPrices[i.value]
@@ -82,12 +84,4 @@ Object.keys(servicesAndPrices).forEach((serv,i)=>{
         divController.appendChild(total)
     }
 })
-        
 // 1 - Fim
-
-
-
-// modal.appendChild(total)
-// let servicosSelecionados = document.getElementsByName('servicos').checked
-
-
