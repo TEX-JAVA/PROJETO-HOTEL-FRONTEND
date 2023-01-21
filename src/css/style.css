@@ -1156,26 +1156,11 @@ div .box-acomod img {
   margin-left: 0.5em;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-}
-
-.logo {
-  flex: 20%;
-  /* border: 1px solid red; */
-  text-align: left;
-  margin-left: 10%;
-}
-
-.logo h1 {
-  font-family: "Lobster", cursive;
-  color: #180f4a;
-  font-size: 34px;
+.container-gastro {
+  max-width: 1250px;
+  margin: auto;
+  position: relative;
+  padding: 10px 10px;
 }
 
 .menu {
