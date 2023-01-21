@@ -5,7 +5,7 @@
   --color-white: #ffffff;
 }
 
-.slogan {
+.slogan-acomodacoes {
   position: relative;
   background-color: var(--color-light-black);
   background-image: url("../../../images/acomodacoes/capa.jpeg");
@@ -407,5 +407,15 @@ div .box-acomod img {
     max-width: 1250px;
     margin: 20px auto;
     row-gap: 30px;
+  }
+}
+@media (max-width: 430px) {
+  .slogan-acomodacoes {
+    position: relative;
+    background-color: var(--color-light-black);
+    background-image: url(../../../images/reserva/de2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }/*# sourceMappingURL=acomodacoes.css.map */

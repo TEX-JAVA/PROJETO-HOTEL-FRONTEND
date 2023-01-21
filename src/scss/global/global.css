@@ -526,6 +526,9 @@ section#avaliacao {
   .flexbox img {
     width: 100%;
   }
+  .container {
+    padding: 0px;
+  }
   .card {
     padding: 10px;
   }
@@ -537,6 +540,19 @@ section#avaliacao {
   .card-acomodacoes {
     width: auto;
     height: auto;
+  }
+  .container {
+    padding: 0px;
+  }
+  .container-quartos, .pratos {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .card-acomodacoes {
+    height: 630px;
+    top: -130px;
+  }
+  .card-avaliacao img {
+    margin: 20px 0px;
   }
 }
 #login_check {
@@ -1088,6 +1104,9 @@ div .box-acomod img {
     font-size: 1.1rem;
     font-weight: bolder;
     padding: 2px 20px 2px 8px;
+  }
+  .slogan {
+    padding: 0vh;
   }
   .promo-img01 {
     display: block;

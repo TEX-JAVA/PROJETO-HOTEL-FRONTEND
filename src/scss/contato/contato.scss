@@ -1,80 +1,76 @@
 .container-contato {
-    display: grid;
-    place-items: center;
-    padding: 150px 10px;
+  display: grid;
+  place-items: center;
+  padding: 150px 10px;
 
-    .card-contato {
-            
-        .h2-contato {
-            font-size: 1.7rem;
-            text-align: center;
-            margin-bottom: 43px;
-        }
-
-        form {
-            width: 100%;
-            .block {
-                font-size: 1.2rem;
-                display: block;
-                margin: 7px 0;
-            }
-
-            .input-contato {
-                max-width: 100%;
-                width: 100%;
-                border: 2px solid #f1f1f1;
-                padding: 7px;
-                outline: none;
-            }
-
-            .textarea-contato {
-                max-width: 100%;
-                width: 100%;
-                min-height: 137px;
-                outline: none;
-                border: 2px solid #f1f1f1;
-                resize: none;
-            }
-
-            .button-contato {
-                padding: 10px;
-                max-width: 50%;
-                width: 100%;
-                margin: 0 auto;
-                border-radius: 196px;
-                background-color: #008f8c;
-                color: #fff;
-                font-size: 1.2rem;
-                transition: 0.3s;
-                cursor: pointer;
-            }
-        }
+  .card-contato {
+    .h2-contato {
+      font-size: 1.7rem;
+      text-align: center;
+      margin-bottom: 43px;
     }
 
-  
+    form {
+      width: 100%;
+      .block {
+        font-size: 1.2rem;
+        display: block;
+        margin: 7px 0;
+      }
+
+      .input-contato {
+        max-width: 100%;
+        width: 100%;
+        border: 3px solid #f1f1f1;
+        padding: 7px;
+        outline: none;
+      }
+
+      .textarea-contato {
+        max-width: 100%;
+        width: 100%;
+        min-height: 137px;
+        outline: none;
+        border: 3px solid #f1f1f1;
+        resize: none;
+      }
+
+      .button-contato {
+        padding: 10px;
+        max-width: 50%;
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 196px;
+        background-color: #008f8c;
+        color: #fff;
+        font-size: 1.2rem;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) {
-    .card-contato{
-        width: 600px;
-    } 
+  .card-contato {
+    width: 600px;
+  }
 }
 
-@media(max-width: 767px){
-    .card-contato{
-        width: 500px;
-    }
+@media (max-width: 767px) {
+  .card-contato {
+    width: 500px;
+  }
 }
 
-@media(max-width: 550px) {
-    .card-contato {
-        width: 400px;
-    }
+@media (max-width: 550px) {
+  .card-contato {
+    width: 400px;
+  }
 }
 
-@media(max-width: 420px) {
-    .card-contato {
-        width: 300px;
-    }
+@media (max-width: 420px) {
+  .card-contato {
+    width: 300px;
+  }
 }
-

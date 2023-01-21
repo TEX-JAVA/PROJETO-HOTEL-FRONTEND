@@ -26,18 +26,27 @@
 
 .div-reserva {
   background-color: #023535;
-  width: 800px;
+  max-width: 800px;
   padding: 20px;
   opacity: 0.92;
 }
 
+.container-check{
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.card-check{
+    display: grid;
+    place-items: center;
+}
 .button-a {
   color: white;
   background-image: linear-gradient(to top, #015958, #016664);
   padding: 6.3px 10px 6.3px 10px;
   margin-left: 18px;
   font-weight: bold;
-  /* border: 1px white double; */
   opacity: 0.92;
 }
 
@@ -58,12 +67,6 @@
   background-image: linear-gradient(to bottom, #015958, #008f8c);
 }
 
-.div-reserva table tr td input {
-  padding: 8px;
-  width: 114px;
-  margin-right: 18px;
-  margin-left: 5px;
-}
 
 .select-apartamento {
   padding: 8px;
@@ -72,12 +75,6 @@
   margin-left: 5px;
 }
 
-.div-reserva table tr td label {
-  display: inline;
-  font-weight: bold;
-  color: white;
-  text-align: right;
-}
 
 @font-face {
   src: url(../../../fonts/KaushanScript-Regular.ttf);
@@ -100,12 +97,6 @@
   column-gap: 18px;
   padding: 21px;
 }
-.dash {
-  height: 5px;
-  background-color: #023535;
-  width: 500px;
-  margin: 10px 0 40px 80px;
-}
 
 .image-reserva {
   width: 300px;
@@ -126,18 +117,13 @@
   width: 60%;
 }
 
-.resumo_reserva_pai {
+.resumo_reserva {
   width: 40%;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 44px;
-}
-
-.resumo_reserva {
-  width: 400px;
-  height: 650px;
-  background-image: url("../../../images/reserva/pe2.jpg");
+  background-image: url(../../../images/reserva/pe2.jpg);
   background-size: cover;
   text-align: center;
   opacity: 0.8;
@@ -150,15 +136,11 @@
 .resumo_reserva div {
   width: 300px;
   height: 380px;
-  margin: 20% 10% 2% 12%;
-  /* background-color: rgba(1, 89, 87, 0.6); */
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.4),
-    rgba(0, 0, 0, 0.3)
-  );
+  margin: 10% auto;
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7));
   position: relative;
-  top: -36px;
 }
 
 .a-servicos {
@@ -180,6 +162,7 @@
   color: white;
   font-weight: bold;
 }
+
 .resumo_reserva div input {
   opacity: 0.9;
   font-size: 0.95rem;
@@ -201,26 +184,29 @@
   font-family: "KaushanScript-Regular";
 }
 
+.resumo_reserva div {
+  width: 300px;
+  height: 430px;
+  margin: 10% auto;
+  background-image: linear-gradient(to top,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7));
+  position: relative;
+}
+
 .button-b {
   color: white;
   padding: 16.3px 14px 16.3px 14px;
   font-weight: bold;
-
-  top: 6px;
+  top: 27px;
   position: relative;
-
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.5)
-  );
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1.8));
 }
+
 .button-b:hover {
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.9),
-    rgba(0, 0, 0, 0.6)
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.6));
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -228,19 +214,27 @@
   .container-main {
     flex-direction: column;
   }
+
   .image-text-pai {
     width: 100%;
   }
+
   .image-text {
     display: block;
     padding: 5px;
   }
+
   .image-reserva {
     width: 100%;
   }
+
   .div-pa {
     margin: 25px 0px;
     gap: 16px;
+  }
+
+  .resumo_reserva {
+    width: 100%;
   }
 }
 
@@ -248,18 +242,15 @@
   .image-text-pai {
     width: 100%;
   }
-  .resumo_reserva_pai {
-    display: block;
-    display: grid;
-    place-items: center;
-  }
+
   .dash {
     height: 5px;
     background-color: #023535;
     width: 500px;
     margin: 10px 0 40px 0px;
   }
-  .container-quartos{
+
+  .container-quartos {
     grid-template-columns: repeat(auto-fit, 1fr);
   }
 }

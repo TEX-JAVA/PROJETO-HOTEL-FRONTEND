@@ -19,7 +19,7 @@
 .container-contato .card-contato form .input-contato {
   max-width: 100%;
   width: 100%;
-  border: 2px solid #f1f1f1;
+  border: 3px solid #f1f1f1;
   padding: 7px;
   outline: none;
 }
@@ -28,7 +28,7 @@
   width: 100%;
   min-height: 137px;
   outline: none;
-  border: 2px solid #f1f1f1;
+  border: 3px solid #f1f1f1;
   resize: none;
 }
 .container-contato .card-contato form .button-contato {

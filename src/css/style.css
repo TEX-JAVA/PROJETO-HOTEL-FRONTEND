@@ -534,9 +534,18 @@ section#avaliacao {
   .bg-acomodacoes {
     padding: 0;
   }
+  .container {
+    padding: 0px;
+  }
+  .container-quartos, .pratos {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   .card-acomodacoes {
-    width: auto;
-    height: auto;
+    height: 630px;
+    top: -130px;
+  }
+  .card-avaliacao img {
+    margin: 20px 0px;
   }
 }
 #login_check {
@@ -750,7 +759,7 @@ section#avaliacao {
   --color-white: #ffffff;
 }
 
-.slogan {
+.slogan-acomodacoes {
   position: relative;
   background-color: var(--color-light-black);
   background-image: url("../../../images/acomodacoes/capa.jpeg");
@@ -1157,6 +1166,16 @@ div .box-acomod img {
     row-gap: 30px;
   }
 }
+@media (max-width: 430px) {
+  .slogan-acomodacoes {
+    position: relative;
+    background-color: var(--color-light-black);
+    background-image: url(../../../images/reserva/de2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 .container-contato {
   display: grid;
   place-items: center;
@@ -1178,7 +1197,7 @@ div .box-acomod img {
 .container-contato .card-contato form .input-contato {
   max-width: 100%;
   width: 100%;
-  border: 2px solid #f1f1f1;
+  border: 3px solid #f1f1f1;
   padding: 7px;
   outline: none;
 }
@@ -1187,7 +1206,7 @@ div .box-acomod img {
   width: 100%;
   min-height: 137px;
   outline: none;
-  border: 2px solid #f1f1f1;
+  border: 3px solid #f1f1f1;
   resize: none;
 }
 .container-contato .card-contato form .button-contato {
@@ -1280,9 +1299,20 @@ div .box-acomod img {
 
 .div-reserva {
   background-color: #023535;
-  width: 800px;
+  max-width: 800px;
   padding: 20px;
   opacity: 0.92;
+}
+
+.container-check {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.card-check {
+  display: grid;
+  place-items: center;
 }
 
 .button-a {
@@ -1291,7 +1321,6 @@ div .box-acomod img {
   padding: 6.3px 10px 6.3px 10px;
   margin-left: 18px;
   font-weight: bold;
-  /* border: 1px white double; */
   opacity: 0.92;
 }
 
@@ -1312,25 +1341,11 @@ div .box-acomod img {
   background-image: linear-gradient(to bottom, #015958, #008f8c);
 }
 
-.div-reserva table tr td input {
-  padding: 8px;
-  width: 114px;
-  margin-right: 18px;
-  margin-left: 5px;
-}
-
 .select-apartamento {
   padding: 8px;
   width: 114px;
   margin-right: 18px;
   margin-left: 5px;
-}
-
-.div-reserva table tr td label {
-  display: inline;
-  font-weight: bold;
-  color: white;
-  text-align: right;
 }
 
 @font-face {
@@ -1379,18 +1394,13 @@ div .box-acomod img {
   width: 60%;
 }
 
-.resumo_reserva_pai {
+.resumo_reserva {
   width: 40%;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-top: 44px;
-}
-
-.resumo_reserva {
-  width: 400px;
-  height: 650px;
-  background-image: url("../../../images/reserva/pe2.jpg");
+  background-image: url(../../../images/reserva/pe2.jpg);
   background-size: cover;
   text-align: center;
   opacity: 0.8;
@@ -1403,11 +1413,9 @@ div .box-acomod img {
 .resumo_reserva div {
   width: 300px;
   height: 380px;
-  margin: 20% 10% 2% 12%;
-  /* background-color: rgba(1, 89, 87, 0.6); */
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3));
+  margin: 10% auto;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   position: relative;
-  top: -36px;
 }
 
 .a-servicos {
@@ -1451,13 +1459,21 @@ div .box-acomod img {
   font-family: "KaushanScript-Regular";
 }
 
+.resumo_reserva div {
+  width: 300px;
+  height: 430px;
+  margin: 10% auto;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  position: relative;
+}
+
 .button-b {
   color: white;
   padding: 16.3px 14px 16.3px 14px;
   font-weight: bold;
-  top: 6px;
+  top: 27px;
   position: relative;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgb(0, 0, 0));
 }
 
 .button-b:hover {
@@ -1483,15 +1499,13 @@ div .box-acomod img {
     margin: 25px 0px;
     gap: 16px;
   }
+  .resumo_reserva {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
   .image-text-pai {
     width: 100%;
-  }
-  .resumo_reserva_pai {
-    display: block;
-    display: grid;
-    place-items: center;
   }
   .dash {
     height: 5px;
