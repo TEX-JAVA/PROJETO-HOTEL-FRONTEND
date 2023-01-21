@@ -1165,7 +1165,6 @@ div .box-acomod img {
 
 .menu {
   flex: 70%;
-  /* border: 1px solid green; */
   text-align: right;
   padding: 20px;
 }
@@ -1203,13 +1202,11 @@ div .box-acomod img {
 }
 
 .headline {
-  /* border: 1px solid black; */
   flex: 40%;
   margin-left: 10%;
 }
 
 .img-headeline {
-  /* border: 1px solid deeppink; */
   margin-right: 10%;
   flex: 40%;
   text-align: center;
@@ -1246,14 +1243,11 @@ div .box-acomod img {
 
 .sec-gastro {
   display: inline-block;
-  margin-top: 80px;
-  /* border: 1px solid black; */
   margin-left: 5%;
   margin-right: 5%;
   height: auto;
   padding: 5%;
   text-align: center;
-  /* width: 90%; */
 }
 
 .sec-gastro h2 {
@@ -1294,10 +1288,6 @@ div .box-acomod img {
   font-size: 34px;
 }
 
-.whats img {
-  width: 80px;
-}
-
 @media screen and (max-width: 1005px) {
   .menu {
     display: none;
@@ -1322,11 +1312,6 @@ div .box-acomod img {
     flex-direction: column;
     width: 100%;
   }
-  /* .img-readline{
-        flex: 100%;
-        margin: 5%;
-        text-align: center;
-    } */
 }
 .container-page-reserva {
   max-width: 1250px;

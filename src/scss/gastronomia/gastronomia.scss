@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
 .container-gastro {
   max-width: 1250px;
   margin: auto;
@@ -8,10 +7,8 @@
   padding: 10px 10px;
 }
 
-
 .menu {
   flex: 70%;
-  /* border: 1px solid green; */
   text-align: right;
   padding: 20px;
 }
@@ -23,11 +20,6 @@
   padding: 20px 16px;
   margin-left: 5%;
 }
-
-// .menu a:hover {
-//   color: #ff2978;
-//   border-bottom: 4px solid #180f4a;
-// }
 
 #botao {
   background: #180f4a;
@@ -54,13 +46,11 @@
 }
 
 .headline {
-  /* border: 1px solid black; */
   flex: 40%;
   margin-left: 10%;
 }
 
 .img-headeline {
-  /* border: 1px solid deeppink; */
   margin-right: 10%;
   flex: 40%;
   text-align: center;
@@ -95,18 +85,13 @@
 background-image: linear-gradient(to top, #015958, #008f8c);
 }
 
-
-
 .sec-gastro {
   display: inline-block;
-  margin-top: 80px;
-  /* border: 1px solid black; */
   margin-left: 5%;
   margin-right: 5%;
   height: auto;
   padding: 5%;
   text-align: center;
-  /* width: 90%; */
 }
 
 .sec-gastro h2 {
@@ -121,7 +106,6 @@ background-image: linear-gradient(to top, #015958, #008f8c);
 .h2-gastro{
   color: #015958;
 }
-
 
 .sevicos {
   display: flex;
@@ -138,35 +122,6 @@ background-image: linear-gradient(to top, #015958, #008f8c);
   height: 50%;
   
 }
-
-// .card-gastro:hover {
-//   background: #ff2978;
-//   color: white;
-// }
-
-// .card-gastro:hover img {
-//   display: none;
-// }
-
-// .card-gastro:hover .card-gastro-text {
-//   display: flex;
-// }
-
-
-
-
-
-
-// .texto-oculto {
-//   display: none;
-// }
-
-// .card-gastro:hover .texto-oculto {
-//   display: block;
-// }
-
-
-
 .logo-rodape {
   padding: 100px
 }
@@ -175,11 +130,6 @@ background-image: linear-gradient(to top, #015958, #008f8c);
   font-family: 'Lobster', cursive;
   color: white;
   font-size: 34px;
-}
-
-
-.whats img {
-  width: 80px;
 }
 
 @media screen and (max-width: 1005px) {
@@ -212,13 +162,5 @@ background-image: linear-gradient(to top, #015958, #008f8c);
     flex-direction: column;
     width: 100%;
   }
-
-  
-
-  /* .img-readline{
-        flex: 100%;
-        margin: 5%;
-        text-align: center;
-    } */
 
 }
