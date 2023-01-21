@@ -3,7 +3,7 @@
 header {
 	@include flexBox;
 	position: fixed;
-	padding: 12px;
+	padding: 10px 12px;
 	z-index: 10;
 	width: 100%;
 	background-color: $bg-header;
@@ -108,7 +108,7 @@ header {
 	}
 
 	.login_form {
-		right: 8vh !important;
+		right: 4vh !important;
 		z-index: 1;
 	}
 
@@ -122,5 +122,8 @@ header {
 
 	#login_check:checked #menu-sidebar {
 		right: -200vh;
+	}
+	#sair p{
+		display: none;
 	}
 }

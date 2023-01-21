@@ -1,0 +1,66 @@
+.container-contato {
+  display: grid;
+  place-items: center;
+  padding: 150px 10px;
+}
+.container-contato .card-contato .h2-contato {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 43px;
+}
+.container-contato .card-contato form {
+  width: 100%;
+}
+.container-contato .card-contato form .block {
+  font-size: 1.2rem;
+  display: block;
+  margin: 7px 0;
+}
+.container-contato .card-contato form .input-contato {
+  max-width: 100%;
+  width: 100%;
+  border: 2px solid #f1f1f1;
+  padding: 7px;
+  outline: none;
+}
+.container-contato .card-contato form .textarea-contato {
+  max-width: 100%;
+  width: 100%;
+  min-height: 137px;
+  outline: none;
+  border: 2px solid #f1f1f1;
+  resize: none;
+}
+.container-contato .card-contato form .button-contato {
+  padding: 10px;
+  max-width: 50%;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 196px;
+  background-color: #008f8c;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .card-contato {
+    width: 600px;
+  }
+}
+@media (max-width: 767px) {
+  .card-contato {
+    width: 500px;
+  }
+}
+@media (max-width: 550px) {
+  .card-contato {
+    width: 400px;
+  }
+}
+@media (max-width: 420px) {
+  .card-contato {
+    width: 300px;
+  }
+}/*# sourceMappingURL=contato.css.map */

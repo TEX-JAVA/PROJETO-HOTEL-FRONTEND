@@ -11,7 +11,7 @@
   background-image: url("../../../images/reserva/de2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -200px;
+  background-position: center;
   padding: 26vh;
 }
 
@@ -41,8 +41,6 @@
   opacity: 0.92;
 }
 
-
-
 .button-a:hover {
   background-image: linear-gradient(to bottom, #015958, #008f8c);
 }
@@ -67,12 +65,11 @@
   margin-left: 5px;
 }
 
-.select-apartamento{
+.select-apartamento {
   padding: 8px;
-    width: 114px;
-    margin-right: 18px;
-    margin-left: 5px;
-
+  width: 114px;
+  margin-right: 18px;
+  margin-left: 5px;
 }
 
 .div-reserva table tr td label {
@@ -101,7 +98,6 @@
 .image-text {
   display: flex;
   column-gap: 18px;
-  border-radius: 42px;
   padding: 21px;
 }
 .dash {
@@ -130,42 +126,6 @@
   width: 60%;
 }
 
-/* ESTILO DO RESUMO DA RESERVA*/
-@media (max-width: 850px) {
-  .resumo_reserva_pai {
-    width: 700px;
-  }
-}
-
-@media (max-width: 690px) {
-  .resumo_reserva_pai {
-    width: 590px;
-  }
-}
-
-@media (max-width: 590px) {
-  .resumo_reserva_pai {
-    width: 500px;
-  }
-}
-
-@media (max-width: 500px) {
-  .resumo_reserva_pai {
-    width: 400px;
-  }
-}
-@media (max-width: 400px) {
-  .resumo_reserva_pai {
-    width: 300px;
-  }
-}
-
-@media (max-width: 300px) {
-  .resumo_reserva_pai {
-    width: 250px;
-  }
-}
-
 .resumo_reserva_pai {
   width: 40%;
   display: flex;
@@ -177,8 +137,6 @@
 .resumo_reserva {
   width: 400px;
   height: 650px;
-  /* background-color: #023535; */
-  /* background-image: linear-gradient(to left, #0d5e5e, #023535); */
   background-image: url("../../../images/reserva/pe2.jpg");
   background-size: cover;
   text-align: center;
@@ -214,7 +172,6 @@
   font-weight: bold;
 }
 
-
 .resumo_reserva p {
   position: relative;
   top: 10px;
@@ -248,11 +205,10 @@
   color: white;
   padding: 16.3px 14px 16.3px 14px;
   font-weight: bold;
-  /* border: 1px white double; */
-  /* opacity: 0.92; */
+
   top: 6px;
   position: relative;
-  /* background-color: rgba(1, 89, 87, 0.8); */
+
   background-image: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.6),
@@ -266,4 +222,44 @@
     rgba(0, 0, 0, 0.6)
   );
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1024px) {
+  .container-main {
+    flex-direction: column;
+  }
+  .image-text-pai {
+    width: 100%;
+  }
+  .image-text {
+    display: block;
+    padding: 5px;
+  }
+  .image-reserva {
+    width: 100%;
+  }
+  .div-pa {
+    margin: 25px 0px;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-text-pai {
+    width: 100%;
+  }
+  .resumo_reserva_pai {
+    display: block;
+    display: grid;
+    place-items: center;
+  }
+  .dash {
+    height: 5px;
+    background-color: #023535;
+    width: 500px;
+    margin: 10px 0 40px 0px;
+  }
+  .container-quartos{
+    grid-template-columns: repeat(auto-fit, 1fr);
+  }
 }

@@ -175,7 +175,7 @@ header option {
     right: 9.5vh;
   }
   .login_form {
-    right: 4vh !important;
+    right: 8vh !important;
     z-index: 1;
   }
   #slide-cancel {
@@ -201,7 +201,8 @@ header option {
 video {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 /* Section Geral */
@@ -218,7 +219,8 @@ section + section {
 .flexbox img {
   flex: 1.3;
   width: 200px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .flexbox div {
@@ -305,7 +307,8 @@ div.card-acomodacoes {
 .container-acomodacoes {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   margin: 30px 0px;
   transition: 0.3s;
 }
@@ -314,7 +317,8 @@ div.card-acomodacoes {
   display: grid;
   grid-template-columns: 0.2fr auto;
   row-gap: 10px;
-  column-gap: 10px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   align-items: center;
 }
 
@@ -355,12 +359,11 @@ div.card-acomodacoes {
 .box img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .box:hover {
-  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
 }
 
@@ -523,21 +526,6 @@ section#avaliacao {
   .flexbox img {
     width: 100%;
   }
-  .container {
-    padding: 0px;
-  }
-  .card {
-    padding: 10px;
-  }
-}
-@media (max-width: 430px) {
-  .bg-acomodacoes {
-    padding: 0;
-  }
-  .card-acomodacoes {
-    width: auto;
-    height: auto;
-  }
 }
 #login_check {
   display: none;
@@ -610,8 +598,6 @@ section#avaliacao {
   margin-left: auto;
   text-align: center;
   transition: all 0.2s ease;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
@@ -832,8 +818,6 @@ section .flex > div {
 }
 
 .flex > div:hover {
-  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   opacity: 100%;
 }
@@ -967,7 +951,8 @@ div .box-acomod img {
   background-color: #f1f1f1;
   width: 100%;
   height: 100%;
-  overscroll-behavior: inherit;
+  -ms-scroll-chaining: inherit;
+      overscroll-behavior: inherit;
 }
 
 .card-promocao:nth-child(1) {
@@ -1070,7 +1055,6 @@ div .box-acomod img {
 .h2-mensagem {
   font-size: 1.8rem;
   text-align: center;
-  padding: 0 4px;
 }
 
 .container-mensagem {
@@ -1145,8 +1129,6 @@ div .box-acomod img {
   }
   #promocao > div {
     transform: scale(0.95);
-    -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   }
   section .flex {
@@ -1349,7 +1331,9 @@ div .box-acomod img {
 /* navegação imagens */
 .image-text {
   display: flex;
-  column-gap: 18px;
+  -moz-column-gap: 18px;
+       column-gap: 18px;
+  border-radius: 42px;
   padding: 21px;
 }
 
@@ -1390,6 +1374,8 @@ div .box-acomod img {
 .resumo_reserva {
   width: 400px;
   height: 650px;
+  /* background-color: #023535; */
+  /* background-image: linear-gradient(to left, #0d5e5e, #023535); */
   background-image: url("../../../images/reserva/pe2.jpg");
   background-size: cover;
   text-align: center;
@@ -1465,44 +1451,6 @@ div .box-acomod img {
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 1024px) {
-  .container-main {
-    flex-direction: column;
-  }
-  .image-text-pai {
-    width: 100%;
-  }
-  .image-text {
-    display: block;
-    padding: 5px;
-  }
-  .image-reserva {
-    width: 100%;
-  }
-  .div-pa {
-    margin: 25px 0px;
-    gap: 16px;
-  }
-}
-@media (max-width: 768px) {
-  .image-text-pai {
-    width: 100%;
-  }
-  .resumo_reserva_pai {
-    display: block;
-    display: grid;
-    place-items: center;
-  }
-  .dash {
-    height: 5px;
-    background-color: #023535;
-    width: 500px;
-    margin: 10px 0 40px 0px;
-  }
-  .container-quartos {
-    grid-template-columns: repeat(auto-fit, 1fr);
-  }
-}
 .modal {
   position: fixed;
   width: 100vw;
@@ -1539,7 +1487,9 @@ div .box-acomod img {
   right: 15px;
   top: 15px;
   outline: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   color: red;
   background: none;
   border: 0px;
@@ -1561,7 +1511,8 @@ div .box-acomod img {
 .card-modal img {
   border-radius: 0.5rem 0.5rem 0 0;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-height: max(10rem, 30vh);
   aspect-ratio: 4/3;
   mix-blend-mode: var(--card-blend-mode);
@@ -1591,6 +1542,8 @@ div .box-acomod img {
 }
 
 .card-wrapper {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
   max-width: fit-content;
   list-style: none;
   padding: 0;
@@ -1622,7 +1575,8 @@ div .box-acomod img {
 .modal-container.reservations .left-side img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -1791,13 +1745,9 @@ button {
 }
 
 button:hover {
-  -webkit-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.7);
   box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.7);
 }
 
 button:hover {
   background-color: #0fc2c0;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=global.css.map */

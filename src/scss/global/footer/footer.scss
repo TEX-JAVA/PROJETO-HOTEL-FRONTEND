@@ -35,6 +35,7 @@ footer{
                 @include flexAlign;
                 gap: 10px;
                 opacity: .7;
+                padding: 3px 0px 16px;
                 transition: .3s;
 
                 img{
@@ -80,6 +81,36 @@ footer{
     }
 }
 
+@media (max-width: 768px){
+    .card-footer {
+            .column {    
+                a {
+                    padding: 3px 0 10px;
+                }
+            }
+        }
+}
 
+@media (max-width: 425px){
+    .container-footer{
+        flex-direction: column;
+        width: 100%;
+    }
+    .card-footer h3{
+        font-size: 15px;
+    }
 
+    
 
+    .card-footer{
+        .column {
+            p {
+                font-size: 16px;
+            }
+
+            a{
+                padding: 3px 0 15px;
+            }
+        }
+    } 
+}
