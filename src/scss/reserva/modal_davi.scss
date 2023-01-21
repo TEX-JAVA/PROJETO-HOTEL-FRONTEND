@@ -1,3 +1,57 @@
-.modal-davi{
+.modal-davi {
+    position: absolute;
+    width: 300px;
+
+    & form{
     
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: baseline;
+        background-color: #023535;
+        opacity: 0.9;
+        border-radius: 30px;
+        padding: 30px;
+        gap: 5px;
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        
+        & h1 {
+            width: 100%;
+            color: white;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        & div {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 5px;
+            
+            & input[type="checkbox"] {
+                display: block;
+                text-align: center;
+            }
+            
+            & label{
+                align-items: center;
+                font-size: 1.4rem;
+                color: white;
+            }
+        }
+        & .controller-services {
+        padding: 10px 0px;
+            
+            & button{
+                margin: 0px;
+                
+                &:hover {
+                    background-color: #5dc4c8;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
 }
