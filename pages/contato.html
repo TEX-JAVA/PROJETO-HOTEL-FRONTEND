@@ -63,7 +63,7 @@
             </select>
             <ul>
                 <li>
-                    <input type="checkbox" id="login_check" />
+                    <input class="block input-contato" type="checkbox" id="login_check" />
                     <label for="login_check" class="login_label">
                         <i class="fa-solid fa-bars" id="btn"></i>
                         <i class="fa-solid fa-xmark" id="cancel"></i>
@@ -73,13 +73,15 @@
                         <div class="login_form">
                             <ul class="login_list">
                                 <li>
-                                    <input type="email" class="txt" placeholder="E-mail" id="login_email" />
+                                    <input class="block input-contato" type="email" class="txt" placeholder="E-mail"
+                                        id="login_email" />
                                 </li>
                                 <li>
-                                    <input type="password" class="txt" placeholder="Senha" id="login_senha" />
+                                    <input class="block input-contato" type="password" class="txt" placeholder="Senha"
+                                        id="login_senha" />
                                 </li>
                                 <div class="salvar-senhar">
-                                    <input name="senha" type="checkbox" id="senha" />
+                                    <input class="block input-contato" name="senha" type="checkbox" id="senha" />
                                     <label for="senha" class="salvar-senha-label">Salvar senha</label>
                                 </div>
                                 <li>
@@ -94,15 +96,14 @@
                     </form>
                 </li>
             </ul>
-            <button type="button" id="sair" 
-            style="margin: 0;
+            <button type="button" id="sair" style="margin: 0;
                 width: auto;
-                background: transparent;"> 
+                background: transparent;">
                 <p>Sair</p>
             </button>
         </div>
         <div class="sidebar">
-            <input type="checkbox" id="slide-menu-sidebar" />
+            <input class="block input-contato" type="checkbox" id="slide-menu-sidebar" />
             <label for="slide-menu-sidebar" class="slide-menu-sidebar-label">
                 <i class="fa-solid fa-bars" id="slide-btn"></i>
                 <i class="fa-solid fa-xmark" id="slide-cancel"></i>
@@ -153,37 +154,34 @@
     </header>
 
     <main>
-        <form action="" method="post" class="contato_form">
-            <div>
-                <label for="nome">Nome Completo:</label>
-                <input type="texto" id="nome" name="nome_usuario" />
+        <div class="container-contato">
+            <div class="card-contato">
+                <h2 class="h2-contato">Envie-nos uma mensagem...</h2>
+                <form action="" method="post">
+                    <label class="block" for="name">Nome:</label>
+                    <input class="block input-contato " type="text" id="name" name="name"><br>
+
+                    <label class="block" for="email">Email:</label>
+                    <input class="block input-contato" type="email" id="email" name="email"><br>
+
+                    <label class="block" for="phone">Telefone:</label>
+                    <input class="block input-contato" type="tel" id="phone" name="phone"><br>
+
+                    <label class="block" for="subject">Assunto:</label>
+                    <select class="block" id="subject" name="subject" required>
+                        <option value="informacoes">Informações</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="elogios">Elogios</option>
+                        <option value="sugestao">Sugestão</option>
+                    </select><br>
+
+                    <label class="block" for="message">Mensagem:</label>
+                    <textarea required class="block textarea-contato" id="message" name="message"></textarea><br>
+
+                    <input class="block button-contato" type="submit" value="Enviar">
+                </form>
             </div>
-            <div>
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email_usuario" />
-            </div>
-            <div>
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone_usuario" />
-            </div>
-            <div>
-                <label for="assunto">Assunto:</label>
-                <select name="assunto" id="assunto">
-                    <option value=" - "> - </option>
-                    <option value="informacao">Informação</option>
-                    <option value="reclamacao">Reclamação</option>
-                    <option value="elogios">Elogios</option>
-                    <option value="sugestao">Sugestão</option>
-                </select>
-            </div>
-            <div>
-                <label for="texto">Mensagem:</label>
-                <textarea id="texto" name="texto_usuario"></textarea>
-            </div>
-            <div class="button">
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
+        </div>
     </main>
 
     <footer>
