@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
 const usuario = "Fulaninho";
 const btnLogin = document.getElementById("login");
 const btnSair = document.getElementById("sair");

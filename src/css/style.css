@@ -1353,10 +1353,13 @@ div .box-acomod img {
         color: #f3f3f3;
         transition: 0.4s ease all; }
 
-.modal-davi {
+#modal-davi {
+  visibility: visible;
   position: absolute;
-  width: 300px; }
-  .modal-davi form {
+  width: fit-content;
+  top: 15vh;
+  right: 40vw; }
+  #modal-davi form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1369,28 +1372,28 @@ div .box-acomod img {
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
-    .modal-davi form h1 {
+    #modal-davi form h1 {
       width: 100%;
       color: white;
       text-align: center;
       padding: 10px 0px; }
-    .modal-davi form div {
+    #modal-davi form div {
       display: flex;
       align-items: center;
       width: 100%;
       gap: 5px; }
-      .modal-davi form div input[type="checkbox"] {
+      #modal-davi form div input[type="checkbox"] {
         display: block;
         text-align: center; }
-      .modal-davi form div label {
+      #modal-davi form div label {
         align-items: center;
         font-size: 1.4rem;
         color: white; }
-    .modal-davi form .controller-services {
+    #modal-davi form .controller-services {
       padding: 10px 0px; }
-      .modal-davi form .controller-services button {
+      #modal-davi form .controller-services button {
         margin: 0px; }
-        .modal-davi form .controller-services button:hover {
+        #modal-davi form .controller-services button:hover {
           background-color: #5dc4c8;
           transition: 0.3s; }
 

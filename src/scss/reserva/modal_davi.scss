@@ -1,6 +1,9 @@
-.modal-davi {
+#modal-davi {
+    visibility: visible;
     position: absolute;
-    width: 300px;
+    width: fit-content;
+    top: 15vh;
+    right: 40vw;
 
     & form{
     
