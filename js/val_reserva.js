@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
     let date = new Date();
     let dateVal = new Date();
     dateVal.setDate(date.getDate() + (date.getHours() >= 14 ? 1 : 0));
@@ -11,11 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let inputCheckin = document.getElementById('checkin-date');
     let inputCheckout = document.getElementById('checkout-date');
 
-    inputCheckin.addEventListener('click',()=>{
-        inputCheckin.setAttribute('min', data_atual)
+    inputCheckin.setAttribute('min', data_atual)
+
+    inputCheckin.addEventListener('change',()=>{
+        inputCheckout.value = ""
     })
 
     inputCheckout.addEventListener('click', ()=>{
-        inputCheckout.setAttribute('min', inputCheckin.value) 
+        inputCheckin.value == "" ? alert("Selecione uma data de Checkin") : inputCheckout.setAttribute('min', inputCheckin.value) 
     })
-})

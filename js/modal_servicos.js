@@ -94,4 +94,3 @@ document.querySelector('.a-servicos').addEventListener('click', ()=>{
     modal_services = document.querySelector('.services-modal')
     modal_services.style='display:block'
 })
-//console.log(document.querySelector('.services-modal'));
