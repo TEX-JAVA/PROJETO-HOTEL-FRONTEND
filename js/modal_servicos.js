@@ -65,9 +65,9 @@ document.querySelector('.a-servicos').addEventListener('click', ()=>{
             servDiv.appendChild(servInput)
             servDiv.appendChild(servLabel)
     
-            servInput.addEventListener('click',()=>{
+            servInput.onclick = () => {
                 document.querySelector('.itens-total').innerText = `R$ ${servicosSelecionados().toFixed(2)}`
-            })
+            }
             
             if(i+1 == (Object.keys(servicesAndPrices).length)) {
                 let divController = document.createElement('div')
@@ -77,9 +77,9 @@ document.querySelector('.a-servicos').addEventListener('click', ()=>{
                 button.setAttribute('class','services_button')
                 button.setAttribute('value', 'salvar')
                 button.innerText = 'Salvar'
-                button.addEventListener('click',()=>{
+                button.onclick = () => {
                     formModalServices.style = 'display:none'
-                })
+                }
                 
                 formModalServices.appendChild(divController)
                 divController.appendChild(button)

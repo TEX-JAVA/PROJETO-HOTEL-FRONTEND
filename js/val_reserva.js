@@ -12,10 +12,10 @@
 
     inputCheckin.setAttribute('min', data_atual)
 
-    inputCheckin.addEventListener('change',()=>{
+    inputCheckin.onchange = ()=>{
         inputCheckout.value = ""
-    })
+    }
 
-    inputCheckout.addEventListener('click', ()=>{
+    inputCheckout.onclick = ()=>{
         inputCheckin.value == "" ? alert("Selecione uma data de Checkin") : inputCheckout.setAttribute('min', inputCheckin.value) 
-    })
+    }
