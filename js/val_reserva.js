@@ -10,10 +10,11 @@ let inputCheckin = document.getElementById('checkin-data');
 let inputCheckout = document.getElementById('checkout-data');
 let data_atual = new Date();
 
+localStorage.setItem('apartamento',"")
 localStorage.setItem('pessoas', 1)
-localStorage.setItem('servicos',"")
-localStorage.setItem('checkout',"")
 localStorage.setItem('checkin', formatarData(data_atual,0))
+localStorage.setItem('checkout',"")
+localStorage.setItem('servicos',"")
 
 inputCheckin.setAttribute('min', localStorage.getItem('checkin'));
 inputCheckin.onchange = ()=>{
