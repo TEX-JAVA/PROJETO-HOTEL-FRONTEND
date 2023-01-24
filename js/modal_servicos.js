@@ -13,7 +13,7 @@ const roomsAndPrices = {
 }
 
 function servicosSelecionados() {
-    localStorage.clear('services')
+    localStorage.setItem('servicos',"")
     let total = 0
     let selecionados = []
     let servicos = document.getElementsByName('servicos')
@@ -25,26 +25,26 @@ function servicosSelecionados() {
         }
     })
     selecionados.push(total)
-    localStorage.setItem('services', selecionados)
+    localStorage.setItem('servicos', selecionados)
     return total
 }
 
-document.querySelector('.a-servicos').addEventListener('click', ()=>{
-    let modal_services = document.querySelector('.services-modal') 
+document.querySelector('.a-servicos').onclick = ()=>{
+    let modal_servicos = document.querySelector('.servicos-modal') 
 
-    if(modal_services == null){
+    if(modal_servicos == null){
         let modal = document.querySelector('#modal-davi')
     
         Object.keys(servicesAndPrices).forEach((serv,i)=>{
-            let formModalServices = document.createElement('form')
-            formModalServices.setAttribute('method', 'POST')
-            formModalServices.setAttribute('class', 'services-modal')
+            let formModalServicos = document.createElement('form')
+            formModalServicos.setAttribute('method', 'POST')
+            formModalServicos.setAttribute('class', 'servicos-modal')
             
             if(i == 0){
-                modal.appendChild(formModalServices)
+                modal.appendChild(formModalServicos)
                 let titulo = document.createElement('h1')
                 titulo.innerText = 'Serviços'
-                formModalServices.appendChild(titulo)
+                formModalServicos.appendChild(titulo)
             }
     
             let servDiv = document.createElement('div')
@@ -60,37 +60,38 @@ document.querySelector('.a-servicos').addEventListener('click', ()=>{
             servLabel.setAttribute('for', serv)
             servLabel.innerText = serv.charAt(0).toUpperCase() + serv.slice(1) + ` R$${(servicesAndPrices[serv].toFixed(2))}`
             
-            formModalServices = document.querySelector('.services-modal')
-            formModalServices.appendChild(servDiv)
+            formModalServicos = document.querySelector('.servicos-modal')
+            formModalServicos.appendChild(servDiv)
             servDiv.appendChild(servInput)
             servDiv.appendChild(servLabel)
     
-            servInput.onclick = () => {
-                document.querySelector('.itens-total').innerText = `R$ ${servicosSelecionados().toFixed(2)}`
+            servInput.onclick = ()=>{
+                document.querySelector('.itens-total').innerText = 
+                    `Pessoas: ${localStorage.getItem('pessoas')}\nR$ ${(servicosSelecionados()*(localStorage.getItem('pessoas'))).toFixed(2)}`
             }
             
             if(i+1 == (Object.keys(servicesAndPrices).length)) {
-                let divController = document.createElement('div')
-                divController.setAttribute('class', 'controller-services')
+                let divControladora = document.createElement('div')
+                divControladora.setAttribute('class', 'controladora-servicos')
                 let button = document.createElement('button')
                 button.setAttribute('type','button')
-                button.setAttribute('class','services_button')
+                button.setAttribute('class','servicos_button')
                 button.setAttribute('value', 'salvar')
                 button.innerText = 'Salvar'
-                button.onclick = () => {
-                    formModalServices.style = 'display:none'
+                button.onclick = ()=>{
+                    formModalServicos.style = 'display:none'
                 }
                 
-                formModalServices.appendChild(divController)
-                divController.appendChild(button)
+                formModalServicos.appendChild(divControladora)
+                divControladora.appendChild(button)
     
                 let total = document.createElement('label');
                 total.setAttribute('class', 'itens-total')
-                total.innerText = "R$ 0,00"
-                divController.appendChild(total)
+                total.innerText = `Pessoas: ${localStorage.getItem('pessoas')}\nR$ 0,00`
+                divControladora.appendChild(total)
             }
         })
     }
-    modal_services = document.querySelector('.services-modal')
-    modal_services.style='display:block'
-})
+    modal_servicos = document.querySelector('.servicos-modal')
+    modal_servicos.style='display:block'
+}

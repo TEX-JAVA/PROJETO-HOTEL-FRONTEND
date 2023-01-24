@@ -1,21 +1,35 @@
-    let date = new Date();
-    let dateVal = new Date();
-    dateVal.setDate(date.getDate() + (date.getHours() >= 14 ? 1 : 0));
+function formatarData(data, qtd){
+    let dataFormatada = new Date(data)
+    dataFormatada.setDate(dataFormatada.getDate() + (dataFormatada.getHours() >= 14 ? 1 : 0));
+    dataFormatada.setDate(dataFormatada.getDate() + (qtd != 0 ? qtd : 0));    
+    return `${dataFormatada.getFullYear()}-${String(dataFormatada.getMonth()+1).padStart(2,0)}-${String(dataFormatada.getDate()).padStart(2,0)}`
+}
 
-    let dia = String(dateVal.getDate()).padStart(2,0)
-    let mes = String(dateVal.getMonth()+1).padStart(2,0);
-    let ano = dateVal.getFullYear();
-    let data_atual = `${ano}-${mes}-${dia}`;
+let qtd_pessoas = document.getElementById('n-adultos');
+let inputCheckin = document.getElementById('checkin-data');
+let inputCheckout = document.getElementById('checkout-data');
+let data_atual = new Date();
 
-    let inputCheckin = document.getElementById('checkin-date');
-    let inputCheckout = document.getElementById('checkout-date');
+localStorage.setItem('pessoas', 1)
+localStorage.setItem('servicos',"")
+localStorage.setItem('checkout',"")
+localStorage.setItem('checkin', formatarData(data_atual,0))
 
-    inputCheckin.setAttribute('min', data_atual)
+inputCheckin.setAttribute('min', localStorage.getItem('checkin'));
+inputCheckin.onchange = ()=>{
+    inputCheckout.value = "";
+    localStorage.setItem('checkin', inputCheckin.value);
+}
 
-    inputCheckin.onchange = ()=>{
-        inputCheckout.value = ""
-    }
+inputCheckout.onclick = ()=>{
+    inputCheckin.value == "" ? alert("Selecione uma data de Checkin") : 
+    inputCheckout.setAttribute('min', formatarData(localStorage.getItem('checkin'),1))
+}
 
-    inputCheckout.onclick = ()=>{
-        inputCheckin.value == "" ? alert("Selecione uma data de Checkin") : inputCheckout.setAttribute('min', inputCheckin.value) 
-    }
+inputCheckout.onchange = ()=>{
+    localStorage.setItem('checkout', inputCheckout.value)
+}
+
+qtd_pessoas.onchange = ()=>{
+    localStorage.setItem('pessoas', qtd_pessoas.value)
+}
