@@ -1,7 +1,9 @@
 @charset "UTF-8";
+
 footer {
   background-color: #015958;
 }
+
 footer .container-footer {
   padding: 10px 0;
   display: flex;
@@ -11,23 +13,28 @@ footer .container-footer {
   width: 100%;
   justify-content: space-between;
 }
+
 footer .card-footer {
   flex-basis: auto;
   margin: 10px;
 }
+
 footer .card-footer h3 {
   color: #fff;
   font-size: 1.6rem;
   margin: 25px 0;
 }
+
 footer .card-footer a {
   color: #fff;
   font-size: 19.2px;
 }
+
 footer .card-footer .column {
   display: flex;
   flex-direction: column;
 }
+
 footer .card-footer .column a {
   display: flex;
   align-items: center;
@@ -36,31 +43,38 @@ footer .card-footer .column a {
   padding: 3px 0px 16px;
   transition: 0.3s;
 }
+
 footer .card-footer .column a img {
   width: 20px;
 }
+
 footer .card-footer .column a:hover {
   opacity: 1;
 }
+
 footer .card-footer .column p {
   color: #fff;
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
 footer .card-footer .icons {
   display: flex;
   align-items: center;
   margin: 30px 0;
   gap: 10px;
 }
+
 footer .card-footer .icons a img {
   width: 30px;
   opacity: 0.7;
   transition: 0.3s;
 }
+
 footer .card-footer .icons a img:hover {
   opacity: 1;
 }
+
 footer .directs {
   text-align: center;
   color: #fff;
@@ -74,21 +88,26 @@ footer .directs {
     padding: 3px 0 10px;
   }
 }
+
 @media (max-width: 425px) {
   .container-footer {
     flex-direction: column;
     width: 100%;
   }
+
   .card-footer h3 {
     font-size: 15px;
   }
+
   .card-footer .column p {
     font-size: 16px;
   }
+
   .card-footer .column a {
     padding: 3px 0 15px;
   }
 }
+
 header {
   display: flex;
   align-items: center;
@@ -101,39 +120,48 @@ header {
   background-color: #023535;
   opacity: 0.9;
 }
+
 header a img {
   width: 45px;
 }
+
 header a:nth-child(1) {
   display: flex;
   align-items: center;
   gap: 8px;
 }
+
 header p {
   font-size: 1.2rem;
   text-transform: uppercase;
   color: #fff;
 }
+
 header nav ul {
   display: flex;
   gap: 20px;
 }
+
 header nav ul li a img {
   width: 20px;
   height: 20px;
 }
+
 header div a img {
   width: 20px;
   height: 20px;
 }
+
 header .flexMenu {
   display: flex;
   align-items: center;
   gap: 15px;
 }
+
 header .gap-login {
   gap: 7px;
 }
+
 header select,
 header option {
   background-color: transparent;
@@ -147,37 +175,47 @@ header option {
     display: none;
   }
 }
+
 @media (max-width: 1260px) {
   nav ul li a p {
     display: none;
   }
+
   nav ul li {
     padding: 10px;
   }
-  #login_check + label #visitante {
+
+  #login_check+label #visitante {
     display: none;
   }
 }
+
 @media (max-width: 768px) {
   nav {
     display: none;
   }
+
   select {
     display: none;
   }
+
   .flex p {
     display: none;
   }
-  #login_check + .login_label #btn {
+
+  #login_check+.login_label #btn {
     display: none;
   }
-  #login_check + .login_label #cancel {
+
+  #login_check+.login_label #cancel {
     right: 9.5vh;
   }
+
   .login_form {
     right: 4vh !important;
     z-index: 1;
   }
+
   #slide-cancel {
     background-color: rgb(90, 137, 88);
     opacity: 0.5;
@@ -185,13 +223,16 @@ header option {
     width: 25px;
     text-align: center;
   }
+
   #login_check:checked #menu-sidebar {
     right: -200vh;
   }
+
   #sair p {
     display: none;
   }
 }
+
 /* Section Banner Video */
 .banner {
   width: 100%;
@@ -202,11 +243,11 @@ video {
   width: 100%;
   height: 100%;
   -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
 }
 
 /* Section Geral */
-section + section {
+section+section {
   padding: 30px 0px;
 }
 
@@ -220,7 +261,7 @@ section + section {
   flex: 1.3;
   width: 200px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .flexbox div {
@@ -308,7 +349,7 @@ div.card-acomodacoes {
   display: flex;
   flex-wrap: wrap;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   margin: 30px 0px;
   transition: 0.3s;
 }
@@ -318,11 +359,11 @@ div.card-acomodacoes {
   grid-template-columns: 0.2fr auto;
   row-gap: 10px;
   -moz-column-gap: 10px;
-       column-gap: 10px;
+  column-gap: 10px;
   align-items: center;
 }
 
-.box-acomodacoes img:hover > :not(:hover) {
+.box-acomodacoes img:hover> :not(:hover) {
   opacity: 0.4;
 }
 
@@ -360,7 +401,7 @@ div.card-acomodacoes {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .box:hover {
@@ -411,7 +452,7 @@ div.card-acomodacoes {
   transition: 0.3s;
 }
 
-.pratos:hover > :not(:hover) {
+.pratos:hover> :not(:hover) {
   opacity: 0.4;
 }
 
@@ -509,65 +550,83 @@ section#avaliacao {
     display: flex;
     gap: 30px;
   }
+
   .container {
     padding: 30px 20px;
   }
 }
+
 @media (max-width: 900px) {
   .banner {
     display: none;
   }
+
   .margin {
     margin-left: 0;
   }
+
   .flexbox {
     flex-direction: column;
   }
+
   .flexbox img {
     width: 100%;
   }
+
   .container {
     padding: 0px;
   }
+
   .card {
     padding: 10px;
   }
 }
+
 @media (max-width: 430px) {
   .bg-acomodacoes {
     padding: 0;
   }
+
   .card-acomodacoes {
     width: auto;
     height: auto;
   }
+
   .container {
     padding: 0px;
   }
-  .container-quartos, .pratos {
+
+  .container-quartos,
+  .pratos {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
+
   .card-acomodacoes {
     height: 630px;
     top: -130px;
   }
+
   .card-avaliacao img {
     margin: 20px 0px;
   }
 }
+
 #login_check {
   display: none;
 }
-#login_check:checked ~ form .login_form {
+
+#login_check:checked~form .login_form {
   opacity: 0.9;
   top: 80px;
 }
-#login_check:checked ~ .login_label #btn {
+
+#login_check:checked~.login_label #btn {
   top: 0px;
   opacity: 0;
   pointer-events: none;
 }
-#login_check:checked ~ .login_label #cancel {
+
+#login_check:checked~.login_label #cancel {
   position: absolute;
   display: block;
   top: 90px;
@@ -578,20 +637,25 @@ section#avaliacao {
   align-items: center;
   gap: 10px;
 }
-.login_label #btn, .login_label #cancel {
+
+.login_label #btn,
+.login_label #cancel {
   color: white;
   cursor: pointer;
   font-size: 1.4rem;
 }
+
 .login_label #btn {
   transition: all 0.2s ease;
 }
+
 .login_label #cancel {
   display: none;
   right: 110px;
   padding: 3px 9px;
   z-index: 2;
 }
+
 .login_label #visitante:hover {
   cursor: pointer;
 }
@@ -603,11 +667,13 @@ section#avaliacao {
   text-align: center;
   justify-content: center;
 }
+
 .salvar-senhar .salvar-senha-label {
   width: 20px;
   color: white;
   display: contents;
 }
+
 .salvar-senhar .login_label {
   font-size: 1.4rem;
   color: #fff;
@@ -635,6 +701,7 @@ section#avaliacao {
   list-style: none;
   display: block;
 }
+
 .login_list .txt {
   height: 50px;
   width: 250px;
@@ -643,14 +710,17 @@ section#avaliacao {
   border-radius: 5px;
   padding-left: 10px;
 }
+
 .login_list p {
   font-size: 1.2rem;
   text-align: center;
   text-transform: none;
 }
+
 .login_list p input {
   margin-right: 10px;
 }
+
 .login_list .login_button {
   width: 200px;
   background-color: #015958;
@@ -665,6 +735,7 @@ section#avaliacao {
   cursor: pointer;
   transition: 0.3s;
 }
+
 .login_list .login_button:hover {
   background-color: #5dc4c8;
   transition: 0.3s;
@@ -677,6 +748,7 @@ section#avaliacao {
   padding: 0px;
   font-size: 1.4rem;
 }
+
 .login_suporte a {
   color: white;
   padding: 5px;
@@ -684,6 +756,7 @@ section#avaliacao {
   font-size: 1.3rem;
   justify-content: center;
 }
+
 .login_suporte a:hover {
   text-decoration: underline;
 }
@@ -705,6 +778,7 @@ section#avaliacao {
 .menu-sidebar-lista {
   width: 100%;
 }
+
 .menu-sidebar-lista li {
   width: 100%;
   padding: 0px 10px;
@@ -712,11 +786,13 @@ section#avaliacao {
   transition: all 0.2s ease-in-out;
   border-bottom: 1px black solid;
 }
+
 .menu-sidebar-lista li a p {
   display: block;
   text-align: left;
   width: 100%;
 }
+
 .menu-sidebar-lista li a i {
   color: white;
 }
@@ -725,6 +801,7 @@ section#avaliacao {
   height: 73.61px;
   padding: 12px;
 }
+
 .menu-sidebar-login a .sidebar-login-label {
   cursor: pointer;
   display: contents;
@@ -733,27 +810,33 @@ section#avaliacao {
 #slide-menu-sidebar {
   display: none;
 }
-#slide-menu-sidebar:checked ~ .menu-sidebar {
+
+#slide-menu-sidebar:checked~.menu-sidebar {
   right: 0vh;
 }
-#slide-menu-sidebar:checked ~ .slide-menu-sidebar-label #slide-cancel {
+
+#slide-menu-sidebar:checked~.slide-menu-sidebar-label #slide-cancel {
   right: 40vh;
   background-color: red;
 }
-#slide-menu-sidebar:checked ~ .slide-menu-sidebar-label #slide-btn {
+
+#slide-menu-sidebar:checked~.slide-menu-sidebar-label #slide-btn {
   display: none;
 }
 
-.slide-menu-sidebar-label #slide-btn, .slide-menu-sidebar-label #slide-cancel {
+.slide-menu-sidebar-label #slide-btn,
+.slide-menu-sidebar-label #slide-cancel {
   position: relative !important;
   cursor: pointer;
   color: white;
   font-size: 1.6rem;
   transition: all 0.5s ease;
 }
+
 .slide-menu-sidebar-label #slide-cancel {
   right: -40vh;
 }
+
 .slide-menu-sidebar-label #slide-btn {
   right: -3vw;
 }
@@ -836,7 +919,7 @@ section .flex {
   scroll-behavior: auto;
 }
 
-section .flex > div {
+section .flex>div {
   text-align: center;
   flex: 1 1 30px;
   margin: 10px;
@@ -845,7 +928,7 @@ section .flex > div {
   transition: 0.3s;
 }
 
-.flex > div:hover {
+.flex>div:hover {
   box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   opacity: 100%;
 }
@@ -980,7 +1063,7 @@ div .box-acomod img {
   width: 100%;
   height: 100%;
   -ms-scroll-chaining: inherit;
-      overscroll-behavior: inherit;
+  overscroll-behavior: inherit;
 }
 
 .card-promocao:nth-child(1) {
@@ -1105,19 +1188,23 @@ div .box-acomod img {
     font-weight: bolder;
     padding: 2px 20px 2px 8px;
   }
+
   .slogan {
     padding: 0vh;
   }
+
   .promo-img01 {
     display: block;
     margin: -20px auto 30px;
     transform: rotate(355deg);
     border: 10px solid white;
   }
+
   .promo-img03 {
     transform: rotate(-355deg);
     border: 10px px solid white;
   }
+
   #preço-promo01 {
     position: absolute;
     top: 8px;
@@ -1129,6 +1216,7 @@ div .box-acomod img {
     font-weight: bolder;
     padding: 2px 20px 2px 8px;
   }
+
   #preço-promo03 {
     position: absolute;
     top: 30px;
@@ -1140,6 +1228,7 @@ div .box-acomod img {
     font-weight: bolder;
     padding: 2px 20px 2px 8px;
   }
+
   #preço-promo02 {
     position: absolute;
     top: 3px;
@@ -1150,6 +1239,7 @@ div .box-acomod img {
     font-weight: bolder;
     padding: 2px 20px 2px 8px;
   }
+
   .container-promocao {
     max-width: 1250px;
     margin: 20px auto;
@@ -1159,10 +1249,12 @@ div .box-acomod img {
     gap: 30px;
     background-color: white;
   }
-  #promocao > div {
+
+  #promocao>div {
     transform: scale(0.95);
     box-shadow: 0px 0px 42px -7px rgba(0, 0, 0, 0.75);
   }
+
   section .flex {
     display: flex;
     flex-wrap: wrap;
@@ -1171,24 +1263,29 @@ div .box-acomod img {
     row-gap: 30px;
   }
 }
+
 .container-contato {
   display: grid;
   place-items: center;
   padding: 150px 10px;
 }
+
 .container-contato .card-contato .h2-contato {
   font-size: 1.7rem;
   text-align: center;
   margin-bottom: 43px;
 }
+
 .container-contato .card-contato form {
   width: 100%;
 }
+
 .container-contato .card-contato form .block {
   font-size: 1.2rem;
   display: block;
   margin: 7px 0;
 }
+
 .container-contato .card-contato form .input-contato {
   max-width: 100%;
   width: 100%;
@@ -1196,6 +1293,7 @@ div .box-acomod img {
   padding: 7px;
   outline: none;
 }
+
 .container-contato .card-contato form .textarea-contato {
   max-width: 100%;
   width: 100%;
@@ -1204,6 +1302,7 @@ div .box-acomod img {
   border: 2px solid #f1f1f1;
   resize: none;
 }
+
 .container-contato .card-contato form .button-contato {
   padding: 10px;
   max-width: 50%;
@@ -1222,21 +1321,25 @@ div .box-acomod img {
     width: 600px;
   }
 }
+
 @media (max-width: 767px) {
   .card-contato {
     width: 500px;
   }
 }
+
 @media (max-width: 550px) {
   .card-contato {
     width: 400px;
   }
 }
+
 @media (max-width: 420px) {
   .card-contato {
     width: 300px;
   }
 }
+
 /* Banner */
 .bannerGastronomia {
   background-image: url("../../../images/gastronomia/banner.jpg");
@@ -1352,6 +1455,7 @@ div .box-acomod img {
   font-family: "KaushanScript-Regular";
   font-weight: normal;
 }
+
 .texto-reserva {
   color: white;
   font-family: "KaushanScript-Regular";
@@ -1364,7 +1468,7 @@ div .box-acomod img {
 .image-text {
   display: flex;
   -moz-column-gap: 18px;
-       column-gap: 18px;
+  column-gap: 18px;
   padding: 21px;
 }
 
@@ -1484,40 +1588,49 @@ div .box-acomod img {
   .container-main {
     flex-direction: column;
   }
+
   .image-text-pai {
     width: 100%;
   }
+
   .image-text {
     display: block;
     padding: 5px;
   }
+
   .image-reserva {
     width: 100%;
   }
+
   .div-pa {
     margin: 25px 0px;
     gap: 16px;
   }
 }
+
 @media (max-width: 768px) {
   .image-text-pai {
     width: 100%;
   }
+
   .resumo_reserva_pai {
     display: block;
     display: grid;
     place-items: center;
   }
+
   .dash {
     height: 5px;
     background-color: #023535;
     width: 500px;
     margin: 10px 0 40px 0px;
   }
+
   .container-quartos {
     grid-template-columns: repeat(auto-fit, 1fr);
   }
 }
+
 .modal {
   position: fixed;
   width: 100vw;
@@ -1531,17 +1644,20 @@ div .box-acomod img {
   align-items: center;
   justify-content: center;
 }
+
 .modal.open {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s;
 }
+
 .modal-bg {
   position: absolute;
   background: teal;
   width: 100%;
   height: 100%;
 }
+
 .modal-container {
   border-radius: 10px;
   background: #fff;
@@ -1549,14 +1665,15 @@ div .box-acomod img {
   padding: 10px;
   top: 40px;
 }
+
 .modal-close {
   position: absolute;
   right: 15px;
   top: 15px;
   outline: none;
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   color: red;
   background: none;
   border: 0px;
@@ -1575,23 +1692,28 @@ div .box-acomod img {
   background-image: linear-gradient(var(--card-gradient), white max(9.5rem, 27vh));
   overflow: hidden;
 }
+
 .card-modal img {
   border-radius: 0.5rem 0.5rem 0 0;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   max-height: max(10rem, 30vh);
   aspect-ratio: 4/3;
   mix-blend-mode: var(--card-blend-mode);
 }
-.card-modal img ~ * {
+
+.card-modal img~* {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-.card-modal > :last-child {
+
+.card-modal> :last-child {
   margin-bottom: 0;
 }
-.card-modal:hover, .card-modal:focus-within {
+
+.card-modal:hover,
+.card-modal:focus-within {
   --card-gradient: #24a9d5 max(8.5rem, 20vh);
 }
 
@@ -1635,18 +1757,21 @@ div .box-acomod img {
   border-radius: 5px;
   box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
 }
+
 .modal-container.reservations .left-side {
   height: 500px;
   flex: 3;
 }
+
 .modal-container.reservations .left-side img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
+
 .modal-container.reservations .right-side {
   flex: 2;
   text-align: left;
@@ -1654,24 +1779,30 @@ div .box-acomod img {
   color: teal;
   margin: 0;
 }
+
 .modal-container.reservations .right-side h4 {
   opacity: 0.5;
   margin: -0.8rem 0 1.2rem 0;
 }
+
 .modal-container.reservations .right-side ul {
   margin-top: 3rem;
   padding: 0;
   list-style: none;
 }
+
 .modal-container.reservations .right-side ul li {
   margin: 2.5rem 0;
 }
+
 .modal-container.reservations .right-side ul li p {
   opacity: 0.5;
 }
+
 .modal-container.reservations .right-side ul li h3 {
   margin: -0.5rem 0;
 }
+
 .modal-container.reservations .right-side .btn {
   border: none;
   outline: none;
@@ -1684,6 +1815,7 @@ div .box-acomod img {
   margin-top: 1rem;
   cursor: pointer;
 }
+
 .modal-container.reservations .right-side .btn:hover {
   background-color: teal;
   color: #f3f3f3;
@@ -1751,23 +1883,23 @@ div .box-acomod img {
   height: 100%;
 }
 
-#slide1:checked ~ .s1 {
+#slide1:checked~.s1 {
   margin-left: 0;
 }
 
-#slide2:checked ~ .s1 {
+#slide2:checked~.s1 {
   margin-left: -20%;
 }
 
-#slide3:checked ~ .s1 {
+#slide3:checked~.s1 {
   margin-left: -40%;
 }
 
-#slide4:checked ~ .s1 {
+#slide4:checked~.s1 {
   margin-left: -60%;
 }
 
-#slide5:checked ~ .s1 {
+#slide5:checked~.s1 {
   margin-left: -80%;
 }
 
@@ -1817,4 +1949,6 @@ button:hover {
 
 button:hover {
   background-color: #0fc2c0;
-}/*# sourceMappingURL=global.css.map */
+}
+
+/*# sourceMappingURL=global.css.map */

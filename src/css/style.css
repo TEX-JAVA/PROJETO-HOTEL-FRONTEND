@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 footer {
   background-color: #015958;
 }
@@ -1242,35 +1243,163 @@ div .box-acomod img {
     width: 300px;
   }
 }
-/* Banner */
-.bannerGastronomia {
-  background-image: url("../../../images/gastronomia/banner.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  padding: 205px 0px;
+.container-gastro {
+  max-width: 1250px;
+  margin: auto;
+  position: relative;
+  padding: 10px 10px;
+}
+
+.menu {
+  flex: 70%;
+  text-align: right;
+  padding: 20px;
+}
+
+.menu a {
+  color: #180f4a;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 20px 16px;
+  margin-left: 5%;
+}
+
+#botao {
+  background: #180f4a;
+  padding: 10px 25px;
+  color: white;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+#botao:hover {
+  border: none;
+  background: #ff2978;
+}
+
+.main-gastro {
+  position: static;
+  padding-top: 100px;
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+  background: white;
+  justify-content: center;
   align-items: center;
+}
+
+.headline {
+  flex: 40%;
+  margin-left: 10%;
+}
+
+.img-headeline {
+  margin-right: 10%;
+  flex: 40%;
   text-align: center;
-  overflow: hidden;
-  opacity: 0.8;
 }
 
-.text-banner {
-  display: block;
-  z-index: 1;
-  opacity: 1;
+.headline h2 {
+  font-weight: 900;
+  font-size: 20px;
+  color: #180f4a;
+  padding: 0;
+  margin: 0;
 }
 
-.text-banner h1 {
-  font-size: 3rem;
-  color: #fff;
+.headline p {
+  color: gray;
+  text-align: left;
+}
+
+.contact-btn {
+  background-image: linear-gradient(to bottom, #015958, #008f8c);
+  padding: 15px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5px;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 5%;
 }
 
-.text-banner p {
-  font-size: 1.8rem;
-  color: #fff;
+.contact-btn:hover {
+  background-image: linear-gradient(to top, #015958, #008f8c);
 }
 
+.sec-gastro {
+  display: inline-block;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: auto;
+  padding: 5%;
+  text-align: center;
+}
+
+.sec-gastro h2 {
+  width: 100%;
+  font-size: 50px;
+  margin: 0;
+  font-family: "Lobster", cursive;
+  font-weight: bold;
+  color: #015958;
+}
+
+.h2-gastro {
+  color: #015958;
+}
+
+.sevicos {
+  display: flex;
+  margin-top: 5%;
+}
+
+.card-gastro {
+  display: inline-block;
+  width: 30%;
+  margin: 1%;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  height: 50%;
+}
+
+.logo-rodape {
+  padding: 100px;
+}
+
+.agencia {
+  font-family: "Lobster", cursive;
+  color: white;
+  font-size: 34px;
+}
+
+@media screen and (max-width: 1005px) {
+  .menu {
+    display: none;
+  }
+  .logo {
+    margin: 0;
+    text-align: center;
+  }
+  .main-gastro {
+    padding-top: 50px;
+  }
+  .headline,
+  .img-readline {
+    flex: 100%;
+    margin: 5%;
+    text-align: center;
+  }
+  .headline p {
+    text-align: center;
+  }
+  .sevicos {
+    flex-direction: column;
+    width: 100%;
+  }
+}
 .container-page-reserva {
   max-width: 1250px;
   margin: 30px auto;
@@ -1366,13 +1495,6 @@ div .box-acomod img {
   display: flex;
   column-gap: 18px;
   padding: 21px;
-}
-
-.dash {
-  height: 5px;
-  background-color: #023535;
-  width: 500px;
-  margin: 10px 0 40px 80px;
 }
 
 .image-reserva {
