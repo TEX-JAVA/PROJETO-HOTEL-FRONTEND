@@ -37,9 +37,9 @@
                 <h3>Serviços</h3>
                 <div class="column">
                     <a href="#">Home</a>
-                    <a href="./pages/sobre.html">Sobre</a>
-                    <a href="pages/acomodacoes.html">Acomodações</a>
-                    <a href="./pages/reserva.html">Reserva</a>
+                    <a href="/sobre">Sobre</a>
+                    <a href="/acomodacoes">Acomodações</a>
+                    <a href="/reserva">Reserva</a>
                 </div>
             </div>
             <div class="card-footer">
@@ -54,7 +54,7 @@
                 <h3>Links Rápidos</h3>
                 <div class="column">
                     <a href="#">Admin</a>
-                    <a href="./pages/contato.html">Contato</a>
+                    <a href="/contato">Contato</a>
                     <a href="#">Blog</a>
                 </div>
             </div>

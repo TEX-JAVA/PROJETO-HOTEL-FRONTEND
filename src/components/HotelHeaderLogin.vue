@@ -90,7 +90,6 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-   @import "../assets/scss/global/global.scss"
-
+<style lang="scss" scoped>
+@import "../assets/scss/global/global.scss";
 </style>
