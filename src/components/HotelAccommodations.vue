@@ -12,21 +12,18 @@
                     <p id="acomodacao">{{ room.name }}</p>
                     <span id="descricao">A partir de R$ {{ room.price }}</span><br>
                     <div>
-                        <div v-for="service of room.services" id="icon-service-acomodacoes">
-                            <img v-if="service.valueOf('wifi')" :src="wifiIcon">
-                            <img v-if="service.valueOf('arCon')" :src="arConIcon">
-                            <img v-if="service.valueOf('chamada')" :src="chamadaIcon">
-                            <img v-if="service.valueOf('bagagem')" :src="bagagemIcon">
+                        <div v-if="room.services.wifi" id="icon-service-acomodacoes">
+                            <img :src="wifiIcon">
                         </div>
-                        <!-- <div id="icon-service-acomodacoes">
+                        <div v-if="room.services.arcondicionado" id="icon-service-acomodacoes">
                             <img :src="arConIcon">
                         </div>
-                        <div id="icon-service-acomodacoes">
+                        <div v-if="room.services.chamada" id="icon-service-acomodacoes">
                             <img :src="chamadaIcon">
                         </div>
-                        <div id="icon-service-acomodacoes">
+                        <div v-if="room.services.bagagem" id="icon-service-acomodacoes">
                             <img :src="bagagemIcon">
-                        </div> -->
+                        </div>
                     </div>
                     <button class="btn-reserve-agora">Reserve Agora</button>
                 </div>
@@ -338,7 +335,6 @@ export default {
 };
 </script>
 
-<style lang="sass" scoped>
-    @import "../assets/scss/global/global.scss"
-    
+<style lang="scss" scoped>
+@import "../assets/scss/global/global.scss";
 </style>

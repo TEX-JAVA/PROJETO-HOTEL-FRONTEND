@@ -106,119 +106,137 @@
                         style="width: 60px; height: 30px; text-align: center" />
                     <br />
                     <br />
-                    <a class="a-servicos" data-modal="modal-one">Adicionar mais serviços</a>
+                    <a @click="showModal = true" class="a-servicos" data-modal="modal-one">Adicionar mais serviços</a>
                     <a class="button-b" data-modal="modal-two" id="continue-btn">CONTINUAR</a>
                 </div>
             </div>
         </div>
-        <!-- Modal Mais serviços-->
-        <div class="modal" id="modal-one">
-            <div class="modal-bg modal-exit"></div>
-            <div class="modal-container">
-                <h1>Mais Serviços</h1>
-                <h2>
-                    Escolha os serviços que gostaria que acompanhasse sua reserva.
-                </h2>
-                <ul class="card-wrapper">
-                    <li class="card-modal" id="wifi">
-                        <img src="https://assets/images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                            alt="" />
-                        <h3><a href="">WiFi</a></h3>
-                        <p>R$ 16/dia por pessoa</p>
-                    </li>
-                    <li class="card-modal" id="breakfast">
-                        <img src="https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                            alt="" />
-                        <h3><a href="">Café da Manhã</a></h3>
-                        <p>R$ 30/dia por pessoa</p>
-                    </li>
-                    <li class="card-modal" id="mini-bar">
-                        <img src="https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                            alt="" />
-                        <h3><a href="">Frigobar a vontade</a></h3>
-                        <p>R$ 120/dia por pessoa</p>
-                    </li>
-                    <li class="card-modal" id="kids-events">
-                        <img src="https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                            alt="" />
-                        <h3><a href="">Entretenimento Infantil</a></h3>
-                        <p>R$ 40/dia por criança</p>
-                    </li>
-                    <li class="card-modal" id="gym">
-                        <img src="https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                            alt="" />
-                        <h3><a href="">Academia</a></h3>
-                        <p>R$ 10/dia por pessoa</p>
-                    </li>
-                </ul>
-                <button class="modal-close modal-exit">X</button>
-            </div>
-        </div>
-        <!-- Modal Mais Serviços-->
+
         <!-- Modal Resumo das Reservas-->
-        <div class="modal" id="modal-two">
-            <div class="modal-bg modal-exit"></div>
-            <div class="modal-container reservations">
-                <div class="left-side">
-                    <img src="https://i.ibb.co/DzZyM1v/hotel.jpg" alt="" />
+        <!--
+            <div class="modal" id="modal-two">
+                <div class="modal-bg modal-exit"></div>
+                <div class="modal-container reservations">
+                    <div class="left-side">
+                        <img src="https://i.ibb.co/DzZyM1v/hotel.jpg" alt="" />
+                    </div>
+                    <div class="right-side">
+                        <h2>Hotel H</h2>
+                        <h4>O hotel que faz sentido para você</h4>
+                        <ul>
+                            <li>
+                                <p>Chegada</p>
+                                <h3 id="checkin-date-value"></h3>
+                            </li>
+                            <li>
+                                <p>Saida</p>
+                                <h3 id="checkout-date-value"></h3>
+                            </li>
+                            <li>
+                                <p>Numero de convidados</p>
+                                <h3 id="nb-adults-value"></h3>
+                            </li>
+                            <li>
+                                <p>Inclui:</p>
+                                <h3 id="services-list-value"></h3>
+                            </li>
+                            <li>
+                                <p>Preço por Adulto</p>
+                                <h3 id="price-per-adult"></h3>
+                            </li>
+                            <li>
+                                <p>Preço Total</p>
+                                <h3 id="total-price"></h3>
+                            </li>
+                        </ul>
+                        <button class="btn">Confirmar a Reserva</button>
+                    </div>
+                    <button class="modal-close modal-exit">X</button>
                 </div>
-                <div class="right-side">
-                    <h2>Hotel H</h2>
-                    <h4>O hotel que faz sentido para você</h4>
-                    <ul>
-                        <li>
-                            <p>Chegada</p>
-                            <h3 id="checkin-date-value"></h3>
-                        </li>
-                        <li>
-                            <p>Saida</p>
-                            <h3 id="checkout-date-value"></h3>
-                        </li>
-                        <li>
-                            <p>Numero de convidados</p>
-                            <h3 id="nb-adults-value"></h3>
-                        </li>
-                        <li>
-                            <p>Inclui:</p>
-                            <h3 id="services-list-value"></h3>
-                        </li>
-                        <li>
-                            <p>Preço por Adulto</p>
-                            <h3 id="price-per-adult"></h3>
-                        </li>
-                        <li>
-                            <p>Preço Total</p>
-                            <h3 id="total-price"></h3>
-                        </li>
-                    </ul>
-                    <button class="btn">Confirmar a Reserva</button>
-                </div>
-                <button class="modal-close modal-exit">X</button>
             </div>
-        </div>
+            
+        -->
         <!-- Modal Resumo das Reservas-->
     </main>
+    <HotelModal v-if="showModal" @close="showModal = false" title="Mais servicos" />
+
 </template>
 
 <script>
+import { ref } from 'vue'
+import HotelModal from './HotelModal.vue'
 
 export default {
-    name: "HotelReservations",
-    data() {
-        return {};
+    name: 'HotelReserva',
+    components: {
+        HotelModal
+    },
+    setup() {
+        return {
+            showModal: ref(false)
+        }
     },
     methods: {
+        openModal() {
+            this.showModal = true;
+        }
+    }
 
-    },
-    mounted() {
-
-    },
-};
+}
 </script>
 
 <style scoped lang="scss">
 @import "../assets/scss/global/global.scss";
 
+
+// MODAL
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    transition: all 0.3s ease;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.open {
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    &-bg {
+        position: absolute;
+        background: teal;
+        width: 100%;
+        height: 100%;
+    }
+
+    &-container {
+        border-radius: 10px;
+        background: #fff;
+        position: relative;
+        padding: 10px;
+        top: 40px;
+    }
+
+    &-close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        outline: none;
+        appearance: none;
+        color: red;
+        background: none;
+        border: 0px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+// MODAL
 .container-page-reserva {
     max-width: 1250px;
     margin: 30px auto;
@@ -475,125 +493,6 @@ export default {
     .container-quartos {
         grid-template-columns: repeat(auto-fit, 1fr);
     }
-}
-
-
-
-.modal {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &.open {
-        visibility: visible;
-        opacity: 1;
-        transition-delay: 0s;
-    }
-
-    &-bg {
-        position: absolute;
-        background: teal;
-        width: 100%;
-        height: 100%;
-    }
-
-    &-container {
-        border-radius: 10px;
-        background: #fff;
-        position: relative;
-        padding: 10px;
-        top: 40px;
-    }
-
-    &-close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        outline: none;
-        appearance: none;
-        color: red;
-        background: none;
-        border: 0px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-}
-
-// Cards
-
-.card-modal {
-    --card-gradient: rgba(0, 0, 0, 0.8);
-    --card-gradient: #5e9ad9, #e271ad;
-    // --card-gradient: tomato, orange;
-    --card-blend-mode: overlay;
-    // --card-blend-mode: multiply;
-
-    background-color: #fff;
-    border-radius: 0.5rem;
-    box-shadow: 0.05rem 0.1rem 0.3rem -0.03rem rgba(0, 0, 0, 0.45);
-    padding-bottom: 1rem;
-    background-image: linear-gradient(var(--card-gradient), white max(9.5rem, 27vh));
-    overflow: hidden;
-
-    img {
-        border-radius: 0.5rem 0.5rem 0 0;
-        width: 100%;
-        object-fit: cover;
-        // height: max(10rem, 25vh);
-        max-height: max(10rem, 30vh);
-        aspect-ratio: 4/3;
-        mix-blend-mode: var(--card-blend-mode);
-        // filter: grayscale(100);
-
-        ~* {
-            margin-left: 1rem;
-            margin-right: 1rem;
-        }
-    }
-
-    > :last-child {
-        margin-bottom: 0;
-    }
-
-    &:hover,
-    &:focus-within {
-        --card-gradient: #24a9d5 max(8.5rem, 20vh);
-    }
-}
-
-.card .selected {
-    border: 2px solid teal;
-}
-
-.card h3 {
-    margin-top: 1rem;
-    font-size: 1.25rem;
-}
-
-.card a {
-    color: inherit;
-}
-
-.card-wrapper {
-    max-width: fit-content;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-    grid-gap: 1.5rem;
-    max-width: 100vw;
-    width: 120ch;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 // =======================================================//
