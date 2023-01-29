@@ -106,7 +106,9 @@
                         style="width: 60px; height: 30px; text-align: center" />
                     <br />
                     <br />
-                    <a @click="showModal = true" class="a-servicos" data-modal="modal-one">Adicionar mais serviços</a>
+                    <a @click="$store.state.showModal = true" class="a-servicos" data-modal="modal-one">Adicionar mais
+                        serviços</a>
+                    <HotelModal v-if="$store.state.showModal" />
                     <a class="button-b" data-modal="modal-two" id="continue-btn">CONTINUAR</a>
                 </div>
             </div>
@@ -158,12 +160,10 @@
         -->
         <!-- Modal Resumo das Reservas-->
     </main>
-    <HotelModal v-if="showModal" @close="showModal = false" title="Mais servicos" />
 
 </template>
 
 <script>
-import { ref } from 'vue'
 import HotelModal from './HotelModal.vue'
 
 export default {
@@ -173,13 +173,16 @@ export default {
     },
     setup() {
         return {
-            showModal: ref(false)
+
         }
     },
     methods: {
         openModal() {
-            this.showModal = true;
-        }
+
+        },
+        closeModal() {
+
+        },
     }
 
 }
@@ -188,55 +191,6 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/global/global.scss";
 
-
-// MODAL
-.modal {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    opacity: 0;
-    transition: all 0.3s ease;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &.open {
-        opacity: 1;
-        transition-delay: 0s;
-    }
-
-    &-bg {
-        position: absolute;
-        background: teal;
-        width: 100%;
-        height: 100%;
-    }
-
-    &-container {
-        border-radius: 10px;
-        background: #fff;
-        position: relative;
-        padding: 10px;
-        top: 40px;
-    }
-
-    &-close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        outline: none;
-        appearance: none;
-        color: red;
-        background: none;
-        border: 0px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-}
-
-// MODAL
 .container-page-reserva {
     max-width: 1250px;
     margin: 30px auto;

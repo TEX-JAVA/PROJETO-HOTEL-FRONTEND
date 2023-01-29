@@ -3,6 +3,7 @@ import HotelHeader from './components/HotelHeader.vue'
 import HotelFooter from './components/HotelFooter.vue'
 import HotelMainPage from './components/HotelMainPage.vue';
 import HotelAbout from './components/HotelAbout.vue';
+import store from './store';
 
 export default {
   name: 'App',
@@ -11,6 +12,9 @@ export default {
     HotelFooter,
     HotelMainPage,
     HotelAbout,
+  },
+  mounted() {
+
   },
 }
 </script>

@@ -68,7 +68,7 @@ export default {
     name: 'HotelModal',
     methods: {
         closeModal() {
-            this.$emit('close-modal')
+            this.$store.state.showModal = false;
         }
     }
 }
