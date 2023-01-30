@@ -6,3 +6,23 @@
     left: 0;
     top: 0;
 }
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #008080 #ffffff00;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff00;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #008080;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
+}

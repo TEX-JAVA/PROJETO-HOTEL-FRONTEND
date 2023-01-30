@@ -1,80 +1,71 @@
 <template>
     <teleport to="body">
         <transition name="modal-fade">
-            <div class="modal-overlay" @click="closeModal">
-                <div class="modal" @click.stop>
-                    <button @click="closeModal">Close</button>
-                </div>
-                <div class="close" @click="closeModal">
-                    X
+            <div class="modal-overlay" @click="closeAllModals">
+
+
+                <HotelModalServices v-if="$store.state.showModalServices" />
+                <HotelModalSummary v-if="$store.state.showModalSummary" />
+
+
+                <!-- <div class="modal-services" @click.stop>
+                    <h3>Escolha mais serviços para fazer sua estadia ainda mais memorável.</h3>
+                    <ul class="card-wrapper">
+                        <li class="card-modal" v-for="service in $store.state.servicesAndPrices" :key="service.id">
+                            <img :src="service.imgUrl" :alt="service.name" class="img-modal">
+                            <h3>{{ service.name }} <br /> R$ {{ service.price.toFixed(2) }}</h3>
+                            <hr />
+                            <p>{{ service.description }}</p>
+                        </li>
+                    </ul>
+                    <div class="sub-total">
+
+                        <button @click="closeModalServices">Close</button>
+                    </div>
+                </div> -->
+                <div class="close" @click="closeModalServices">
+                    <img src="/src/assets/global/icons/icons8-close.svg" />
                 </div>
             </div>
         </transition>
 
     </teleport>
-
-
-    <!-- Modal Mais serviços-->
-    <!-- <div class="modal" id="modal-one">
-        <div class="modal-bg modal-exit"></div>
-        <div class="modal-container">
-            <h1>Mais Serviços</h1>
-            <h2>
-                Escolha os serviços que gostaria que acompanhasse sua reserva.
-            </h2>
-            <ul class="card-wrapper">
-                <li class="card-modal" id="wifi">
-                    <img src="https://assets/images.unsplash.com/photo-1611916656173-875e4277bea6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                        alt="" />
-                    <h3><a href="">WiFi</a></h3>
-                    <p>R$ 16/dia por pessoa</p>
-                </li>
-                <li class="card-modal" id="breakfast">
-                    <img src="https://images.unsplash.com/photo-1611083360739-bdad6e0eb1fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                        alt="" />
-                    <h3><a href="">Café da Manhã</a></h3>
-                    <p>R$ 30/dia por pessoa</p>
-                </li>
-                <li class="card-modal" id="mini-bar">
-                    <img src="https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                        alt="" />
-                    <h3><a href="">Frigobar a vontade</a></h3>
-                    <p>R$ 120/dia por pessoa</p>
-                </li>
-                <li class="card-modal" id="kids-events">
-                    <img src="https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                        alt="" />
-                    <h3><a href="">Entretenimento Infantil</a></h3>
-                    <p>R$ 40/dia por criança</p>
-                </li>
-                <li class="card-modal" id="gym">
-                    <img src="https://images.unsplash.com/photo-1613230485186-2e7e0fca1253?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHw&ixlib=rb-1.2.1&q=80&w=400"
-                        alt="" />
-                    <h3><a href="">Academia</a></h3>
-                    <p>R$ 10/dia por pessoa</p>
-                </li>
-            </ul>
-            <button @click="closeModal" class="modal-close modal-exit">X</button>
-        </div>
-    </div> -->
-    <!-- Modal Mais Serviços-->
-
-
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+import HotelModalServices from './HotelModalServices.vue';
+import HotelModalSummary from './HotelModalSummary.vue';
 
 export default {
     name: 'HotelModal',
-    methods: {
-        closeModal() {
-            this.$store.state.showModal = false;
+    components: {
+        HotelModalServices,
+        HotelModalSummary,
+    },
+    data() {
+        return {
         }
-    }
+    },
+    methods: {
+        ...mapActions(['closeAllModals']),
+    },
 }
 </script>
 
 <style scoped lang="scss">
+h3,
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 5px 0;
+    margin: 0;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -88,18 +79,61 @@ export default {
 
 .close {
     padding: 10px;
-    background-color: #ac003e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 15px;
+    width: 15px;
+    background-color: teal;
+    color: white;
+    border-radius: 50%;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.modal {
+.modal-services {
     text-align: center;
     background-color: white;
-    height: 500px;
-    width: 500px;
+    height: 75vh;
+    width: 80vw;
     margin-top: 10%;
-    padding: 60px 0;
+    padding: 10px 0;
     border-radius: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    overflow-y: scroll;
+
+    .card-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 20px;
+        gap: 1vw;
+
+        .card-modal {
+            width: 15vw;
+            list-style: none;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+
+            &.selected {
+                border: 3px solid teal;
+            }
+
+            .img-modal {
+                max-width: 100%;
+                max-height: 20vh;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+    }
 }
+
 
 .close {
     margin: 10% 0 0 16px;
@@ -127,13 +161,14 @@ p {
 }
 
 button {
-    background-color: #ac003e;
+    background-color: teal;
     width: 150px;
     height: 40px;
     color: white;
     font-size: 14px;
     border-radius: 16px;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 .modal-fade-enter,
@@ -144,5 +179,26 @@ button {
 .modal-fade-enter-active,
 .modal-fade-leave-active {
     transition: opacity 0.5s ease;
+}
+
+
+* {
+    scrollbar-width: auto;
+    scrollbar-color: #008080 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #008080;
+    border-radius: 10px;
+    border: 3px solid #ffffff;
 }
 </style>

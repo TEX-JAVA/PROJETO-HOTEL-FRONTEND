@@ -106,10 +106,10 @@
                         style="width: 60px; height: 30px; text-align: center" />
                     <br />
                     <br />
-                    <a @click="$store.state.showModal = true" class="a-servicos" data-modal="modal-one">Adicionar mais
+                    <a @click="openModalServices" class="a-servicos" data-modal="modal-one">Adicionar mais
                         serviços</a>
-                    <HotelModal v-if="$store.state.showModal" />
-                    <a class="button-b" data-modal="modal-two" id="continue-btn">CONTINUAR</a>
+                    <HotelModal v-if="$store.state.showModalServices || $store.state.showModalSummary" />
+                    <a @click="openModalSummary" class="button-b" data-modal="modal-two" id="continue-btn">CONTINUAR</a>
                 </div>
             </div>
         </div>
@@ -164,6 +164,8 @@
 </template>
 
 <script>
+
+import { mapActions } from 'vuex';
 import HotelModal from './HotelModal.vue'
 
 export default {
@@ -177,15 +179,11 @@ export default {
         }
     },
     methods: {
-        openModal() {
-
-        },
-        closeModal() {
-
-        },
-    }
-
+        ...mapActions(['openModalServices', 'openModalSummary'])
+    },
 }
+
+
 </script>
 
 <style scoped lang="scss">

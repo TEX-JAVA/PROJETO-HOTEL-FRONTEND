@@ -25,6 +25,10 @@ export default {
   <HotelFooter />
 </template>
 
+<style lang="scss" scoped>
+
+</style>
+
 
 
 
