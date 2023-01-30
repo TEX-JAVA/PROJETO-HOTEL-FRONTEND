@@ -12,7 +12,7 @@ export default createStore({
             { id:'breakfast', name: 'Café da Manhã', price: 10, description: 'Café da manhã a vontade', imgUrl: 'https://images.unsplash.com/photo-1493770348161-369560ae357d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' },
             { id:'lunch', name: 'Almoço', price: 15, description: 'Experiência gastronômica única', imgUrl: '/src/assets/images/gastronomia/salmon2.jpg' },
             { id:'dinner', name: 'Jantar', price: 20, description: 'Jantares especiais', imgUrl: '/src/assets/images/gastronomia/salmon1.jpg' },
-            { id:'allmeals', name: 'Todas as refeições inclusas', price: 35, description: 'Café da manhã, almoço e jantar', imgUrl: '/src/assets/images/gastronomia/salmon1.jpg'},
+            //{ id:'allmeals', name: 'Todas as refeições inclusas', price: 35, description: 'Café da manhã, almoço e jantar', imgUrl: '/src/assets/images/gastronomia/salmon1.jpg'},
             { id:'spa', name: 'Spa', price: 30, description: 'Massagens relaxantes', imgUrl: 'https://images.unsplash.com/photo-1630835425197-50feeba99ecd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80' },
             { id:'gym', name: 'Academia', price: 10, description: 'Acesso à academia', imgUrl: 'https://images.unsplash.com/photo-1593079831268-3381b0db4a77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80' },
             { id:'shuttle', name: 'Transporte Aeroporto-Hotel', price: 20, description: 'Transporte de ida e volta', imgUrl: 'https://images.unsplash.com/photo-1495150434753-f8ceb319e9dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1175&q=80' },
@@ -166,6 +166,50 @@ export default createStore({
             localStorage.setItem('roomTypeChosen', value);
             commit('SET_ROOM_TYPE_CHOSEN', value);
         },
+        setServicesChosen({ commit }, value) {
+            if (!localStorage.getItem('servicesChosen')) {
+                localStorage.setItem('servicesChosen', '');
+            }
+            let servicesChosen = [...this.state.servicesChosen]
+            if (servicesChosen.includes(value)) {
+                servicesChosen = servicesChosen.filter(item => item !== value);
+            } else 
+                servicesChosen.push(value);
+            localStorage.setItem('servicesChosen', JSON.stringify(servicesChosen));
+            commit('SET_SERVICES_CHOSEN', servicesChosen);
+        },
+        setServicesSelectedOnLoad({ commit }) {
+            if (localStorage.getItem('servicesChosen') && localStorage.getItem('servicesChosen') !== ('' || '[]')) {
+                const servicesChosen = JSON.parse(localStorage.getItem('servicesChosen'));
+                commit('SET_SERVICES_CHOSEN', servicesChosen);
+            }
+        },
+        setCheckInOnLoad({ commit }) {
+            if (localStorage.getItem('checkIn') && localStorage.getItem('checkIn') !== '') {
+                const checkIn = localStorage.getItem('checkIn');
+                commit('SET_CHECK_IN', checkIn);
+            }
+        },
+        setCheckOutOnLoad({ commit }) {
+            if (localStorage.getItem('checkOut') && localStorage.getItem('checkOut') !== '') {
+                const checkOut = localStorage.getItem('checkOut');
+                commit('SET_CHECK_OUT', checkOut);
+            }
+        },
+        setGuestsNbOnLoad({ commit }) {
+            if (localStorage.getItem('guestsNb') && localStorage.getItem('guestsNb') !== '') {
+                const guestsNb = localStorage.getItem('guestsNb');
+                commit('SET_GUESTS_NB', guestsNb);
+            }
+        },
+        setRoomTypeChosenOnLoad({ commit }) {
+            if (localStorage.getItem('roomTypeChosen') && localStorage.getItem('roomTypeChosen') !== '') {
+                const roomTypeChosen = localStorage.getItem('roomTypeChosen');
+                commit('SET_ROOM_TYPE_CHOSEN', roomTypeChosen);
+            }
+        },
+        
+
     },
     modules: {},
 });

@@ -39,7 +39,7 @@
         <div class="container container-main">
             <div class="image-text-pai">
                 <div v-for="room in $store.state.roomTypes" :key="room.id" class="image-text card-room"
-                    id="card-classic">
+                    :class="selectedDiv" id="card-classic">
                     <div class="card-image">
                         <img class="image-reserva" :src="room.imgUrl" :alt="room.name" />
                     </div>
@@ -59,11 +59,10 @@
                 <div id="border-if-failure">
                     <p>APARTAMENTO:</p>
                     <select @change="roomTypeInput" id="room-type" style="width: 120px; height: 24px">
-                        <option v-for="room in $store.state.roomTypes" :key="room.name" :value="room.id">
+                        <option v-for="room in                     $store.state.roomTypes" :key="room.name"
+                            :value="room.id">
                             {{ room.name }}
                         </option>
-                        <!-- <option value="executive">Executive</option>
-                        <option value="premium">Premium</option> -->
                     </select>
                     <p>CHECK-IN:</p>
                     <input @change="checkInDateInput" id="checkin-date" type="date"
@@ -83,52 +82,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- Modal Resumo das Reservas-->
-        <!--
-            <div class="modal" id="modal-two">
-                <div class="modal-bg modal-exit"></div>
-                <div class="modal-container reservations">
-                    <div class="left-side">
-                        <img src="https://i.ibb.co/DzZyM1v/hotel.jpg" alt="" />
-                    </div>
-                    <div class="right-side">
-                        <h2>Hotel H</h2>
-                        <h4>O hotel que faz sentido para você</h4>
-                        <ul>
-                            <li>
-                                <p>Chegada</p>
-                                <h3 id="checkin-date-value"></h3>
-                            </li>
-                            <li>
-                                <p>Saida</p>
-                                <h3 id="checkout-date-value"></h3>
-                            </li>
-                            <li>
-                                <p>Numero de convidados</p>
-                                <h3 id="nb-adults-value"></h3>
-                            </li>
-                            <li>
-                                <p>Inclui:</p>
-                                <h3 id="services-list-value"></h3>
-                            </li>
-                            <li>
-                                <p>Preço por Adulto</p>
-                                <h3 id="price-per-adult"></h3>
-                            </li>
-                            <li>
-                                <p>Preço Total</p>
-                                <h3 id="total-price"></h3>
-                            </li>
-                        </ul>
-                        <button class="btn">Confirmar a Reserva</button>
-                    </div>
-                    <button class="modal-close modal-exit">X</button>
-                </div>
-            </div>
-            
-        -->
-        <!-- Modal Resumo das Reservas-->
     </main>
 
 </template>
@@ -182,6 +135,26 @@ export default {
             this.roomType = e.target.value;
             this.setRoomTypeChosen(this.roomType);
         },
+        roomTypeSelected() {
+            return this.$store.state.roomTypeChosen;
+        },
+        selectedDiv(e) {
+            const divs = document.querySelectorAll('.room-type');
+            divs.forEach(div => {
+                div.classList.remove('selected');
+            });
+            if (e.target.key === this.$store.state.roomTypeChosen) e.target.classList.add('selected');
+        },
+        setInputValues() {
+            const checkInDateInput = document.getElementById('checkin-date');
+            const checkOutDateInput = document.getElementById('checkout-date');
+            const nbAdultsInput = document.getElementById('nb-adults');
+            const roomTypeInput = document.getElementById('room-type');
+            checkInDateInput.value = this.$store.state.checkIn;
+            checkOutDateInput.value = this.$store.state.checkOut;
+            nbAdultsInput.value = this.$store.state.guestsNb;
+            roomTypeInput.value = this.$store.state.roomTypeChosen;
+        }
 
     },
     mounted() {
@@ -190,6 +163,7 @@ export default {
         this.setMinCheckOut();
         this.inputMinCheckInAttribute();
         this.inputMinCheckOutAttribute();
+        this.setInputValues();
     }
 }
 
@@ -300,6 +274,7 @@ export default {
 
 .image-text {
     display: flex;
+    align-items: center;
     column-gap: 18px;
     padding: 21px;
     margin-right: 1vw;
@@ -426,10 +401,10 @@ export default {
         width: 100%;
     }
 
-    .image-text {
+    /* .image-text {
         display: block;
         padding: 5px;
-    }
+    } */
 
     .image-reserva {
         width: 100%;

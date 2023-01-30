@@ -3,7 +3,7 @@
         <h3>Escolha mais serviços para fazer sua estadia ainda mais memorável.</h3>
         <ul class="card-wrapper">
             <li @click="setSelectedService" class="card-modal" v-for="service in $store.state.servicesAndPrices"
-                :key="service.id">
+                :key="service.id" :id="service.id">
                 <img :src="service.imgUrl" :alt="service.name" class="img-modal">
                 <h3>{{ service.name }} <br /> R$ {{ service.price.toFixed(2) }}</h3>
                 <hr />
@@ -25,11 +25,22 @@ export default {
         }
     },
     methods: {
-        ...mapActions(['openModalServices', 'closeModalServices', 'closeAllModals']),
+        ...mapActions(['openModalServices', 'closeModalServices', 'closeAllModals', 'setServicesChosen']),
         setSelectedService(e) {
-
-            e.target.classList.toggle('selected');
-        }
+            const serviceId = e.target.closest('.card-modal');
+            serviceId.classList.toggle('selected');
+            this.setServicesChosen(serviceId.id);
+        },
+        setSelectedServicesOnLoad() {
+            const servicesChosen = this.$store.state.servicesChosen;
+            servicesChosen.forEach(service => {
+                const serviceId = document.getElementById(service);
+                serviceId.classList.add('selected');
+            });
+        },
+    },
+    mounted() {
+        this.setSelectedServicesOnLoad();
     },
 }
 </script>
