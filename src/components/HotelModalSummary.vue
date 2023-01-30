@@ -1,5 +1,5 @@
 <template>
-    <div class="modal-services" @click.stop>
+    <div class="modal-summary" @click.stop>
         <h3>XDDDD</h3>
 
         <div class="sub-total">
@@ -25,12 +25,28 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.modal-services {
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+
+h3,
+p {
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 0;
+    margin: 0;
+    color: teal;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-summary {
     text-align: center;
     background-color: white;
     height: 75vh;
     width: 80vw;
-    margin-top: 10%;
+    margin-top: 10vh;
     padding: 10px 0;
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);

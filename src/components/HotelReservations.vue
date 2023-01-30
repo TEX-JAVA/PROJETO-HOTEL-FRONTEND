@@ -38,71 +38,41 @@
         </div>
         <div class="container container-main">
             <div class="image-text-pai">
-                <div class="image-text card-room" id="card-classic">
+                <div v-for="room in $store.state.roomTypes" :key="room.id" class="image-text card-room"
+                    id="card-classic">
                     <div class="card-image">
-                        <img class="image-reserva" src="../assets/images/reserva/classic.jpg" alt="Classic"
-                            href="#resumo" />
+                        <img class="image-reserva" :src="room.imgUrl" :alt="room.name" />
                     </div>
                     <div class="div-pa">
-                        <h1>CLASSIC</h1>
-                        <h2 class="h2-reserva">R$ 200</h2>
+                        <h1>{{ room.name.toUpperCase() }}</h1>
+                        <h2 class="h2-reserva">R$ {{ room.price.toFixed(2) }}</h2>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-                            temporibus error voluptatem non sit? Ratione eos, omnis quam
-                            quis quo hic cum officiis id quidem non
+                            {{ room.description }}
                         </p>
                         <a class="button-c" id="btn-classic" href="#resumo">SELECIONAR</a>
                     </div>
                 </div>
 
-                <div class="image-text card-room" id="card-executive">
-                    <div class="card-image">
-                        <img class="image-reserva" src="../assets/images/reserva/executive.jpg" alt="Executive" />
-                    </div>
-                    <div class="div-pa">
-                        <h1>EXECUTIVE</h1>
-                        <h2 class="h2-reserva">R$ 500</h2>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi
-                            temporibus error voluptatem non sit? Ratione perspiciatis cumque
-                            quam quis quo hic
-                        </p>
-                        <a class="button-c" id="btn-executive" href="#resumo">SELECIONAR</a>
-                    </div>
-                </div>
-
-                <div class="image-text card-room" id="card-premium">
-                    <div class="card-image">
-                        <img class="image-reserva" src="../assets/images/reserva/premium.jpg" alt="Executive" />
-                    </div>
-
-                    <div class="div-pa">
-                        <h1>PREMIUM</h1>
-                        <h2 class="h2-reserva">R$ 1000</h2>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing voluptatem
-                            non sit? Ratione eos, omnis vel doloribus perspiciatis cumque
-                            quam quis quo hic
-                        </p>
-                        <a class="button-c" id="btn-premium" href="#resumo">SELECIONAR</a>
-                    </div>
-                </div>
             </div>
             <div id="resumo" class="resumo_reserva">
                 <h3 class="resumo-direita">Resumo da reserva</h3>
                 <div id="border-if-failure">
                     <p>APARTAMENTO:</p>
-                    <select id="room-type" style="width: 120px; height: 24px">
-                        <option value="classic">Classic</option>
-                        <option value="executive">Executive</option>
-                        <option value="premium">Premium</option>
+                    <select @change="roomTypeInput" id="room-type" style="width: 120px; height: 24px">
+                        <option v-for="room in $store.state.roomTypes" :key="room.name" :value="room.id">
+                            {{ room.name }}
+                        </option>
+                        <!-- <option value="executive">Executive</option>
+                        <option value="premium">Premium</option> -->
                     </select>
                     <p>CHECK-IN:</p>
-                    <input id="checkin-date" type="date" style="text-align: center; height: 24px" />
+                    <input @change="checkInDateInput" id="checkin-date" type="date"
+                        style="text-align: center; height: 24px" />
                     <p>CHECK-OUT:</p>
-                    <input id="checkout-date" type="date" style="text-align: center; height: 24px" />
+                    <input @change="checkOutDateInput" id="checkout-date" type="date"
+                        style="text-align: center; height: 24px" />
                     <p>PESSOAS:</p>
-                    <input id="nb-adults" type="number" min="1" max="10"
+                    <input @change="guestsNbInput" id="nb-adults" type="number" min="1" max="10"
                         style="width: 60px; height: 30px; text-align: center" />
                     <br />
                     <br />
@@ -175,12 +145,52 @@ export default {
     },
     setup() {
         return {
-
+            checkInDate: '',
+            checkOutDate: '',
+            guestsNb: 1,
+            roomType: 'classic',
+            servicesList: [],
+            totalPrice: 0,
+            pricePerAdult: 0,
         }
     },
     methods: {
-        ...mapActions(['openModalServices', 'openModalSummary'])
+        ...mapActions(['openModalServices', 'openModalSummary', 'setMinCheckIn', 'setToday', 'setMinCheckOut', 'setCheckIn', 'setCheckOut', 'setGuestsNb', 'setRoomTypeChosen']),
+        inputMinCheckInAttribute() {
+            const checkInDateInput = document.getElementById('checkin-date');
+            checkInDateInput.setAttribute('min', this.$store.state.minCheckIn);
+        },
+        inputMinCheckOutAttribute() {
+            const checkOutDateInput = document.getElementById('checkout-date');
+            checkOutDateInput.setAttribute('min', this.$store.state.minCheckOut);
+        },
+        checkInDateInput(e) {
+            this.checkInDate = e.target.value;
+            this.setCheckIn(this.checkInDate);
+            this.setMinCheckOut();
+            this.inputMinCheckOutAttribute();
+        },
+        checkOutDateInput(e) {
+            this.checkOutDate = e.target.value;
+            this.setCheckOut(this.checkOutDate);
+        },
+        guestsNbInput(e) {
+            this.guestsNb = e.target.value;
+            this.setGuestsNb(this.guestsNb);
+        },
+        roomTypeInput(e) {
+            this.roomType = e.target.value;
+            this.setRoomTypeChosen(this.roomType);
+        },
+
     },
+    mounted() {
+        this.setToday();
+        this.setMinCheckIn();
+        this.setMinCheckOut();
+        this.inputMinCheckInAttribute();
+        this.inputMinCheckOutAttribute();
+    }
 }
 
 
@@ -188,6 +198,10 @@ export default {
 
 <style scoped lang="scss">
 @import "../assets/scss/global/global.scss";
+
+.selected {
+    border: 3px solid teal;
+}
 
 .container-page-reserva {
     max-width: 1250px;
@@ -288,6 +302,7 @@ export default {
     display: flex;
     column-gap: 18px;
     padding: 21px;
+    margin-right: 1vw;
 }
 
 .image-reserva {

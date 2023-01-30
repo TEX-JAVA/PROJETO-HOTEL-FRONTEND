@@ -56,9 +56,10 @@ export default {
 <style scoped lang="scss">
 h3,
 p {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', sans-serif;
     padding: 5px 0;
     margin: 0;
+    color: teal;
 }
 
 h3 {

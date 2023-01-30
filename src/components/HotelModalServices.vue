@@ -35,6 +35,22 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+
+h3,
+p {
+    font-family: 'Nunito', sans-serif;
+    padding: 5px 0;
+    margin: 0;
+    color: teal;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
 .modal-services {
     text-align: center;
     background-color: white;
