@@ -24,7 +24,7 @@
                     <p>Quarto escolhido:</p>
                     <h3 id="room-type-value">{{ roomType }}</h3>
                 </li>
-                <li>
+                <li v-if="servicesSelected.length > 0">
                     <p>Inclui:</p>
                     <h3 id="services-list-value">{{ servicesSelected }}</h3>
                 </li>
@@ -92,6 +92,7 @@ export default {
     mounted() {
         this.setData();
         this.calcPricePerAdult();
+        console.log(this.servicesSelected);
     },
 }
 </script>
