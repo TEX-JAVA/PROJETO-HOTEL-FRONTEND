@@ -2,7 +2,8 @@
     <div class="modal-services" @click.stop>
         <h3>Escolha mais serviços para fazer sua estadia ainda mais memorável.</h3>
         <ul class="card-wrapper">
-            <li class="card-modal" v-for="service in $store.state.servicesAndPrices" :key="service.id">
+            <li @click="setSelectedService" class="card-modal" v-for="service in $store.state.servicesAndPrices"
+                :key="service.id">
                 <img :src="service.imgUrl" :alt="service.name" class="img-modal">
                 <h3>{{ service.name }} <br /> R$ {{ service.price.toFixed(2) }}</h3>
                 <hr />
@@ -25,6 +26,10 @@ export default {
     },
     methods: {
         ...mapActions(['openModalServices', 'closeModalServices', 'closeAllModals']),
+        setSelectedService(e) {
+
+            e.target.classList.toggle('selected');
+        }
     },
 }
 </script>
