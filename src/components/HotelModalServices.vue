@@ -83,6 +83,7 @@ h3 {
 
         .card-modal {
             width: 15vw;
+            height: 32vh;
             list-style: none;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
             cursor: pointer;

@@ -4,10 +4,15 @@ import HotelFooter from './components/HotelFooter.vue'
 import HotelMainPage from './components/HotelMainPage.vue';
 import HotelAbout from './components/HotelAbout.vue';
 import store from './store';
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      modalState: false,
+    }
+  },
   components: {
     HotelHeader,
     HotelFooter,
@@ -16,6 +21,7 @@ export default {
   },
   methods: {
     ...mapActions(['setServicesSelectedOnLoad', 'setRoomTypeChosenOnLoad', 'setGuestsNbOnLoad', 'setCheckInOnLoad', 'setCheckOutOnLoad']),
+    ...mapGetters(['getModalState'])
   },
   mounted() {
     this.setServicesSelectedOnLoad();

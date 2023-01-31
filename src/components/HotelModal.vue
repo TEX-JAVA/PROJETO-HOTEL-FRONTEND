@@ -2,38 +2,18 @@
     <teleport to="body">
         <transition name="modal-fade">
             <div class="modal-overlay" @click="closeAllModals">
-
-
                 <HotelModalServices v-if="$store.state.showModalServices" />
                 <HotelModalSummary v-if="$store.state.showModalSummary" />
-
-
-                <!-- <div class="modal-services" @click.stop>
-                    <h3>Escolha mais serviços para fazer sua estadia ainda mais memorável.</h3>
-                    <ul class="card-wrapper">
-                        <li class="card-modal" v-for="service in $store.state.servicesAndPrices" :key="service.id">
-                            <img :src="service.imgUrl" :alt="service.name" class="img-modal">
-                            <h3>{{ service.name }} <br /> R$ {{ service.price.toFixed(2) }}</h3>
-                            <hr />
-                            <p>{{ service.description }}</p>
-                        </li>
-                    </ul>
-                    <div class="sub-total">
-
-                        <button @click="closeModalServices">Close</button>
-                    </div>
-                </div> -->
                 <div class="close" @click="closeModalServices">
                     <img src="/src/assets/global/icons/icons8-close.svg" />
                 </div>
             </div>
         </transition>
-
     </teleport>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 import HotelModalServices from './HotelModalServices.vue';
 import HotelModalSummary from './HotelModalSummary.vue';
 
@@ -45,11 +25,13 @@ export default {
     },
     data() {
         return {
+            modalState: false,
         }
     },
     methods: {
         ...mapActions(['closeAllModals']),
     },
+
 }
 </script>
 

@@ -181,6 +181,7 @@ export default {
             this.setRoomTypeChosen(roomType);
             const roomTypeInput = document.getElementById('room-type');
             roomTypeInput.value = roomType;
+            console.log(roomType);
         }
 
     },

@@ -100,6 +100,9 @@ export default createStore({
         getShowModalServices() {
             return this.state.showModalServices;
         },
+        getModalState() {
+            return this.state.showModalSummary || this.state.showModalServices;
+        }
 
 
     },
@@ -109,18 +112,21 @@ export default createStore({
             commit('SET_TODAY', today);
         },
         openModalServices({ commit }) {
+            document.body.style.overflow = 'hidden';
             commit('SET_SHOW_MODAL_SERVICES', true);
         },
         closeModalServices({ commit }) {
             commit('SET_SHOW_MODAL_SERVICES', false);
         },
         openModalSummary({ commit }) {
+            document.body.style.overflow = 'hidden';
             commit('SET_SHOW_MODAL_SUMMARY', true);
         },
         closeModalSummary({ commit }) {
             commit('SET_SHOW_MODAL_SUMMARY', false);
         },
         closeAllModals({ commit }) {
+            document.body.style.overflow = 'auto';
             commit('SET_SHOW_MODAL_SERVICES', false);
             commit('SET_SHOW_MODAL_SUMMARY', false);
         },
