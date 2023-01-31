@@ -11,7 +11,7 @@
             </li>
         </ul>
         <div class="sub-total">
-            <button @click="closeAllModals">Close</button>
+            <button @click="closeAllModals">Fechar</button>
         </div>
     </div>
 </template>

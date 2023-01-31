@@ -39,7 +39,7 @@
             </ul>
             <div class="btns-container">
                 <button class="btn">Confirmar a Reserva</button>
-                <button @click="closeAllModals">Close</button>
+                <button @click="closeAllModals">Fechar</button>
             </div>
         </div>
 
