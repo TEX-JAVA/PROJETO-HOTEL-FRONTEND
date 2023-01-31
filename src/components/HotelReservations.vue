@@ -39,7 +39,7 @@
         <div class="container container-main">
             <div class="image-text-pai">
                 <div v-for="room in $store.state.roomTypes" :key="room.id" class="image-text card-room"
-                    :class="selectedDiv" id="card-classic">
+                    :class="selectedDiv" :id="'card-' + room.id">
                     <div class="card-image">
                         <img class="image-reserva" :src="room.imgUrl" :alt="room.name" />
                     </div>
@@ -49,7 +49,7 @@
                         <p>
                             {{ room.description }}
                         </p>
-                        <a class="button-c" id="btn-classic">SELECIONAR</a>
+                        <a @click="selectRoomFromCards" class="button-c" :id="'btn-' + room.id">SELECIONAR</a>
                     </div>
                 </div>
 
@@ -137,16 +137,18 @@ export default {
         roomTypeInput(e) {
             this.roomType = e.target.value;
             this.setRoomTypeChosen(this.roomType);
+            this.selectedDiv();
         },
         roomTypeSelected() {
             return this.$store.state.roomTypeChosen;
         },
-        selectedDiv(e) {
-            const divs = document.querySelectorAll('.room-type');
-            divs.forEach(div => {
-                div.classList.remove('selected');
-            });
-            if (e.target.key === this.$store.state.roomTypeChosen) e.target.classList.add('selected');
+        selectedDiv() {
+            const divs = document.getElementsByClassName('card-room');
+            for (let room of divs) {
+                room.classList.remove('selected');
+            }
+            const selectedDiv = document.getElementById('card-' + this.roomTypeSelected());
+            selectedDiv.classList.add('selected');
         },
         setInputValues() {
             const checkInDateInput = document.getElementById('checkin-date');
@@ -171,6 +173,14 @@ export default {
                 return;
             }
             this.openModalSummary();
+        },
+        selectRoomFromCards(e) {
+            e.preventDefault();
+            this.selectedDiv();
+            const roomType = e.target.getAttribute('id').split('-')[1];
+            this.setRoomTypeChosen(roomType);
+            const roomTypeInput = document.getElementById('room-type');
+            roomTypeInput.value = roomType;
         }
 
     },
@@ -181,6 +191,9 @@ export default {
         this.inputMinCheckInAttribute();
         this.inputMinCheckOutAttribute();
         this.setInputValues();
+    },
+    computed() {
+        this.selectedDiv();
     }
 }
 
@@ -258,6 +271,7 @@ export default {
     font-weight: bold;
     opacity: 0.92;
     max-width: 140px;
+    cursor: pointer;
 }
 
 .button-c:hover {
