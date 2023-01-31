@@ -22,11 +22,11 @@
                 </li>
                 <li>
                     <p>Quarto escolhido:</p>
-                    <h3 id="room-type-value">{{ roomType }}</h3>
+                    <h3 id="room-type-value">{{ getRoomsNames() }}</h3>
                 </li>
                 <li v-if="servicesSelected.length > 0">
                     <p>Inclui:</p>
-                    <h3 id="services-list-value">{{ servicesSelected }}</h3>
+                    <h3 id="services-list-value">{{ getServicesNames() }}</h3>
                 </li>
                 <li>
                     <p>Preço por Adulto:</p>
@@ -61,6 +61,7 @@ export default {
             pricePerAdult: '',
             totalPrice: '',
             roomType: '',
+            servicesNamesString: ''
         }
     },
     methods: {
@@ -87,12 +88,22 @@ export default {
             const diffTime = Math.abs(checkOut - checkIn);
             const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
             return diffDays;
+        },
+        getServicesNames() {
+            const servicesChosen = this.$store.state.servicesChosen;
+            const servicesNames = this.$store.state.servicesAndPrices.filter(service => servicesChosen.includes(service.id)).map(service => service.name);
+            return servicesNames.join(', ');
+        },
+        getRoomsNames() {
+            const roomsChosen = this.$store.state.roomTypeChosen;
+            const roomsNames = this.$store.state.roomTypes.filter(room => roomsChosen.includes(room.id)).map(room => room.name);
+            return roomsNames.join(', ');
         }
+
     },
     mounted() {
         this.setData();
         this.calcPricePerAdult();
-        console.log(this.servicesSelected);
     },
 }
 </script>

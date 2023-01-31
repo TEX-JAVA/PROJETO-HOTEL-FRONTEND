@@ -1,7 +1,7 @@
 #app {
     margin: 0;
     padding: 0;
-    min-width: 100vw;
+    min-width: 99.1vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -9,16 +9,16 @@
 
 * {
     scrollbar-width: auto;
-    scrollbar-color: #008080 #ffffff00;
+    scrollbar-color: #008080 transparent;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 16px;
+    width: 13px;
 }
 
 *::-webkit-scrollbar-track {
-    background: #ffffff00;
+    background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {

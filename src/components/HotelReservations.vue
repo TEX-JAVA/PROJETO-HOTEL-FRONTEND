@@ -49,7 +49,7 @@
                         <p>
                             {{ room.description }}
                         </p>
-                        <a class="button-c" id="btn-classic" href="#resumo">SELECIONAR</a>
+                        <a class="button-c" id="btn-classic">SELECIONAR</a>
                     </div>
                 </div>
 
@@ -59,8 +59,7 @@
                 <div id="border-if-failure">
                     <p>APARTAMENTO:</p>
                     <select @change="roomTypeInput" id="room-type" style="width: 120px; height: 24px">
-                        <option v-for="room in                     $store.state.roomTypes" :key="room.name"
-                            :value="room.id">
+                        <option v-for="room in $store.state.roomTypes" :key="room.name" :value="room.id">
                             {{ room.name }}
                         </option>
                     </select>

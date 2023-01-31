@@ -91,8 +91,8 @@ export default createStore({
         getGuests() {
             return state.guests;
         },
-        getServices() {
-            return state.services;
+        getServicesNames() {
+            return this.state.servicesChosen.map((service) => service.name);
         },
         getRoomType() {
             return state.roomType;
