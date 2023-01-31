@@ -56,9 +56,10 @@
             </div>
             <div id="resumo" class="resumo_reserva">
                 <h3 class="resumo-direita">Resumo da reserva</h3>
-                <div id="border-if-failure">
+                <div id="resumo-reserva-inner">
                     <p>APARTAMENTO:</p>
                     <select @change="roomTypeInput" id="room-type" style="width: 120px; height: 24px">
+                        <option value="">Selecione</option>
                         <option v-for="room in $store.state.roomTypes" :key="room.name" :value="room.id">
                             {{ room.name }}
                         </option>
@@ -74,10 +75,13 @@
                         style="width: 60px; height: 30px; text-align: center" />
                     <br />
                     <br />
-                    <a @click="openModalServices" class="a-servicos" data-modal="modal-one">Adicionar mais
-                        serviços</a>
+                    <div class="btn-reserva-container">
+                        <a @click="openModalServices" class="button-b" data-modal="modal-one">Adicionar mais
+                            serviços</a>
+                        <a @click="checkAndOpenModalSummary" class="button-b" data-modal="modal-two"
+                            id="continue-btn">CONTINUAR</a>
+                    </div>
                     <HotelModal v-if="$store.state.showModalServices || $store.state.showModalSummary" />
-                    <a @click="openModalSummary" class="button-b" data-modal="modal-two" id="continue-btn">CONTINUAR</a>
                 </div>
             </div>
         </div>
@@ -149,10 +153,24 @@ export default {
             const checkOutDateInput = document.getElementById('checkout-date');
             const nbAdultsInput = document.getElementById('nb-adults');
             const roomTypeInput = document.getElementById('room-type');
+
             checkInDateInput.value = this.$store.state.checkIn;
             checkOutDateInput.value = this.$store.state.checkOut;
             nbAdultsInput.value = this.$store.state.guestsNb;
             roomTypeInput.value = this.$store.state.roomTypeChosen;
+        },
+        checkAndOpenModalSummary() {
+            const checkInDateInput = document.getElementById('checkin-date');
+            const checkOutDateInput = document.getElementById('checkout-date');
+            const nbAdultsInput = document.getElementById('nb-adults');
+            const roomTypeInput = document.getElementById('room-type');
+            document.getElementById('resumo-reserva-inner').style.border = 'none';
+            if (checkInDateInput.value === '' || checkOutDateInput.value === '' || nbAdultsInput.value === '' || roomTypeInput.value === '') {
+                document.getElementById('resumo-reserva-inner').style.border = '3px solid red';
+                alert('Por favor, preencha todos os campos!');
+                return;
+            }
+            this.openModalSummary();
         }
 
     },
@@ -254,7 +272,6 @@ export default {
     margin-left: 5px;
 }
 
-
 @font-face {
     src: url(../assets/fonts/KaushanScript-Regular.ttf);
     font-family: "KaushanScript-Regular";
@@ -308,21 +325,21 @@ export default {
     background-size: cover;
     text-align: center;
     opacity: 0.8;
+
+    #resumo-reserva-inner {
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1.8));
+        z-index: 3;
+        width: 60%;
+        height: 60%;
+        opacity: 0.9;
+    }
 }
 
 .resumo_reserva:hover {
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-.resumo_reserva div {
-    width: 300px;
-    height: 380px;
-    margin: 10% auto;
-    background-image: linear-gradient(to top,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7));
-    position: relative;
-}
+
 
 .a-servicos {
     color: white;
@@ -365,23 +382,20 @@ export default {
     font-family: "KaushanScript-Regular";
 }
 
-.resumo_reserva div {
-    width: 300px;
-    height: 430px;
-    margin: 10% auto;
-    background-image: linear-gradient(to top,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7));
-    position: relative;
-}
+
 
 .button-b {
     color: white;
-    padding: 16.3px 14px 16.3px 14px;
+    padding: 14px;
+    width: 90%;
     font-weight: bold;
     top: 27px;
-    position: relative;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1.8));
+    cursor: pointer;
+}
+
+.button-b:first-child {
+    margin-bottom: 20px;
 }
 
 .button-b:hover {
@@ -390,6 +404,19 @@ export default {
             rgba(0, 0, 0, 0.6));
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
+
+.btn-reserva-container {
+    width: 100%;
+    height: 20%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
 
 @media (max-width: 1024px) {
     .container-main {

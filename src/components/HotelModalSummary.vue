@@ -2,7 +2,7 @@
     <div class="modal-summary" @click.stop>
 
         <div class="left-side">
-            <img src="https://i.ibb.co/DzZyM1v/hotel.jpg" alt="" />
+            <img :src="getRoomImage()" alt="" />
         </div>
         <div class="right-side">
             <h2>Hotel H</h2>
@@ -98,6 +98,11 @@ export default {
             const roomsChosen = this.$store.state.roomTypeChosen;
             const roomsNames = this.$store.state.roomTypes.filter(room => roomsChosen.includes(room.id)).map(room => room.name);
             return roomsNames.join(', ');
+        },
+        getRoomImage() {
+            const roomsChosen = this.$store.state.roomTypeChosen;
+            const roomsImages = this.$store.state.roomTypes.filter(room => roomsChosen.includes(room.id)).map(room => room.imgUrl);
+            return roomsImages;
         }
 
     },
